@@ -1,0 +1,25 @@
+body {
+    padding: 0px;
+}
+.main-footer{
+    height: 150px;
+    width: 100%;
+    background-color: grey;
+}
+
+.main-header{
+    display: inline-block;
+}
+
+.main-header img{
+    height: 175px;
+    width: 175px;
+}
+
+.col-md-6{
+    width: 100%;
+}
+
+.col-lg-12{
+    text-align: center;
+}
