@@ -78,7 +78,7 @@ class User_model extends CI_Model
     /**
      *  Retourne une liste de user
      */
-    public function list_user($nb = 1, $debut = 0)
+    public function list_user($nb = 100, $debut = 0)
     {
         // return array("toto"=>"totoo", "titit"=>"titi");
         return $this->db->select('*')

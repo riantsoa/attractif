@@ -24,6 +24,15 @@ class User extends CI_Controller {
         $this->load->view('footer');
     }
 
+    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    {
+        $this->load->helper('url');
+        $this->load->model('user_model', 'userManager');
+        $this->userManager->add_user($name, $mail, $pass, $newsletter, $alert, $admin);
+
+        echo site_url("/user/view");
+
+    }
     public function view()
     {
         $this->load->model('user_model', 'userManager');
@@ -39,6 +48,7 @@ class User extends CI_Controller {
         $this->load->view('header');
         $this->load->view('user', $data);
         $this->load->view('footer');
+
     }
 
     public function toto()
