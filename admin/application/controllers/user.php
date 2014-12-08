@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class User extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -21,6 +21,23 @@ class Welcome extends CI_Controller {
     {
         $this->load->view('header');
         $this->load->view('welcome_message');
+        $this->load->view('footer');
+    }
+
+    public function view()
+    {
+        $this->load->model('user_model', 'userManager');
+        // $this->load->model('user_model');
+
+        $data = array();
+
+        //  On lance une requête
+        // $data['ooo'] = "tutu";
+        $data['toto'] = $this->userManager->list_user();
+
+        //  Et on inclut une vue
+        $this->load->view('header');
+        $this->load->view('user', $data);
         $this->load->view('footer');
     }
 
