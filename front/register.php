@@ -2,10 +2,29 @@
 session_start();
 include('lib/dbconnect.php');
 
-// On récupère nos variables de session
-if (isset($_SESSION['data'])) {
-    $mail = $_SESSION['data']->mail;
-    $password = $_SESSION['data']->pass;
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $pass = $_POST['pass'];
+    //Je vérifie les infos et je les insert
+    $insert = $bdd->prepare('INSERT INTO user VALUES(NULL, :name, :mail, :pass, :newsletter, :alert, :admin)');
+    try {
+        // On envois la requète
+        $success = $insert->execute(array(
+            'name' => $name,
+            'mail' => $mail,
+            'pass' => $pass,
+            'newsletter' => 1,
+            'alert' => 0,
+            'admin' => 0
+        ));
+
+        if ($success) {
+            echo "Enregistrement réussi";
+        }
+    } catch (Exception $e) {
+        echo 'Erreur de requète : ', $e->getMessage();
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -106,21 +125,15 @@ if (isset($_SESSION['data'])) {
         <div id="content">
             <div class="container">
                 <div class="col-lg-12">
-                    <h2 class="page-header">Liste de nos produits</h2>
+                    <h2 class="page-header">S'inscrire</h2>
                 </div>
                 <div class="col-md-12 col-sm-6">
-                    <?php
-                    //Je vérifie le pseudo et le mot de passe
-                    $req = $bdd->prepare('SELECT name, quantity, category, descript, image FROM product WHERE 1');
-                    $req->execute();
-                    $data = $req->setFetchMode(PDO::FETCH_OBJ);
-
-                    // Nous traitons les résultats en boucle
-                    while ($enregistrement = $req->fetch()) {
-                        // Affichage des enregistrements
-                        echo '<h1>', $enregistrement->name, ' ', $enregistrement->quantity, '</h1>';
-                    }
-                    ?>
+                    <form action="register.php" method="post">
+                        <input type="text" placeholder="Nom" name="name" /><br />
+                        <input type="email" placeholder="Email" name="mail" /><br />
+                        <input type="password" placeholder="Mot de passe" name="pass" /><br />
+                        <input type="submit" name="submit" value="Inscription">
+                    </form>
                 </div>
                 <!-- Footer -->
                 <footer>
@@ -135,5 +148,10 @@ if (isset($_SESSION['data'])) {
         <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script>
+            $('.carousel').carousel({
+                interval: 5000 //changes the speed
+            })
+        </script>
     </body>
 </html>

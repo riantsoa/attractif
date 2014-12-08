@@ -2,6 +2,7 @@
 session_start();
 include('lib/dbconnect.php');
 
+//var_dump($_SESSION['data']);
 // On récupère nos variables de session
 if (isset($_SESSION['data'])) {
     $mail = $_SESSION['data']->mail;
@@ -42,6 +43,7 @@ if (isset($_SESSION['data'])) {
                     ?>
                     <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Mon compte</span>
                     <div id="login-box">
+                        <div>Bienvenue, <?php echo $mail; ?></div>
                         <div>Mes infos</div>
                         <div>Mes alertes</div>
                         <div>Mes favoris</div>
@@ -54,9 +56,9 @@ if (isset($_SESSION['data'])) {
                     <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
                     <div id="login-box">
                         <form action="lib/login.php" method="post">
-                            <input type="text" placeholder="E-mail" name="login">
+                            <input type="text" placeholder="E-mail" name="mail">
                             <br />
-                            <input type="password" placeholder="Mot de passe" name="pwd"><br />
+                            <input type="password" placeholder="Mot de passe" name="pass"><br />
                             <input type="submit" value="Connexion">
                         </form>
                         <div>
@@ -102,25 +104,72 @@ if (isset($_SESSION['data'])) {
                 </div>
             </div>
         </nav>
+        <!-- Slider -->
+        <header id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                    <div class="carousel-caption">
+                        <h2>Caption 1</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                    <div class="carousel-caption">
+                        <h2>Caption 2</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                    <div class="carousel-caption">
+                        <h2>Caption 3</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a>
+        </header>
         <!-- Page Content -->
         <div id="content">
             <div class="container">
-                <div class="col-lg-12">
-                    <h2 class="page-header">Liste de nos produits</h2>
+                <!-- Selection 3 blocks -->
+                <div class="row three-area">
+                    <div class="col-md-4 col-sm-6">
+                        <span class="label label-default">Prochaines ventes</span>
+                        <a href="portfolio-item.html">
+                            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <span class="label label-default">Produits</span>
+                        <a href="portfolio-item.html">
+                            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <span class="label label-default">Newsletters / Alertes</span>
+                        <a href="portfolio-item.html">
+                            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-12 col-sm-6">
-                    <?php
-                    //Je vérifie le pseudo et le mot de passe
-                    $req = $bdd->prepare('SELECT name, quantity, category, descript, image FROM product WHERE 1');
-                    $req->execute();
-                    $data = $req->setFetchMode(PDO::FETCH_OBJ);
-
-                    // Nous traitons les résultats en boucle
-                    while ($enregistrement = $req->fetch()) {
-                        // Affichage des enregistrements
-                        echo '<h1>', $enregistrement->name, ' ', $enregistrement->quantity, '</h1>';
-                    }
-                    ?>
+                <!-- Produits phares -->
+                <div class="row highlight-products">
+                    <!--<div class="col-lg-12">
+                        <h2 class="page-header">Nos produits phares</h2>
+                    </div>-->
+                    <div class="best-products">
+                        <div class="col-md-6">
+                            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+                        </div>
+                    </div>
                 </div>
                 <!-- Footer -->
                 <footer>
@@ -135,5 +184,10 @@ if (isset($_SESSION['data'])) {
         <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script>
+            $('.carousel').carousel({
+                interval: 5000 //changes the speed
+            })
+        </script>
     </body>
 </html>
