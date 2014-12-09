@@ -1,7 +1,7 @@
 <pre>
 <?php
 
-var_dump($toto);
+var_dump($one_user);
 
 ?>
 </pre>

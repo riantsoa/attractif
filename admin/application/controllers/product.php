@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User extends CI_Controller {
+class Product extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -15,7 +15,7 @@ class User extends CI_Controller {
      *
      * So any other public methods not prefixed with an underscore will
      * map to /index.php/welcome/<method_name>
-     * @see http://codeigniter.com/user_guide/general/urls.html
+     * @see http://codeigniter.com/product_guide/general/urls.html
      */
     public function index()
     {
@@ -24,63 +24,63 @@ class User extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add($name, $quantity, $category, $descript , $image)
     {
         $this->load->helper('url');
-        $this->load->model('user_model', 'userManager');
-        $this->userManager->add($name, $mail, $pass, $newsletter, $alert, $admin);
+        $this->load->model('product_model', 'productManager');
+        $this->productManager->add($name, $quantity, $category, $descript , $image);
 
-        redirect("user/all");
-        // TODO redirect last insert $id user page
+        redirect("product/all");
+        // TODO redirect last insert $id product page
     }
 
-    public function edit($id, $name = null, $mail = null, $pass = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id, $name = null, $quantity = null, $category = null, $descript = null, $image = null)
     {
         $this->load->helper('url');
-        $this->load->model('user_model', 'userManager');
-        $this->userManager->edit($id, $name, $mail, $pass, $newsletter, $alert, $admin);
+        $this->load->model('product_model', 'productManager');
+        $this->productManager->edit($id, $name, $quantity, $category, $descript, $image);
 
-        redirect("user/one/" . $id);
+        redirect("product/one/" . $id);
     }
 
     public function del($id)
     {
         $this->load->helper('url');
-        $this->load->model('user_model', 'userManager');
-        $this->userManager->del($id);
+        $this->load->model('product_model', 'productManager');
+        $this->productManager->del($id);
 
-        redirect("user/all");
+        redirect("product/all");
     }
 
     public function all()
     {
-        $this->load->model('user_model', 'userManager');
+        $this->load->model('product_model', 'productManager');
 
         $data = array();
 
         //  On lance une requête
-        $data['all_user'] = $this->userManager->all();
-        $data['count_user'] = $this->userManager->count();
+        $data['all_product'] = $this->productManager->all();
+        $data['count_product'] = $this->productManager->count();
 
         //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('all_user', $data);
+        $this->load->view('all_product', $data);
         $this->load->view('footer');
 
     }
 
     public function one($id)
     {
-        $this->load->model('user_model', 'userManager');
+        $this->load->model('product_model', 'productManager');
 
         $data = array();
 
         //  On lance une requête
-        $data['one_user'] = $this->userManager->one($id);
+        $data['one_product'] = $this->productManager->one($id);
 
         //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('one_user', $data);
+        $this->load->view('one_product', $data);
         $this->load->view('footer');
 
     }

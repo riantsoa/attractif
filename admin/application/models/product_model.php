@@ -1,22 +1,21 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User_model extends CI_Model
+class Product_model extends CI_Model
 {
-    protected $table = 'user';
+    protected $table = 'product';
 
     /**
-     *  Ajoute un user
+     *  Ajoute un product
      */
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add($name, $quantity, $category, $descript , $image)
     {
         //  Ces données seront automatiquement échappées
         return $this->db
             ->set('name',  $name)
-            ->set('mail',   $mail)
-            ->set('pass', $pass)
-            ->set('newsletter', $newsletter)
-            ->set('alert', $alert)
-            ->set('admin', $admin)
+            ->set('quantity',   $quantity)
+            ->set('category', $category)
+            ->set('descript', $descript)
+            ->set('image', $image)
             ->insert($this->table);
         ;
 
@@ -25,33 +24,29 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Édite une user déjà existante
+     *  Édite une product déjà existante
      */
-    public function edit($id, $name = null, $mail = null, $pass = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id, $name = null, $quantity = null, $category = null, $descript = null, $image = null)
     {
         if($name != null)
         {
             $this->db->set('name', $name);
         }
-        if($mail != null)
+        if($quantity != null)
         {
-            $this->db->set('mail', $mail);
+            $this->db->set('quantity', $quantity);
         }
-        if($pass != null)
+        if($category != null)
         {
-            $this->db->set('pass', $pass);
+            $this->db->set('category', $category);
         }
-        if($newsletter != null)
+        if($descript != null)
         {
-            $this->db->set('newsletter', $newsletter);
+            $this->db->set('descript', $descript);
         }
-        if($alert != null)
+        if($image != null)
         {
-            $this->db->set('alert', $alert);
-        }
-        if($admin != null)
-        {
-            $this->db->set('admin', $admin);
+            $this->db->set('image', $image);
         }
         //  La condition
         $this->db->where('id', (int) $id);
@@ -60,7 +55,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Supprime une user
+     *  Supprime une product
      */
     public function del($id)
     {
@@ -69,7 +64,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne le nombre de user
+     *  Retourne le nombre de product
      */
     public function count($where = array())
     {
@@ -78,7 +73,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de product
      */
     public function one($id)
     {
@@ -89,7 +84,7 @@ class User_model extends CI_Model
                 ->result();
     }
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de product
      */
     public function all($nb = 100, $debut = 0)
     {
@@ -103,5 +98,5 @@ class User_model extends CI_Model
 }
 
 
-/* End of file user_model.php */
-/* Location: ./application/models/user_model.php */
+/* End of file product_model.php */
+/* Location: ./application/models/product_model.php */
