@@ -35,18 +35,30 @@ $req->execute(array(
     'mail' => $mail
 ));
 $data = $req->setFetchMode(PDO::FETCH_OBJ);
+?>
+<!-- Page Content -->
+<div id="content">
+    <div class="container">
+        <div class="col-lg-12">
+            <h2 class="page-header">Liste de nos produits</h2>
+        </div>
+        <div class="col-md-12 col-sm-6">
+            <?php
+            while ($enregistrement = $req->fetch()) {
+                // Affichage des enregistrements
 
-while ($enregistrement = $req->fetch()) {
-    // Affichage des enregistrements
-
-    echo '
+                echo '
     <div class="col-md-12 col-sm-6">
        <form action="myinfos.php" method="post">
-            <input type="text" placeholder="Nom" name="name" value="'.$enregistrement->name.'" /><br />
-            <input type="email" placeholder="Email" name="mail" value="'.$enregistrement->mail.'" /><br />
-            <input type="text" placeholder="Mot de passe" name="pass" value="'.$enregistrement->pass.'"/><br />
+            <input type="text" placeholder="Nom" name="name" value="' . $enregistrement->name . '" /><br />
+            <input type="email" placeholder="Email" name="mail" value="' . $enregistrement->mail . '" /><br />
+            <input type="text" placeholder="Mot de passe" name="pass" value="' . $enregistrement->pass . '"/><br />
             <input type="submit" name="submit" value="Enregistrer modifications">
         </form>
     </div>';
-
-}
+            }
+            ?>
+        </div>
+        <?php
+        include('footer.php');
+        

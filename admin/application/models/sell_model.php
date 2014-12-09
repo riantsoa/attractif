@@ -1,22 +1,22 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User_model extends CI_Model
+class Sell_model extends CI_Model
 {
-    protected $table = 'user';
+    protected $table = 'sell';
 
     /**
-     *  Ajoute un user
+     *  Ajoute un sell
      */
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add($user, $product, $quantity, $date, $event)
     {
         //  Ces données seront automatiquement échappées
+        $user = time();
         return $this->db
-            ->set('name',  $name)
-            ->set('mail',   $mail)
-            ->set('pass', $pass)
-            ->set('newsletter', $newsletter)
-            ->set('alert', $alert)
-            ->set('admin', $admin)
+            ->set('user',  $user)
+            ->set('product',   $product)
+            ->set('quantity', $quantity)
+            ->set('date', $date)
+            ->set('event', $event)
             ->insert($this->table);
         ;
 
@@ -25,42 +25,39 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Édite une user déjà existante
+     *  Édite une sell déjà existante
      */
-    public function edit($id, $name = null, $mail = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id, $user = null, $product = null, $quantity = null, $date = null, $event = null, $admin = null)
     {
-        if($name != null)
+        $user = time();
+        if($user != null)
         {
-            $this->db->set('name', $name);
+            $this->db->set('user', $user);
         }
-        if($mail != null)
+        if($product != null)
         {
-            $this->db->set('mail', $mail);
+            $this->db->set('product', $product);
         }
-        // if($pass != null)
-        // {
-            // $this->db->set('pass', $pass);
-        // }
-        if($newsletter != null)
+        if($quantity != null)
         {
-            $this->db->set('newsletter', $newsletter);
+            $this->db->set('quantity', $quantity);
         }
-        if($alert != null)
+        if($date != null)
         {
-            $this->db->set('alert', $alert);
+            $this->db->set('date', $date);
         }
-        if($admin != null)
+        if($event != null)
         {
-            $this->db->set('admin', $admin);
+            $this->db->set('event', $event);
         }
         //  La condition
         $this->db->where('id', (int) $id);
 
-        return $this->db->update($this->table);
+        return $this->db->upuser($this->table);
     }
 
     /**
-     *  Supprime une user
+     *  Supprime une sell
      */
     public function del($id)
     {
@@ -69,7 +66,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne le nombre de user
+     *  Retourne le nombre de sell
      */
     public function count($where = array())
     {
@@ -78,7 +75,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de sell
      */
     public function one($id)
     {
@@ -89,7 +86,7 @@ class User_model extends CI_Model
                 ->result();
     }
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de sell
      */
     public function all($nb = 100, $debut = 0)
     {
@@ -103,5 +100,5 @@ class User_model extends CI_Model
 }
 
 
-/* End of file user_model.php */
-/* Location: ./application/models/user_model.php */
+/* End of file sell_model.php */
+/* Location: ./application/models/sell_model.php */

@@ -1,22 +1,21 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User_model extends CI_Model
+class Event_user_model extends CI_Model
 {
-    protected $table = 'user';
+    protected $table = 'event_user';
 
     /**
-     *  Ajoute un user
+     *  Ajoute un event_user
      */
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add($status, $customer, $event, $date)
     {
         //  Ces données seront automatiquement échappées
+        $status = time();
         return $this->db
-            ->set('name',  $name)
-            ->set('mail',   $mail)
-            ->set('pass', $pass)
-            ->set('newsletter', $newsletter)
-            ->set('alert', $alert)
-            ->set('admin', $admin)
+            ->set('status',  $status)
+            ->set('place',   $place)
+            ->set('event', $event)
+            ->set('date', $date)
             ->insert($this->table);
         ;
 
@@ -25,42 +24,35 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Édite une user déjà existante
+     *  Édite une event_user déjà existante
      */
-    public function edit($id, $name = null, $mail = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id, $status, $customer, $event, $date)
     {
-        if($name != null)
+        $status = time();
+        if($status != null)
         {
-            $this->db->set('name', $name);
+            $this->db->set('status', $status);
         }
-        if($mail != null)
+        if($place != null)
         {
-            $this->db->set('mail', $mail);
+            $this->db->set('place', $place);
         }
-        // if($pass != null)
-        // {
-            // $this->db->set('pass', $pass);
-        // }
-        if($newsletter != null)
+        if($event != null)
         {
-            $this->db->set('newsletter', $newsletter);
+            $this->db->set('event', $event);
         }
-        if($alert != null)
+        if($date != null)
         {
-            $this->db->set('alert', $alert);
-        }
-        if($admin != null)
-        {
-            $this->db->set('admin', $admin);
+            $this->db->set('date', $date);
         }
         //  La condition
         $this->db->where('id', (int) $id);
 
-        return $this->db->update($this->table);
+        return $this->db->upstatus($this->table);
     }
 
     /**
-     *  Supprime une user
+     *  Supprime une event_user
      */
     public function del($id)
     {
@@ -69,7 +61,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne le nombre de user
+     *  Retourne le nombre de event_user
      */
     public function count($where = array())
     {
@@ -78,7 +70,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de event_user
      */
     public function one($id)
     {
@@ -89,7 +81,7 @@ class User_model extends CI_Model
                 ->result();
     }
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de event_user
      */
     public function all($nb = 100, $debut = 0)
     {
@@ -103,5 +95,5 @@ class User_model extends CI_Model
 }
 
 
-/* End of file user_model.php */
-/* Location: ./application/models/user_model.php */
+/* End of file event_user_model.php */
+/* Location: ./application/models/event_user_model.php */

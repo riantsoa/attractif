@@ -1,22 +1,19 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User_model extends CI_Model
+class Product_event_model extends CI_Model
 {
-    protected $table = 'user';
+    protected $table = 'product_event';
 
     /**
-     *  Ajoute un user
+     *  Ajoute un product_event
      */
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add($product, $event)
     {
         //  Ces données seront automatiquement échappées
+        $date = time();
         return $this->db
-            ->set('name',  $name)
-            ->set('mail',   $mail)
-            ->set('pass', $pass)
-            ->set('newsletter', $newsletter)
-            ->set('alert', $alert)
-            ->set('admin', $admin)
+            ->set('product',  $product)
+            ->set('event',   $event)
             ->insert($this->table);
         ;
 
@@ -25,33 +22,17 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Édite une user déjà existante
+     *  Édite une product_event déjà existante
      */
-    public function edit($id, $name = null, $mail = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id, $product, $event)
     {
-        if($name != null)
+        if($product != null)
         {
-            $this->db->set('name', $name);
+            $this->db->set('product', $product);
         }
-        if($mail != null)
+        if($event != null)
         {
-            $this->db->set('mail', $mail);
-        }
-        // if($pass != null)
-        // {
-            // $this->db->set('pass', $pass);
-        // }
-        if($newsletter != null)
-        {
-            $this->db->set('newsletter', $newsletter);
-        }
-        if($alert != null)
-        {
-            $this->db->set('alert', $alert);
-        }
-        if($admin != null)
-        {
-            $this->db->set('admin', $admin);
+            $this->db->set('event', $event);
         }
         //  La condition
         $this->db->where('id', (int) $id);
@@ -60,7 +41,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Supprime une user
+     *  Supprime une product_event
      */
     public function del($id)
     {
@@ -69,7 +50,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne le nombre de user
+     *  Retourne le nombre de product_event
      */
     public function count($where = array())
     {
@@ -78,7 +59,7 @@ class User_model extends CI_Model
     }
 
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de product_event
      */
     public function one($id)
     {
@@ -89,7 +70,7 @@ class User_model extends CI_Model
                 ->result();
     }
     /**
-     *  Retourne une liste de user
+     *  Retourne une liste de product_event
      */
     public function all($nb = 100, $debut = 0)
     {
@@ -103,5 +84,5 @@ class User_model extends CI_Model
 }
 
 
-/* End of file user_model.php */
-/* Location: ./application/models/user_model.php */
+/* End of file product_event_model.php */
+/* Location: ./application/models/product_event_model.php */

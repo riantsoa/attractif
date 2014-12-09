@@ -1,13 +1,14 @@
 <?php
 session_start();
 include('lib/dbconnect.php');
-include('header.php');
 
 // On récupère nos variables de session
 if (isset($_SESSION['data'])) {
     $mail = $_SESSION['data']->mail;
     $password = $_SESSION['data']->pass;
 }
+
+include('header.php');
 ?>
 <!-- Page Content -->
 <div id="content">
@@ -29,16 +30,5 @@ if (isset($_SESSION['data'])) {
         }
     ?>
 </div>
-<!-- Footer -->
-<footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p>Copyright &copy; Attractif 2014</p>
-        </div>
-    </div>
-</footer>
-</div>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<?php
+include('footer.php');
