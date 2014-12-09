@@ -40,7 +40,7 @@ class Event_user extends CI_Controller {
         $this->load->model('event_user_model', 'eventUserManager');
         $this->eventUserManager->add($status, $customer, $event, $date);
 
-        redirect("event_user");
+        redirect("event_user/");
         // TODO redirect last insert $id event_user page
     }
 
@@ -59,7 +59,7 @@ class Event_user extends CI_Controller {
         $this->load->model('event_user_model', 'eventUserManager');
         $this->eventUserManager->del($id);
 
-        redirect("event_user");
+        redirect("event_user/");
     }
 
     public function one($id)

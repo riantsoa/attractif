@@ -40,7 +40,7 @@ class User extends CI_Controller {
         $this->load->model('user_model', 'userManager');
         $this->userManager->add($name, $mail, $pass, $newsletter, $alert, $admin);
 
-        redirect("user");
+        redirect("user/");
         // TODO redirect last insert $id user page
     }
 
@@ -67,7 +67,7 @@ class User extends CI_Controller {
         $this->load->model('user_model', 'userManager');
         $this->userManager->del($id);
 
-        redirect("user");
+        redirect("user/");
     }
 
     public function one($id)

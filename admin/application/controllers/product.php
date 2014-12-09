@@ -40,7 +40,7 @@ class Product extends CI_Controller {
         $this->load->model('product_model', 'productManager');
         $this->productManager->add($name, $quantity, $category, $descript , $image);
 
-        redirect("product");
+        redirect("product/");
         // TODO redirect last insert $id product page
     }
 
@@ -59,7 +59,7 @@ class Product extends CI_Controller {
         $this->load->model('product_model', 'productManager');
         $this->productManager->del($id);
 
-        redirect("product");
+        redirect("product/");
     }
 
     public function one($id)

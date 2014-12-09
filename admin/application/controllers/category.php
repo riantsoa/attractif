@@ -41,7 +41,7 @@ class Category extends CI_Controller {
         $this->load->model('category_model', 'categoryManager');
         $this->categoryManager->add($name);
 
-        redirect("category");
+        redirect("category/");
         // TODO redirect last insert $id category page
     }
 
@@ -60,7 +60,7 @@ class Category extends CI_Controller {
         $this->load->model('category_model', 'categoryManager');
         $this->categoryManager->del($id);
 
-        redirect("category");
+        redirect("category/");
     }
 
     public function one($id)

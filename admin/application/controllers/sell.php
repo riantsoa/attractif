@@ -40,7 +40,7 @@ class Sell extends CI_Controller {
         $this->load->model('sell_model', 'sellManager');
         $this->sellManager->add($user, $product, $quantity, $date, $event);
 
-        redirect("sell");
+        redirect("sell/");
         // TODO redirect last insert $id sell page
     }
 
@@ -59,7 +59,7 @@ class Sell extends CI_Controller {
         $this->load->model('sell_model', 'sellManager');
         $this->sellManager->del($id);
 
-        redirect("sell");
+        redirect("sell/");
     }
 
     public function one($id)
