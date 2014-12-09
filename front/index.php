@@ -47,23 +47,40 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="row three-area">
-            <div class="col-md-4 col-sm-6">
-                <span class="label label-default">Prochaines ventes</span>
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <span class="label label-default">Produits</span>
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <span class="label label-default">Newsletters / Alertes</span>
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
+            <div class="col-md-12 col-sm-6">
+                <?php
+                //Timer
+                $req = $bdd->prepare('SELECT * FROM event WHERE 1');
+                $req->execute();
+                $data = $req->fetch(PDO::FETCH_OBJ);
+                $redirection = 'index.php'; // quand le compteur arrive à 0
+                $secondes = strtotime($data->date) - time();
+                ?>
+                <script type="text/javascript">
+                    var temps = <?php echo $secondes; ?>;
+                    var timer = setInterval('CompteaRebour()', 1000);
+                    function CompteaRebour() {
+
+                        temps--;
+                        j = parseInt(temps);
+                        h = parseInt(temps / 3600);
+                        m = parseInt((temps % 3600) / 60);
+                        s = parseInt((temps % 3600) % 60);
+                        document.getElementById('minutes').innerHTML =
+                                (h < 10 ? "0" + h : h) + '  h :  ' +
+                                (m < 10 ? "0" + m : m) + ' mn : ' +
+                                (s < 10 ? "0" + s : s) + ' s ';
+                        if ((s == 0 && m == 0 && h == 0)) {
+                            clearInterval(timer);
+                            url = "<?php echo $redirection; ?>"
+                            Redirection(url)
+                        }
+                    }
+                    function Redirection(url) {
+                        setTimeout("window.location=url", 500)
+                    }
+                </script>
+                PROCHAINE VENTE DANS : <div id="minutes" style="font-size: 36px;"></div>
             </div>
         </div>
         <!-- Produits phares -->
