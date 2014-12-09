@@ -30,12 +30,12 @@
                     <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Mon compte</span>
                     <div id="login-box">
                         <div>Bienvenue, <?php echo $mail; ?></div>
-                        <div><a href="myinfos.php">Mes infos</a></div>
-                        <div><a href="myalerts.php">Mes alertes</a></div>
-                        <div><a href="myfav.php">Mes favoris</a></div>
-                        <div><a href="mysell.php">Mes achats / VP</a></div>
+                        <div><a href="myinfos.php"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Mes infos</a></div>
+                        <div><a href="myalerts.php"><i class="glyphicon glyphicon-bell" aria-hidden="true"></i> Mes alertes</a></div>
+                        <div><a href="myfav.php"><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Mes favoris</a></div>
+                        <div><a href="mysell.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats / VP</a></div>
                         <br />
-                        <div><a href="lib/logout.php">Me déconnecter</a></div>
+                        <div><a href="lib/logout.php"><i class="glyphicon glyphicon-remove-circle" aria-hidden="true"></i> Me déconnecter</a></div>
                     </div>
                     <?php
                 } else {
