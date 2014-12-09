@@ -17,10 +17,20 @@ class Event_user extends CI_Controller {
      * map to /index.php/welcome/<method_status>
      * @see http://codeigniter.com/event_user_guide/general/urls.html
      */
+
     public function index()
     {
+        $this->load->model('event_user_model', 'eventUserManager');
+
+        $data = array();
+
+        //  On lance une requête
+        $data['all_event_user'] = $this->eventUserManager->all();
+        $data['count_event_user'] = $this->eventUserManager->count();
+
+        //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('welcome_message');
+        $this->load->view('all_event_user', $data);
         $this->load->view('footer');
     }
 
@@ -30,7 +40,7 @@ class Event_user extends CI_Controller {
         $this->load->model('event_user_model', 'eventUserManager');
         $this->eventUserManager->add($status, $customer, $event, $date);
 
-        redirect("event_user/all");
+        redirect("event_user/");
         // TODO redirect last insert $id event_user page
     }
 
@@ -49,24 +59,7 @@ class Event_user extends CI_Controller {
         $this->load->model('event_user_model', 'eventUserManager');
         $this->eventUserManager->del($id);
 
-        redirect("event_user/all");
-    }
-
-    public function all()
-    {
-        $this->load->model('event_user_model', 'eventUserManager');
-
-        $data = array();
-
-        //  On lance une requête
-        $data['all_event_user'] = $this->eventUserManager->all();
-        $data['count_event_user'] = $this->eventUserManager->count();
-
-        //  Et on inclut une vue
-        $this->load->view('header');
-        $this->load->view('all_event_user', $data);
-        $this->load->view('footer');
-
+        redirect("event_user/");
     }
 
     public function one($id)
@@ -84,21 +77,6 @@ class Event_user extends CI_Controller {
         $this->load->view('footer');
 
     }
-
-    // public function toto()
-    // {
-        // $this->load->view('toto');
-    // }
-//
-    // public function manger($plat = '', $boisson = '')
-    // {
-        // $this->load->view('header');
-        // echo 'Voici votre menu : <br />';
-        // echo $plat . '<br />';
-        // echo $boisson . '<br />';
-        // echo 'Bon appétit !';
-        // $this->load->view('footer', array("plat"=>$plat, "boisson"=>$boisson));
-    // }
 }
 
 /* End of file welcome.php */

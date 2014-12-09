@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 09 Décembre 2014 à 09:38
+-- Généré le :  Mar 09 Décembre 2014 à 15:04
 -- Version du serveur :  5.5.40-1
 -- Version de PHP :  5.6.2-1
 
@@ -30,6 +30,19 @@ CREATE TABLE "category" (
   "name" varchar(1024) NOT NULL
 );
 
+--
+-- Contenu de la table "category"
+--
+
+SET IDENTITY_INSERT "category" ON ;
+INSERT INTO "category" ("id", "name") VALUES
+(1, 'toto'),
+(2, 'titi'),
+(3, 'toto'),
+(4, 'titi');
+
+SET IDENTITY_INSERT "category" OFF;
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +57,17 @@ CREATE TABLE "event" (
   "name" varchar(1024) NOT NULL
 );
 
+--
+-- Contenu de la table "event"
+--
+
+SET IDENTITY_INSERT "event" ON ;
+INSERT INTO "event" ("id", "date", "place", "descript", "name") VALUES
+(1, '0000-00-00 00:00:00', 'rrr', 'rrr', 'rrr'),
+(2, '0000-00-00 00:00:00', 'rrr', 'rrr', 'rrrgffff');
+
+SET IDENTITY_INSERT "event" OFF;
+
 -- --------------------------------------------------------
 
 --
@@ -53,10 +77,23 @@ CREATE TABLE "event" (
 CREATE TABLE "event_user" (
   "id" int NOT NULL,
   "status" int NOT NULL,
-  "client" int NOT NULL,
+  "customer" int NOT NULL,
   "event" int NOT NULL,
   "date" timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+--
+-- Contenu de la table "event_user"
+--
+
+SET IDENTITY_INSERT "event_user" ON ;
+INSERT INTO "event_user" ("id", "status", "customer", "event", "date") VALUES
+(1, 0, 2, 1, '2014-12-09 09:24:31'),
+(2, 2, 3, 2, '2014-12-09 09:24:31'),
+(3, 0, 2, 1, '2014-12-09 09:24:35'),
+(4, 2, 3, 2, '2014-12-09 09:24:35');
+
+SET IDENTITY_INSERT "event_user" OFF;
 
 -- --------------------------------------------------------
 
@@ -73,6 +110,17 @@ CREATE TABLE "product" (
   "image" varchar(1024) NOT NULL
 );
 
+--
+-- Contenu de la table "product"
+--
+
+SET IDENTITY_INSERT "product" ON ;
+INSERT INTO "product" ("id", "name", "quantity", "category", "descript", "image") VALUES
+(1, 'aaa', 0, 0, 'aaa', 'aaa'),
+(2, 'zzz', 0, 0, 'zzz', 'zzz');
+
+SET IDENTITY_INSERT "product" OFF;
+
 -- --------------------------------------------------------
 
 --
@@ -80,9 +128,24 @@ CREATE TABLE "product" (
 --
 
 CREATE TABLE "product_event" (
+  "id" int NOT NULL,
   "product" int NOT NULL,
   "event" int NOT NULL
 );
+
+--
+-- Contenu de la table "product_event"
+--
+
+SET IDENTITY_INSERT "product_event" ON ;
+INSERT INTO "product_event" ("id", "product", "event") VALUES
+(1, 1, 2),
+(2, 2, 1),
+(3, 1, 2),
+(4, 2, 1),
+(5, 2, 2);
+
+SET IDENTITY_INSERT "product_event" OFF;
 
 -- --------------------------------------------------------
 
@@ -99,6 +162,20 @@ CREATE TABLE "sell" (
   "event" int NOT NULL
 );
 
+--
+-- Contenu de la table "sell"
+--
+
+SET IDENTITY_INSERT "sell" ON ;
+INSERT INTO "sell" ("id", "user", "product", "quantity", "date", "event") VALUES
+(1, 1, 2, 2, '2014-12-09 09:25:43', 2),
+(2, 3, 2, 5, '2014-12-09 09:25:43', 1),
+(3, 1, 2, 2, '2014-12-09 09:25:46', 2),
+(4, 3, 2, 5, '2014-12-09 09:25:46', 1),
+(5, 1418119354, 1, 1, '0000-00-00 00:00:00', 1);
+
+SET IDENTITY_INSERT "sell" OFF;
+
 -- --------------------------------------------------------
 
 --
@@ -114,6 +191,19 @@ CREATE TABLE "user" (
   "alert" tinyint NOT NULL DEFAULT '0',
   "admin" tinyint NOT NULL DEFAULT '0'
 );
+
+--
+-- Contenu de la table "user"
+--
+
+SET IDENTITY_INSERT "user" ON ;
+INSERT INTO "user" ("id", "name", "mail", "pass", "newsletter", "alert", "admin") VALUES
+(1, 'aaaa', 'ggggg', 'ff', 1, 1, 1),
+(2, 'totouv', 'toto@toto.toto', 'toto', 1, 0, 1),
+(3, 'titijhgjhgjh', 'titiddddfsdfs@hghy', 'titi', 0, 0, 1),
+(4, 'titi', 'titi', 'titi', 0, 0, 0);
+
+SET IDENTITY_INSERT "user" OFF;
 
 --
 -- Index pour les tables exportées
@@ -141,6 +231,12 @@ ALTER TABLE "event_user"
 -- Index pour la table "product"
 --
 ALTER TABLE "product"
+ ADD PRIMARY KEY ("id");
+
+--
+-- Index pour la table "product_event"
+--
+ALTER TABLE "product_event"
  ADD PRIMARY KEY ("id");
 
 --
