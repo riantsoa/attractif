@@ -40,7 +40,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->eventManager->add($date, $place, $descript, $category, $category, $admin);
 
-        redirect("event");
+        redirect("event/");
         // TODO redirect last insert $id event page
     }
 
@@ -59,7 +59,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->eventManager->del($id);
 
-        redirect("event");
+        redirect("event/");
     }
     public function one($id)
     {

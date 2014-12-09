@@ -20,6 +20,11 @@ class Product extends CI_Controller {
 
     public function index()
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
+        $this->load->helper('form');
         $this->load->model('product_model', 'productManager');
 
         $data = array();
@@ -29,7 +34,6 @@ class Product extends CI_Controller {
         $data['count_product'] = $this->productManager->count();
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('all_product', $data);
         $this->load->view('footer');
     }
@@ -37,18 +41,29 @@ class Product extends CI_Controller {
     public function add($name, $quantity, $category, $descript , $image)
     {
         $this->load->helper('url');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
         $this->productManager->add($name, $quantity, $category, $descript , $image);
 
-        redirect("product");
+        redirect("product/");
         // TODO redirect last insert $id product page
     }
 
     public function edit($id, $name = null, $quantity = null, $category = null, $descript = null, $image = null)
     {
         $this->load->helper('url');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
-        $this->productManager->edit($id, $name, $quantity, $category, $descript, $image);
+        $this->productManager->edit(
+            $id,
+            $this->input->get_post('name'),
+            $this->input->get_post('quantity'),
+            $this->input->get_post('category'),
+            $this->input->get_post('descript'),
+            $this->input->get_post('image')
+        );
 
         redirect("product/one/" . $id);
     }
@@ -56,23 +71,41 @@ class Product extends CI_Controller {
     public function del($id)
     {
         $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
         $this->productManager->del($id);
 
-        redirect("product");
+        redirect("product/");
     }
 
     public function one($id)
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
+        $this->load->model('category_model', 'categoryManager');
 
         $data = array();
 
         //  On lance une requête
         $data['one_product'] = $this->productManager->one($id);
+        $data['all_category'] = $this->categoryManager->all();
+
+        try
+        {
+            $data["product"] = $this->config->item("product");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('one_product', $data);
         $this->load->view('footer');
 
