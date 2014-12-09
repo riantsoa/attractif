@@ -17,10 +17,20 @@ class Event extends CI_Controller {
      * map to /index.php/welcome/<method_date>
      * @see http://codeigniter.com/event_guide/general/urls.html
      */
+
     public function index()
     {
+        $this->load->model('event_model', 'eventManager');
+
+        $data = array();
+
+        //  On lance une requête
+        $data['all_event'] = $this->eventManager->all();
+        $data['count_event'] = $this->eventManager->count();
+
+        //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('welcome_message');
+        $this->load->view('all_event', $data);
         $this->load->view('footer');
     }
 
@@ -30,7 +40,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->eventManager->add($date, $place, $descript, $category, $category, $admin);
 
-        redirect("event/all");
+        redirect("event/");
         // TODO redirect last insert $id event page
     }
 
@@ -49,26 +59,8 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->eventManager->del($id);
 
-        redirect("event/all");
+        redirect("event/");
     }
-
-    public function all()
-    {
-        $this->load->model('event_model', 'eventManager');
-
-        $data = array();
-
-        //  On lance une requête
-        $data['all_event'] = $this->eventManager->all();
-        $data['count_event'] = $this->eventManager->count();
-
-        //  Et on inclut une vue
-        $this->load->view('header');
-        $this->load->view('all_event', $data);
-        $this->load->view('footer');
-
-    }
-
     public function one($id)
     {
         $this->load->model('event_model', 'eventManager');
@@ -84,21 +76,6 @@ class Event extends CI_Controller {
         $this->load->view('footer');
 
     }
-
-    // public function toto()
-    // {
-        // $this->load->view('toto');
-    // }
-//
-    // public function manger($plat = '', $boisson = '')
-    // {
-        // $this->load->view('header');
-        // echo 'Voici votre menu : <br />';
-        // echo $plat . '<br />';
-        // echo $boisson . '<br />';
-        // echo 'Bon appétit !';
-        // $this->load->view('footer', array("plat"=>$plat, "boisson"=>$boisson));
-    // }
 }
 
 /* End of file welcome.php */

@@ -17,43 +17,14 @@ class Product extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see http://codeigniter.com/product_guide/general/urls.html
      */
+
     public function index()
     {
+        $this->load->helper('url');
         $this->load->view('header');
-        $this->load->view('welcome_message');
-        $this->load->view('footer');
-    }
+        $this->load->helper('form');
 
-    public function add($name, $quantity, $category, $descript , $image)
-    {
-        $this->load->helper('url');
-        $this->load->model('product_model', 'productManager');
-        $this->productManager->add($name, $quantity, $category, $descript , $image);
-
-        redirect("product/all");
-        // TODO redirect last insert $id product page
-    }
-
-    public function edit($id, $name = null, $quantity = null, $category = null, $descript = null, $image = null)
-    {
-        $this->load->helper('url');
-        $this->load->model('product_model', 'productManager');
-        $this->productManager->edit($id, $name, $quantity, $category, $descript, $image);
-
-        redirect("product/one/" . $id);
-    }
-
-    public function del($id)
-    {
-        $this->load->helper('url');
-        $this->load->model('product_model', 'productManager');
-        $this->productManager->del($id);
-
-        redirect("product/all");
-    }
-
-    public function all()
-    {
+        $this->load->helper('form');
         $this->load->model('product_model', 'productManager');
 
         $data = array();
@@ -63,14 +34,58 @@ class Product extends CI_Controller {
         $data['count_product'] = $this->productManager->count();
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('all_product', $data);
         $this->load->view('footer');
+    }
 
+    public function add($name, $quantity, $category, $descript , $image)
+    {
+        $this->load->helper('url');
+        $this->load->helper('form');
+
+        $this->load->model('product_model', 'productManager');
+        $this->productManager->add($name, $quantity, $category, $descript , $image);
+
+        redirect("product/");
+        // TODO redirect last insert $id product page
+    }
+
+    public function edit($id, $name = null, $quantity = null, $category = null, $descript = null, $image = null)
+    {
+        $this->load->helper('url');
+        $this->load->helper('form');
+
+        $this->load->model('product_model', 'productManager');
+        $this->productManager->edit(
+            $id,
+            $this->input->get_post('name'),
+            $this->input->get_post('quantity'),
+            $this->input->get_post('category'),
+            $this->input->get_post('descript'),
+            $this->input->get_post('image')
+        );
+
+        redirect("product/one/" . $id);
+    }
+
+    public function del($id)
+    {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
+        $this->load->model('product_model', 'productManager');
+        $this->productManager->del($id);
+
+        redirect("product/");
     }
 
     public function one($id)
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
 
         $data = array();
@@ -78,27 +93,21 @@ class Product extends CI_Controller {
         //  On lance une requête
         $data['one_product'] = $this->productManager->one($id);
 
+        try
+        {
+            $data["product"] = $this->config->item("product");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('one_product', $data);
         $this->load->view('footer');
 
     }
-
-    // public function toto()
-    // {
-        // $this->load->view('toto');
-    // }
-//
-    // public function manger($plat = '', $boisson = '')
-    // {
-        // $this->load->view('header');
-        // echo 'Voici votre menu : <br />';
-        // echo $plat . '<br />';
-        // echo $boisson . '<br />';
-        // echo 'Bon appétit !';
-        // $this->load->view('footer', array("plat"=>$plat, "boisson"=>$boisson));
-    // }
 }
 
 /* End of file welcome.php */
