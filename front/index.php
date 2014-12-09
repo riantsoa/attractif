@@ -46,7 +46,7 @@ include('header.php');
 <div id="content">
     <div class="container">
         <!-- Selection 3 blocks -->
-        <div class="row three-area">
+        <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
@@ -55,6 +55,7 @@ include('header.php');
                 $data = $req->fetch(PDO::FETCH_OBJ);
                 $redirection = 'index.php'; // quand le compteur arrive à 0
                 $secondes = strtotime($data->date) - time();
+//                $secondes = strtotime($data->date)
                 ?>
                 <script type="text/javascript">
                     var temps = <?php echo $secondes; ?>;
@@ -66,10 +67,10 @@ include('header.php');
                         h = parseInt(temps / 3600);
                         m = parseInt((temps % 3600) / 60);
                         s = parseInt((temps % 3600) % 60);
-                        document.getElementById('minutes').innerHTML =
-                                (h < 10 ? "0" + h : h) + '  h :  ' +
-                                (m < 10 ? "0" + m : m) + ' mn : ' +
-                                (s < 10 ? "0" + s : s) + ' s ';
+                        document.getElementById('timer').innerHTML =
+                                ' <div class="inline"><span class="hour">' + (h < 10 ? "0" + h : h) + '</span><p>HEURES</p></div> ' +
+                                ' <div class="inline"><span class="min">' + (m < 10 ? "0" + m : m) + '</span><p>MINUTES</p></div> ' +
+                                ' <div class="inline"><span class="sec">' + (s < 10 ? "0" + s : s) + '</span><p>SECONDES</p></div> ';
                         if ((s == 0 && m == 0 && h == 0)) {
                             clearInterval(timer);
                             url = "<?php echo $redirection; ?>"
@@ -80,14 +81,16 @@ include('header.php');
                         setTimeout("window.location=url", 500)
                     }
                 </script>
-                PROCHAINE VENTE DANS : <div id="minutes" style="font-size: 36px;"></div>
+                <h2>PROCHAINE VENTE DANS </h2>
+                <div id="timer"></div>
+                <div class="participate green">
+                    <a href="#">PARTICIPER</a>
+                </div>
             </div>
         </div>
         <!-- Produits phares -->
         <div class="row highlight-products">
-            <!--<div class="col-lg-12">
-                <h2 class="page-header">Nos produits phares</h2>
-            </div>-->
+                <h2>Nos produits phares</h2>
             <div class="best-products">
                 <div class="col-md-6">
                     <img class="img-responsive" src="http://placehold.it/700x450" alt="">
