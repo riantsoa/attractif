@@ -87,11 +87,13 @@ class Product extends CI_Controller {
         $this->load->helper('form');
 
         $this->load->model('product_model', 'productManager');
+        $this->load->model('category_model', 'categoryManager');
 
         $data = array();
 
         //  On lance une requête
         $data['one_product'] = $this->productManager->one($id);
+        $data['all_category'] = $this->categoryManager->all();
 
         try
         {

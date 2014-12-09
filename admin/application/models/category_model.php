@@ -12,7 +12,7 @@ class Category_model extends CI_Model
         //  Ces données seront automatiquement échappées
         $date = time();
         return $this->db
-            ->set('date',  $name)
+            ->set('name',  $name)
             ->insert($this->table);
         ;
 
