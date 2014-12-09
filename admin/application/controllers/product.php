@@ -18,13 +18,12 @@ class Product extends CI_Controller {
      * @see http://codeigniter.com/product_guide/general/urls.html
      */
 
-    function __construct() {
+    public function index()
+    {
         $this->load->helper('url');
         $this->load->view('header');
         $this->load->helper('form');
-    }
-    public function index()
-    {
+
         $this->load->helper('form');
         $this->load->model('product_model', 'productManager');
 
@@ -35,7 +34,6 @@ class Product extends CI_Controller {
         $data['count_product'] = $this->productManager->count();
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('all_product', $data);
         $this->load->view('footer');
     }
@@ -43,6 +41,8 @@ class Product extends CI_Controller {
     public function add($name, $quantity, $category, $descript , $image)
     {
         $this->load->helper('url');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
         $this->productManager->add($name, $quantity, $category, $descript , $image);
 
@@ -53,6 +53,8 @@ class Product extends CI_Controller {
     public function edit($id, $name = null, $quantity = null, $category = null, $descript = null, $image = null)
     {
         $this->load->helper('url');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
         $this->productManager->edit(
             $id,
@@ -69,6 +71,9 @@ class Product extends CI_Controller {
     public function del($id)
     {
         $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
         $this->productManager->del($id);
 
@@ -77,6 +82,10 @@ class Product extends CI_Controller {
 
     public function one($id)
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+
         $this->load->model('product_model', 'productManager');
 
         $data = array();
@@ -84,8 +93,17 @@ class Product extends CI_Controller {
         //  On lance une requête
         $data['one_product'] = $this->productManager->one($id);
 
+        try
+        {
+            $data["product"] = $this->config->item("product");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('one_product', $data);
         $this->load->view('footer');
 
