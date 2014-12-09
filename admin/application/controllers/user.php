@@ -2,6 +2,11 @@
 
 class User extends CI_Controller {
 
+    function __construct() {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+    }
     /**
      * Index Page for this controller.
      *
@@ -19,7 +24,6 @@ class User extends CI_Controller {
      */
     public function index()
     {
-        $this->load->helper('form');
         $this->load->model('user_model', 'userManager');
 
         $data = array();
@@ -36,7 +40,6 @@ class User extends CI_Controller {
     }
     public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
     {
-        $this->load->helper('url');
         $this->load->model('user_model', 'userManager');
         $this->userManager->add($name, $mail, $pass, $newsletter, $alert, $admin);
 
@@ -46,9 +49,8 @@ class User extends CI_Controller {
 
     public function edit($id)
     {
-        $this->load->helper('url');
         $this->load->model('user_model', 'userManager');
-            $this->userManager->edit(
+        $this->userManager->edit(
             $id,
             $this->input->get_post('name'),
             $this->input->get_post('mail'),
@@ -63,7 +65,6 @@ class User extends CI_Controller {
 
     public function del($id)
     {
-        $this->load->helper('url');
         $this->load->model('user_model', 'userManager');
         $this->userManager->del($id);
 
@@ -72,8 +73,6 @@ class User extends CI_Controller {
 
     public function one($id)
     {
-        $this->load->view('header');
-        $this->load->helper('form');
         $this->load->model('user_model', 'userManager');
 
         $data = array();

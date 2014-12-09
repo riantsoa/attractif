@@ -18,8 +18,14 @@ class Product extends CI_Controller {
      * @see http://codeigniter.com/product_guide/general/urls.html
      */
 
+    function __construct() {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
+    }
     public function index()
     {
+        $this->load->helper('form');
         $this->load->model('product_model', 'productManager');
 
         $data = array();
@@ -48,7 +54,14 @@ class Product extends CI_Controller {
     {
         $this->load->helper('url');
         $this->load->model('product_model', 'productManager');
-        $this->productManager->edit($id, $name, $quantity, $category, $descript, $image);
+        $this->productManager->edit(
+            $id,
+            $this->input->get_post('name'),
+            $this->input->get_post('quantity'),
+            $this->input->get_post('category'),
+            $this->input->get_post('descript'),
+            $this->input->get_post('image')
+        );
 
         redirect("product/one/" . $id);
     }

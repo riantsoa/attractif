@@ -392,3 +392,31 @@ $config['user'] =  array(
                      'rules' => 'trim|required|xss_clean'
                      ),
            );
+
+$config['product'] =  array(
+           'name' => array(
+                     'field' => 'name',
+                     'label' => 'Name',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'quantity' => array(
+                     'field' => 'quantity',
+                     'label' => 'Quantity',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'category' => array(
+                     'field' => 'category',
+                     'label' => 'Category',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'descript' => array(
+                     'field' => 'descript',
+                     'label' => 'Descript',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'image' => array(
+                     'field' => 'image',
+                     'label' => 'Image',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
