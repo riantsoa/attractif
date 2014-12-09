@@ -29,7 +29,19 @@ class Product extends CI_Controller {
 
         $data = array();
 
+        try
+        {
+            $data["product"] = $this->config->item("product");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  On lance une requête
+        $this->load->model('category_model', 'categoryManager');
+        $data['all_category'] = $this->categoryManager->all();
         $data['all_product'] = $this->productManager->all();
         $data['count_product'] = $this->productManager->count();
 
@@ -44,9 +56,15 @@ class Product extends CI_Controller {
         $this->load->helper('form');
 
         $this->load->model('product_model', 'productManager');
-        $this->productManager->add($name, $quantity, $category, $descript , $image);
+        $this->productManager->add(
+            $this->input->get_post('name'),
+            $this->input->get_post('quantity'),
+            $this->input->get_post('category'),
+            $this->input->get_post('descript'),
+            $this->input->get_post('image')
+        );
 
-        redirect("product/");
+        redirect("product/one/index");
         // TODO redirect last insert $id product page
     }
 
@@ -77,7 +95,7 @@ class Product extends CI_Controller {
         $this->load->model('product_model', 'productManager');
         $this->productManager->del($id);
 
-        redirect("product/");
+        redirect("product/index");
     }
 
     public function one($id)

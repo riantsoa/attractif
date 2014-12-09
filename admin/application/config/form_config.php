@@ -83,4 +83,81 @@ $config['event'] =  array(
                      ),
            );
 
+$config['category'] =  array(
+           'name' => array(
+                     'field' => 'name',
+                     'label' => 'Name',
+                     'rules' => 'trim|required|xss_clean'
+                     )
+           );
+
+$config['event_user'] =  array(
+           'status' => array(
+                     'field' => 'status',
+                     'label' => 'Status',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'customer' => array(
+                     'field' => 'customer',
+                     'label' => 'Customer',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'event' => array(
+                     'field' => 'event',
+                     'label' => 'Event',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'date' => array(
+                     'field' => 'date',
+                     'label' => 'Date',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
+
+$config['product_event'] =  array(
+           'product' => array(
+                     'field' => 'product',
+                     'label' => 'Product',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'event' => array(
+                     'field' => 'event',
+                     'label' => 'Event',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
+
+$config['sell'] =  array(
+           'user' => array(
+                     'field' => 'user',
+                     'label' => 'User',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'product' => array(
+                     'field' => 'product',
+                     'label' => 'Product',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'quantity' => array(
+                     'field' => 'quantity',
+                     'label' => 'Quantity',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'date' => array(
+                     'field' => 'date',
+                     'label' => 'Date',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'event' => array(
+                     'field' => 'event',
+                     'label' => 'Event',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'product' => array(
+                     'field' => 'product',
+                     'label' => 'Product',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
+
 ?>

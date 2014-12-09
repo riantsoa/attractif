@@ -7,7 +7,7 @@ class Event_model extends CI_Model
     /**
      *  Ajoute un event
      */
-    public function add($date, $place, $descript, $name, $category)
+    public function add($date, $place, $descript, $name)
     {
         //  Ces données seront automatiquement échappées
         // $date = time();
@@ -16,7 +16,6 @@ class Event_model extends CI_Model
             ->set('place',   $place)
             ->set('descript', $descript)
             ->set('name', $name)
-            ->set('category', $category)
             ->insert($this->table);
         ;
 

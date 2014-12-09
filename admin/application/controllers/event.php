@@ -27,6 +27,16 @@ class Event extends CI_Controller {
 
         $data = array();
 
+        try
+        {
+            $data["event"] = $this->config->item("event");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  On lance une requête
         $data['all_event'] = $this->eventManager->all();
         $data['count_event'] = $this->eventManager->count();
@@ -42,9 +52,14 @@ class Event extends CI_Controller {
         $this->load->view('header');
         $this->load->helper('form');
         $this->load->model('event_model', 'eventManager');
-        $this->eventManager->add($date, $place, $descript, $name);
+        $this->eventManager->add(
+            $this->input->get_post('date'),
+            $this->input->get_post('place'),
+            $this->input->get_post('descript'),
+            $this->input->get_post('name')
+        );
 
-        redirect("event/");
+        redirect("event/index");
         // TODO redirect last insert $id event page
     }
 
@@ -73,7 +88,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->eventManager->del($id);
 
-        redirect("event/");
+        redirect("event//index");
     }
     public function one($id)
     {
