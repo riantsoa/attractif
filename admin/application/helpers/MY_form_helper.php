@@ -37,6 +37,20 @@ if ( ! function_exists('form_email'))
     }
 }
 
+if ( ! function_exists('form_datetime'))
+{
+    function form_datetime($data = '', $value = '', $extra = '')
+    {
+        if ( ! is_array($data))
+        {
+            $data = array('name' => $data);
+        }
+
+        $data['type'] = 'datetime';
+        return form_input($data, $value, $extra);
+    }
+}
+
 // ------------------------------------------------------------------------
 
 /**

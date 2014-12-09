@@ -42,9 +42,12 @@ body {
 #header #login #login-box.active {
     height: 180px;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
+    background-color: rgba(0,167,157,0.8);
+    color: #fff;
 }
 #header #login #login-box form {
     padding: 5px;
+    color: #111;
 }
 #header #login #login-box input {
     margin: 5px 0;
@@ -58,7 +61,7 @@ body {
 * NAV / SLIDER
 */
 .navbar {
-    background: none repeat scroll 0 0 #c8dbd9;
+    background: none repeat scroll 0 0 #7fcab3;
     border-radius: 0;
     border: none;
     min-height: 50px;
@@ -70,13 +73,14 @@ body {
     width: 60%;
 }
 .navbar .container .navbar-nav li a {
+    font-weight: bold;
     color: #44716f;
     padding-bottom: 3px;
     text-transform: uppercase;
     transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;
 }
 .navbar .container .navbar-nav li a:hover {
-    color: #00a79d;
+    /*color: #00a79d;*/
     transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;
 }
 .navbar .container .navbar-nav li .nav-hover {
@@ -163,12 +167,47 @@ header.carousel {
 }
 /* HIGHTLIGHT */
 #content .container .highlight-products {
-    box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.25) inset;-webkit-box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.25) inset;-moz-box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.25) inset;-o-box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-webkit-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-moz-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-o-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;
     padding-top: 0px;
     background: #deeaea;
 }
 #content .container .highlight-products h2 {
-    
+    padding: 15px 5px;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    width: 290px;
+    box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-webkit-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-moz-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-o-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;
+}
+#content .container .highlight-products .best-products button {
+    width: 45px;
+    height: 45px;
+    vertical-align: middle;
+}
+#content .container .highlight-products .best-products .prev {
+    background: url("../img/arrows.jpg") no-repeat scroll 0px -2px rgba(0, 0, 0, 0);
+}
+#content .container .highlight-products .best-products .next {
+    background: url("../img/arrows.jpg") no-repeat scroll 0px -46px rgba(0, 0, 0, 0);
+}
+#content .container .highlight-products .best-products #carousel {
+    margin: 0 auto;
+    width: 950px;
+}
+#content .container .highlight-products .mfcarousel {
+    margin: 25px 0;
+    vertical-align: middle;
+    width: 850px !important;
+}
+#content .container .highlight-products .mfcarousel li {
+    margin: 0 10px;
+}
+#content .container .highlight-products .mfcarousel img {
+    width: 150px;
+    height: 150px;
 }
 /*
 * FOOTER
@@ -214,4 +253,9 @@ footer {
 }
 .col-lg-12 {
     text-align: center;
+}
+
+#login-box a {
+    text-decoration: none;
+    color: #fff;
 }
