@@ -34,11 +34,19 @@ class User extends CI_Controller {
         // TODO redirect last insert $id user page
     }
 
-    public function edit($id, $name = null, $mail = null, $pass = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id)
     {
         $this->load->helper('url');
         $this->load->model('user_model', 'userManager');
-        $this->userManager->edit($id, $name, $mail, $pass, $newsletter, $alert, $admin);
+            $this->userManager->edit(
+            $id,
+            $this->input->get_post('name'),
+            $this->input->get_post('mail'),
+            // $this->input->get_post('pass'),
+            $this->input->get_post('newsletter'),
+            $this->input->get_post('alert'),
+            $this->input->get_post('admin')
+        );
 
         redirect("user/one/" . $id);
     }
@@ -54,6 +62,7 @@ class User extends CI_Controller {
 
     public function all()
     {
+        $this->load->helper('form');
         $this->load->model('user_model', 'userManager');
 
         $data = array();
@@ -71,6 +80,8 @@ class User extends CI_Controller {
 
     public function one($id)
     {
+        $this->load->view('header');
+        $this->load->helper('form');
         $this->load->model('user_model', 'userManager');
 
         $data = array();
@@ -78,8 +89,17 @@ class User extends CI_Controller {
         //  On lance une requête
         $data['one_user'] = $this->userManager->one($id);
 
+        try
+        {
+            $data["user"] = $this->config->item("user");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('one_user', $data);
         $this->load->view('footer');
 

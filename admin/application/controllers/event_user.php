@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Event extends CI_Controller {
+class Event_user extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -14,8 +14,8 @@ class Event extends CI_Controller {
      * config/routes.php, it's displayed at http://example.com/
      *
      * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_date>
-     * @see http://codeigniter.com/event_guide/general/urls.html
+     * map to /index.php/welcome/<method_status>
+     * @see http://codeigniter.com/event_user_guide/general/urls.html
      */
     public function index()
     {
@@ -24,63 +24,63 @@ class Event extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function add($date, $place, $descript, $category = 0, $category = 0, $admin = 0)
+    public function add($status, $customer, $event, $date)
     {
         $this->load->helper('url');
-        $this->load->model('event_model', 'eventManager');
-        $this->eventManager->add($date, $place, $descript, $category, $category, $admin);
+        $this->load->model('event_user_model', 'eventUserManager');
+        $this->eventUserManager->add($status, $customer, $event, $date);
 
-        redirect("event/all");
-        // TODO redirect last insert $id event page
+        redirect("event_user/all");
+        // TODO redirect last insert $id event_user page
     }
 
-    public function edit($id, $date, $place, $descript, $category, $category, $admin)
+    public function edit($id, $status, $customer, $event, $date)
     {
         $this->load->helper('url');
-        $this->load->model('event_model', 'eventManager');
-        $this->eventManager->edit($id, $date, $place, $descript, $category, $category, $admin);
+        $this->load->model('event_user_model', 'eventUserManager');
+        $this->eventUserManager->edit($id, $status, $customer, $event, $date);
 
-        redirect("event/one/" . $id);
+        redirect("event_user/one/" . $id);
     }
 
     public function del($id)
     {
         $this->load->helper('url');
-        $this->load->model('event_model', 'eventManager');
-        $this->eventManager->del($id);
+        $this->load->model('event_user_model', 'eventUserManager');
+        $this->eventUserManager->del($id);
 
-        redirect("event/all");
+        redirect("event_user/all");
     }
 
     public function all()
     {
-        $this->load->model('event_model', 'eventManager');
+        $this->load->model('event_user_model', 'eventUserManager');
 
         $data = array();
 
         //  On lance une requête
-        $data['all_event'] = $this->eventManager->all();
-        $data['count_event'] = $this->eventManager->count();
+        $data['all_event_user'] = $this->eventUserManager->all();
+        $data['count_event_user'] = $this->eventUserManager->count();
 
         //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('all_event', $data);
+        $this->load->view('all_event_user', $data);
         $this->load->view('footer');
 
     }
 
     public function one($id)
     {
-        $this->load->model('event_model', 'eventManager');
+        $this->load->model('event_user_model', 'eventUserManager');
 
         $data = array();
 
         //  On lance une requête
-        $data['one_event'] = $this->eventManager->one($id);
+        $data['one_event_user'] = $this->eventUserManager->one($id);
 
         //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('one_event', $data);
+        $this->load->view('one_event_user', $data);
         $this->load->view('footer');
 
     }
