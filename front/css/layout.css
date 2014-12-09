@@ -10,16 +10,13 @@ body {
 */
 #header {
     display: block;
-    height: 250px;
+    height: 80px;
     margin: 0 auto;
     width: 980px;
-    padding-top: 15px
-}
-.header #search {
-
+    padding-top: 5px
 }
 #header #logo {
-    padding-top: 25px;
+    padding-top: 15px;
 }
 #header #logo img {
     margin: 0 auto;
@@ -33,16 +30,17 @@ body {
 }
 #header #login #login-box {
     height: 0;
-    left: 120px;
     overflow: hidden;
-    position: relative;
-    top: 15px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
     width: 180px;
+    z-index: 3;
+    background: #dae8e8;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 #header #login #login-box.active {
     height: 180px;
-    background: #dae8e8;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 #header #login #login-box form {
@@ -60,25 +58,26 @@ body {
 * NAV / SLIDER
 */
 .navbar {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7) !important;
+    background: none repeat scroll 0 0 #c8dbd9;
+    border-radius: 0;
     border: none;
     min-height: 50px;
-    position: relative;
-    top: 50px;
-    z-index: 3;
-    margin: 0;
+    margin: 10px 0 0 0;
 }
 .navbar .container .navbar-nav {
     float: none;
     margin: 0 auto;
-    width: 42.5%;
+    width: 60%;
 }
 .navbar .container .navbar-nav li a {
-    color: #64e7df;
+    color: #44716f;
     padding-bottom: 3px;
+    text-transform: uppercase;
+    transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;
 }
 .navbar .container .navbar-nav li a:hover {
-    color: #17feee;
+    color: #00a79d;
+    transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;
 }
 .navbar .container .navbar-nav li .nav-hover {
     border-bottom: 3px solid;
@@ -87,10 +86,21 @@ body {
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 .navbar .container .navbar-nav li:hover .nav-hover {
-    border-bottom: 3px solid #17feee;
+    border-bottom: 3px solid #00a79d;
     margin: 0 0 10px 3%;
     width: 95%;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
+}
+header.carousel {
+    background: #47d9c9;
+    height: 70%;
+}
+.carousel-inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+.carousel-control.left, .carousel-control.right {
+    background: none;
 }
 /*
 * CONTENT
@@ -113,6 +123,11 @@ body {
 /*
 * FOOTER
 */
+footer {
+    margin: 0 auto;
+    width: 1140px;
+    box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);-moz-box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);-webkit-box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);-o-box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);
+}
 .main-footer {
     height: 150px;
     width: 100%;
@@ -120,7 +135,6 @@ body {
 }
 
 .row {
-    box-shadow: 0 -3px 41px 0 rgba(0, 0, 0, 0.5);
     padding: 25px;
 }
 
