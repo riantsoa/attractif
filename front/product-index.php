@@ -21,6 +21,7 @@ $data = $req->setFetchMode(PDO::FETCH_OBJ);
             while ($enregistrement = $req->fetch()) {
                 echo $enregistrement->name;
                 echo '<img src="img/' . $enregistrement->image . '" />';
+                echo $enregistrement->descript;
             }
             ?>
         </div>
