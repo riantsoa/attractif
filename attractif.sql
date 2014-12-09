@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Lun 08 Décembre 2014 à 11:43
+-- Généré le :  Mar 09 Décembre 2014 à 09:38
 -- Version du serveur :  5.5.40-1
 -- Version de PHP :  5.6.2-1
 
@@ -42,9 +42,8 @@ CREATE TABLE IF NOT EXISTS `event` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `place` varchar(1024) NOT NULL,
   `descript` varchar(1024) NOT NULL,
-  `name` varchar(1024) NOT NULL,
-  `category` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `name` varchar(1024) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -73,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `category` int(11) NOT NULL,
   `descript` varchar(1024) NOT NULL,
   `image` varchar(1024) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -97,7 +96,8 @@ CREATE TABLE IF NOT EXISTS `sell` (
   `user` int(11) NOT NULL,
   `product` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `event` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `newsletter` tinyint(1) NOT NULL DEFAULT '0',
   `alert` tinyint(1) NOT NULL DEFAULT '0',
   `admin` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Index pour les tables exportées
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Index pour la table `category`
 --
 ALTER TABLE `category`
- ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Index pour la table `event`
@@ -169,7 +169,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `event`
 --
 ALTER TABLE `event`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `event_user`
 --
@@ -179,7 +179,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `sell`
 --
@@ -189,7 +189,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
