@@ -10,8 +10,10 @@ $req->execute(array(
 $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
 while ($enregistrement = $req->fetch()) {
-    echo $enregistrement->name;
-    echo '<img src="img/'.$enregistrement->image. '" />';
+    echo '<h4>'.$enregistrement->name. '</h4>';
+    echo '<img src="img/'.$enregistrement->image. '" />'; echo '<p>'.$enregistrement->descript. '</p>';
+
+
 
 }
 
