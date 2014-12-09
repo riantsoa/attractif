@@ -96,9 +96,10 @@ body {
 * CONTENT
 */
 #content {
-    background: url('../img/bg.jpg') repeat;
+    background: #47D9C9;
 }
 #content .container {
+    box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-o-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);
     background: #fff;
 }
 #content .container .three-area {
@@ -117,6 +118,13 @@ body {
     width: 100%;
     background-color: grey;
 }
+
+.row {
+    box-shadow: 0 -3px 41px 0 rgba(0, 0, 0, 0.5);
+    padding: 25px;
+}
+
+
 /*
 * PROPS
 */

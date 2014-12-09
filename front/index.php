@@ -44,10 +44,11 @@ if (isset($_SESSION['data'])) {
                     <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Mon compte</span>
                     <div id="login-box">
                         <div>Bienvenue, <?php echo $mail; ?></div>
-                        <div>Mes infos</div>
-                        <div>Mes alertes</div>
-                        <div>Mes favoris</div>
-                        <div>Mes achats / VP</div>
+                        <div><a href="myinfos.php">Mes infos</a></div>
+                        <div><a href="myalerts.php">Mes alertes</a></div>
+                        <div><a href="myfav.php">Mes favoris</a></div>
+                        <div><a href="mysell.php">Mes achats / VP</a></div>
+                        <br />
                         <div><a href="lib/logout.php">Me déconnecter</a></div>
                     </div>
                     <?php
@@ -85,7 +86,7 @@ if (isset($_SESSION['data'])) {
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="">Prochaines ventes</a>
+                            <a href="events.php">Prochaines ventes</a>
                             <div class="nav-hover"></div>
                         </li>
                         <li>
