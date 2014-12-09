@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb49df0e-0b97-49c8-b182-e35aacf6398d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/application/views/user/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/application/controllers/user_ctrl.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/application/controllers/user.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/application/config/config.php" afterPath="$PROJECT_DIR$/admin/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bb49df0e-0b97-49c8-b182-e35aacf6398d" name="Default" comment="" />
     <ignored path="attractif.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,28 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/template_admin_files/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="938" column="0" selection-start="51606" selection-end="52261" vertical-scroll-proportion="-9.105263" vertical-offset="16365" max-vertical-offset="16992">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="15" selection-start="8065" selection-end="8065" vertical-scroll-proportion="0.25945947" vertical-offset="3726" max-vertical-offset="7200">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/application/views/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="57" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.20689656" vertical-offset="0" max-vertical-offset="594">
+            <state line="1" column="57" selection-start="64" selection-end="64" vertical-scroll-proportion="0.03345725" vertical-offset="0" max-vertical-offset="594">
               <folding />
             </state>
           </provider>
@@ -565,20 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/template_admin_files/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="938" column="0" selection-start="51606" selection-end="52261" vertical-scroll-proportion="-9.105263" vertical-offset="16365" max-vertical-offset="16992">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/application/views/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="57" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.20689656" vertical-offset="0" max-vertical-offset="594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/application/views/body_admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="540" column="0" selection-start="24279" selection-end="24279" vertical-scroll-proportion="-92.25301" vertical-offset="2063" max-vertical-offset="9828">
@@ -644,7 +606,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="15" selection-start="8065" selection-end="8065" vertical-scroll-proportion="0.25945947" vertical-offset="3726" max-vertical-offset="7200">
+        <state line="215" column="15" selection-start="8065" selection-end="8065" vertical-scroll-proportion="2.0108109" vertical-offset="2754" max-vertical-offset="7200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/template_admin_files/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="938" column="0" selection-start="51606" selection-end="52261" vertical-scroll-proportion="0.9351351" vertical-offset="16365" max-vertical-offset="16992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/application/views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="57" selection-start="64" selection-end="64" vertical-scroll-proportion="0.03345725" vertical-offset="0" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
