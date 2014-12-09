@@ -360,35 +360,4 @@ $config['proxy_ips'] = '';
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
-$config['user'] =  array(
-           'name' => array(
-                     'field' => 'name',
-                     'label' => 'Name',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           'mail' => array(
-                     'field' => 'mail',
-                     'label' => 'Mail',
-                     'rules' => 'trim|required|valid_email'
-                     ),
-           // 'pass' => array(
-                     // 'field' => 'pass',
-                     // 'label' => 'Pass',
-                     // 'rules' => 'trim|required|xss_clean'
-                     // ),
-           'newsletter' => array(
-                     'field' => 'newsletter',
-                     'label' => 'Newsletter',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           'alert' => array(
-                     'field' => 'alert',
-                     'label' => 'Alert',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           'admin' => array(
-                     'field' => 'admin',
-                     'label' => 'Admin',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           );
+require("form_config.php");
