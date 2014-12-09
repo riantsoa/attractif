@@ -8,6 +8,7 @@ $req->execute(array(
     'id' => $_GET['id']
 ));
 $data = $req->setFetchMode(PDO::FETCH_OBJ);
+
 ?>
 <!-- Page Content -->
 <div id="content">
@@ -20,6 +21,7 @@ $data = $req->setFetchMode(PDO::FETCH_OBJ);
             while ($enregistrement = $req->fetch()) {
                 echo $enregistrement->name;
                 echo '<img src="img/' . $enregistrement->image . '" />';
+                echo $enregistrement->descript;
             }
             ?>
         </div>

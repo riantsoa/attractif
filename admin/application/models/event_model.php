@@ -10,7 +10,7 @@ class Event_model extends CI_Model
     public function add($date, $place, $descript, $name, $category)
     {
         //  Ces données seront automatiquement échappées
-        $date = time();
+        // $date = time();
         return $this->db
             ->set('date',  $date)
             ->set('place',   $place)
@@ -27,9 +27,9 @@ class Event_model extends CI_Model
     /**
      *  Édite une event déjà existante
      */
-    public function edit($id, $date = null, $place = null, $descript = null, $name = null, $category = null, $admin = null)
+    public function edit($id, $date = null, $place = null, $descript = null, $name = null)
     {
-        $date = time();
+        // $date = time();
         if($date != null)
         {
             $this->db->set('date', $date);
@@ -45,10 +45,6 @@ class Event_model extends CI_Model
         if($name != null)
         {
             $this->db->set('name', $name);
-        }
-        if($category != null)
-        {
-            $this->db->set('category', $category);
         }
         //  La condition
         $this->db->where('id', (int) $id);
