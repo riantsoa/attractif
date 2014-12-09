@@ -1,16 +1,8 @@
 <?php
 session_start();
 include('lib/dbconnect.php');
-
-//var_dump($_SESSION['data']);
-// On récupère nos variables de session
-if (isset($_SESSION['data'])) {
-    $mail = $_SESSION['data']->mail;
-    $password = $_SESSION['data']->pass;
-}
 include('header.php');
 ?>
-
 <!-- Slider -->
 <header id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">

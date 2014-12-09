@@ -1,6 +1,6 @@
 <?php
 // Connection au serveur
-$dns = 'mysql:host=localhost;dbname=attractif';
+$dns = 'mysql:host=localhost;dbname=attractif;charset=utf8';
 $utilisateur = 'root';
 $motDePasse = '';
 

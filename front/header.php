@@ -1,3 +1,12 @@
+<?php
+// On récupère nos variables de session
+if (isset($_SESSION['data'])) {
+    $email = $_SESSION['data']->email;
+    $password = $_SESSION['data']->password;
+    $id = $_SESSION['data']->id;
+}
+header('Content-Type: text/html; charset=utf-8');
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -27,11 +36,11 @@
             <div id="login" class="inline col-md-8 col-sm-6">
                 <?php
                 // Si non-connecté => Login / Sinon => Mon compte
-                if (isset($password) && isset($mail)) {
+                if (isset($password) && isset($email)) {
                     ?>
                     <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Mon compte</span>
                     <div id="login-box">
-                        <div>Bienvenue, <?php echo $mail; ?></div>
+                        <div>Bienvenue, <?php echo $email; ?></div>
                         <div><a href="myinfos.php"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Mes infos</a></div>
                         <div><a href="myalerts.php"><i class="glyphicon glyphicon-bell" aria-hidden="true"></i> Mes alertes</a></div>
                         <div><a href="myfav.php"><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Mes favoris</a></div>
@@ -45,9 +54,9 @@
                     <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
                     <div id="login-box">
                         <form action="lib/login.php" method="post">
-                            <input type="text" placeholder="E-mail" name="mail">
+                            <input type="text" placeholder="E-mail" name="email">
                             <br />
-                            <input type="password" placeholder="Mot de passe" name="pass"><br />
+                            <input type="password" placeholder="Mot de passe" name="password"><br />
                             <input type="submit" value="Connexion">
                         </form>
                         <div>

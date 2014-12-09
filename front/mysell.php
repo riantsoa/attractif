@@ -3,27 +3,17 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 
-// On récupère nos variables de session
-if (isset($_SESSION['data'])) {
-    $mail = $_SESSION['data']->mail;
-    $password = $_SESSION['data']->pass;
-    $id = $_SESSION['data']->id;
-}
-
-$nb = $bdd->prepare('SELECT COUNT(id) AS count FROM sell WHERE user = :id_user ');
+$nb = $bdd->prepare('SELECT COUNT(id) AS count FROM user_sales WHERE user_id = :id');
 $nb->execute(array(
-    'id_user' => $id
+    'id' => $id
 ));
 $nb->setFetchMode(PDO::FETCH_OBJ);
 
 while ($enregistrement = $nb->fetch()) {
     // Affichage des enregistrements
-    echo '<h4>', 'Votre avez effectué : ' .$enregistrement->count. ' achats jusqu\'à aujourd\'hui. </h4>';
+    echo '<h4>', 'Votre avez effectué : ' . $enregistrement->count . ' achats jusqu\'à aujourd\'hui. </h4>';
     echo '<br />';
 }
-
-
-
 
 $req = $bdd->prepare('SELECT p.name, e.name AS eventname
                       FROM product AS p
@@ -37,5 +27,5 @@ $req->setFetchMode(PDO::FETCH_OBJ);
 
 while ($enregistrement = $req->fetch()) {
     // Affichage des enregistrements
-    echo '<h5>', 'Vous avez acheté : ' .$enregistrement->name. ' lors de l\'évènement ' .$enregistrement->eventname. '</h5>';
+    echo '<h5>', 'Vous avez acheté : ' . $enregistrement->name . ' lors de l\'évènement ' . $enregistrement->eventname . '</h5>';
 }
