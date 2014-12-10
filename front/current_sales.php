@@ -7,6 +7,9 @@ include('header.php');
 <div id="content">
     <div class="container">
         <!-- Selection 3 blocks -->
+        <div class="col-lg-12">
+                <h2 class="page-header">Ventes en cours</h2>
+            </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <?php
@@ -27,8 +30,6 @@ include('header.php');
                 ));
                 $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
-                echo '<h2>VENTES EN COURS</h2>';
-
                 while ($enregistrement = $req->fetch()) {
 //                    affiche le timer ('à voir plus tard')
 //                    $secondes = time() - strtotime($enregistrement->date);
@@ -39,11 +40,6 @@ include('header.php');
                 }
 //                $secondes = strtotime($hplus3) - time();
                 ?>
-                <!--                <h2>PROCHAINE VENTE DANS </h2>
-                                                <div id="timer"></div>
-                                                <div class="participate green">
-                                                    <a href="#">PARTICIPER</a>
-                                                </div>-->
             </div>
         </div>
         <?php
