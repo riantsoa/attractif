@@ -31,11 +31,11 @@ foreach ($user as $key=>$value)
     }
     elseif ($user[$key]["field"] == 'mail')
     {
-        echo form_email($user[$key]["field"], $one_user[0]->$key);
+        echo form_email($user[$key]["field"], $one_user[0]->$key, 'class="form-control input-sm"');
     }
     else
     {
-        echo form_input($user[$key]["field"], $one_user[0]->$key);
+        echo form_input($user[$key]["field"], $one_user[0]->$key, 'class="form-control input-sm"');
     }
     echo '<br><br>';
 }
@@ -44,13 +44,13 @@ foreach ($user as $key=>$value)
 
 
 
-echo form_submit('submit', 'Submit');
+echo form_submit('submit', 'Envoyer');
 echo form_close();
 
 ?>
-<pre>
+
 <?php
-var_dump($one_user[0]);
+//var_dump($one_user[0]);
 ?>
 </pre>
 

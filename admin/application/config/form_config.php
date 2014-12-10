@@ -63,7 +63,7 @@ $config['event'] =  array(
                      ),
            'place' => array(
                      'field' => 'place',
-                     'label' => 'Place',
+                     'label' => 'Lieu',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'descript' => array(
@@ -99,7 +99,7 @@ $config['event_user'] =  array(
                      ),
            'event' => array(
                      'field' => 'event',
-                     'label' => '   ',
+                     'label' => 'Événement',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'date' => array(
