@@ -29,37 +29,37 @@ foreach ($sale as $key=>$value)
     echo form_label($sale[$key]["label"], $sale[$key]["field"]) . '<br>';
     if ($sale[$key]["field"] == 'date')
     {
-        echo form_datetime('date', $one_sale[0]->$key, "id='datetimepicker'");
+        echo form_datetime('date', $one_sale[0]->$key, 'class="form-control input-sm"');
     }
     elseif ($sale[$key]["field"] == 'product')
     {
-        echo form_dropdown('product', $products, $one_sale[0]->$key);
+        echo form_dropdown('product', $products, $one_sale[0]->$key, 'class="form-control input-sm"');
     }
     elseif ($sale[$key]["field"] == 'user')
     {
-        echo form_dropdown('user', $users, $one_sale[0]->$key);
+        echo form_dropdown('user', $users, $one_sale[0]->$key, 'class="form-control input-sm"');
     }
     elseif ($sale[$key]["field"] == 'event')
     {
-        echo form_dropdown('user', $events, '');
+        echo form_dropdown('event', $events, $one_sale[0]->$key, 'class="form-control input-sm"');
     }
     else
     {
-        echo form_input($sale[$key]["field"], $one_sale[0]->$key);
+        echo form_input($sale[$key]["field"], $one_sale[0]->$key, 'class="form-control input-sm"');
 
     }
     // echo form_input($sale[$key]["field"], $one_sale[0]->$key);
     echo '<br><br>';
 }
 
-echo form_submit('submit', 'Submit');
+echo form_submit('submit', 'Envoyer');
 echo form_close();
 
 
 ?>
-<pre>
+
 <?php
-var_dump($one_sale);
+//var_dump($one_sale);
 
 ?>
 </pre>

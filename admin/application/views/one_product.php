@@ -11,22 +11,26 @@ foreach ($product as $key=>$value)
     echo form_label($product[$key]["label"], $product[$key]["field"]) . '<br>';
     if ($product[$key]["field"] == 'category')
     {
-        echo form_dropdown('category', $options, $one_product[0]->$key);
+        echo form_dropdown('category', $options, $one_product[0]->$key, 'class="form-control input-sm"');
+    }
+    elseif ($product[$key]["field"] == 'descript')
+    {
+        echo form_textarea($product[$key]["field"], $one_product[0]->$key, 'class="form-control input-sm"');
     }
     else
     {
-        echo form_input($product[$key]["field"], $one_product[0]->$key);
+        echo form_input($product[$key]["field"], $one_product[0]->$key, 'class="form-control input-sm"');
     }
     echo '<br><br>';
 }
 
-echo form_submit('submit', 'Submit');
+echo form_submit('submit', 'Envoyer');
 echo form_close();
 
 ?>
-<pre>
+
 <?php
-var_dump($one_product[0]);
+//var_dump($one_product[0]);
 ?>
 </pre>
 

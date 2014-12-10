@@ -123,8 +123,8 @@ class Event extends CI_Controller {
 
 
         $data['all_product'] = $this->productManager->all();
-        $data['all_product_event'] = $this->productEventManager->one($id);
-
+        $data['all_product_event'] = $this->productEventManager->one($id)[0];
+        $data['id'] = $id;
         //  On lance une requête
         $data['one_event'] = $this->eventManager->one($id);
 
