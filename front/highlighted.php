@@ -12,7 +12,7 @@ include('header.php');
     <div class="col-md-12 col-sm-6">
         <?php
         //Je vérifie le pseudo et le mot de passe
-        $req = $bdd->prepare('SELECT *
+        $req = $bdd->prepare('SELECT COUNT (DISTINCT p.name)
                               FROM product AS p
                               LEFT JOIN sale AS s ON (s.product = p.id)
                               WHERE s.event = 1

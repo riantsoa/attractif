@@ -19,7 +19,7 @@ $data = $req->fetch(PDO::FETCH_OBJ);
             <h2 class="page-header">Fiche article de : <?php echo $data->prodname; ?></h2>
         </div>
         <div class="col-md-12 col-sm-6">
-            <p>TYPE : <?php echo $data->catname; ?></p>
+            <p>CATEGORIE : <?php echo $data->catname; ?></p>
             <p>DESCRIPTION : <?php echo $data->pdescrip; ?></p>
             <p>STOCK : <?php echo $data->pqty; ?> produits restants</p>
             <p><img src="img/products/<?php echo $data->pimage; ?>" width="150" alt="<?php echo $data->prodname; ?>" /></p>
