@@ -10,11 +10,24 @@ class Product_event_model extends CI_Model
     public function add($product, $event)
     {
         //  Ces données seront automatiquement échappées
-        return $this->db
-            ->set('product',  $product)
-            ->set('event',   $event)
-            ->insert($this->table);
-        ;
+        $result = $this->db->select('*')
+                ->from($this->table)
+                ->where('product', (int) $product)
+                ->where('event', (int) $event)
+                ->get()
+                ->result();
+        if (!$result) {
+
+            return $this->db
+                ->set('product',  $product)
+                ->set('event',   $event)
+                ->insert($this->table);
+            ;
+        }
+        else
+        {
+            return 0;
+        }
 
         //  Une fois que tous les champs ont bien été définis, on "insert" le tout
         // return $this->db->insert($this->table);
