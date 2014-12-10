@@ -19,7 +19,7 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
             // Affichage des enregistrements
-            echo '<img src="img/products/' . $enregistrement->img . '" width="200" alt="'.$enregistrement->nom.'" /><br />';
+            echo '<img src="img/products/' . $enregistrement->image . '" width="200" alt="'.$enregistrement->name.'" /><br />';
         }
         ?>
     </div>

@@ -8,15 +8,15 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     //Je vérifie les infos et je les insert
-    $insert = $bdd->prepare('INSERT INTO user VALUES(NULL, :nom, :email, :password, :date, :newsletter, :admin)');
+    $insert = $bdd->prepare('INSERT INTO user VALUES(NULL, :nom, :email, :password, :newsletter, :alert, :admin)');
     try {
         // On envois la requète
         $success = $insert->execute(array(
-            'name' => $nom,
-            'mail' => $email,
-            'pass' => $password,
-            'date' => date('Y-m-d H-i-s'),
-            'newsletter' => 0,
+            'nom' => $nom,
+            'email' => $email,
+            'password' => $password,
+            'newsletter' => 1,
+            'alert' => 0,
             'admin' => 0
         ));
 

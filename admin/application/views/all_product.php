@@ -1,6 +1,8 @@
 <pre>
 <?php
 
+echo "<h1>Products (" . $count_product . ")</h1><br>";
+
 $options = array();
 foreach ($all_category as $key=>$value)
 {

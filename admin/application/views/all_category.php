@@ -1,6 +1,8 @@
 <pre>
 <?php
 
+echo "<h1>Categories (" . $count_category . ")</h1><br>";
+
 foreach ($all_category as $key=>$value)
 {
     echo "<strong>" . $value->name  . " (" . $value->id . ")</strong><br>";

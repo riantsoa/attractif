@@ -3,7 +3,9 @@ session_start();
 include('dbconnect.php');
 
 //Je vérifie le pseudo et le mot de passe
-$req = $bdd->prepare('SELECT id, email, password FROM user WHERE password = :password AND email = :email');
+$req = $bdd->prepare('SELECT id, mail, pass
+                    FROM user
+                    WHERE pass = :password AND mail = :email');
 $req->execute(array(
     'password' => $_POST['password'],
     'email' => $_POST['email']
