@@ -65,7 +65,9 @@ class Product_event_model extends CI_Model
     {
         return $this->db->select('*')
                 ->from($this->table)
-                ->where('id', (int) $id)
+                ->join('product', 'product_event.product = product.id', 'left')
+                ->group_by('product_event.id')
+                ->having('event', (int) $id)
                 ->get()
                 ->result();
     }

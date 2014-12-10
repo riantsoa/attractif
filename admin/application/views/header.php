@@ -34,6 +34,7 @@
     <!--[if lt IE 9]>
     <script src="<?php echo $base_url;?>js/html5shiv.js"></script>
     <script src="<?php echo $base_url;?>jsrespond.min.js"></script>
+    <script src="<?php echo $base_url;?>js/jquery.js"></script>
     <![endif]-->
 
 </head>
@@ -256,7 +257,7 @@
         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Réglages</a>
         </li>
         <li class="divider"></li>
-        <li><a href="<?php echo site_url();?>/user_ctrl/login"><i class="fa fa-sign-out fa-fw"></i> Deconnecter</a>
+        <li><a href="<?php echo site_url();?>/userctrl/deconnecter"><i class="fa fa-sign-out fa-fw"></i> Deconnecter</a>
         </li>
     </ul>
     <!-- /.dropdown-user -->
@@ -269,30 +270,25 @@
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a class="active" href="<?php echo base_url();?>index.php/index/index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a class="active" href="<?php echo base_url();?>index.php/welcome"><i class="fa fa-dashboard fa-fw"></i> Acceuil</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/user/index"><i class="fa fa-table fa-fw"></i> Users</a>
+                <a href="<?php echo base_url();?>index.php/user/index"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Utilisateurs</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/product/index"><i class="fa fa-table fa-fw"></i> Products</a>
+                <a href="<?php echo base_url();?>index.php/product/index"><span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;Produits</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/category/index"><i class="fa fa-table fa-fw"></i> Categories</a>
+                <a href="<?php echo base_url();?>index.php/category/index"><span class="glyphicon glyphicon-tasks"></span>&nbsp;&nbsp;Categories</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/event/index"><i class="fa fa-table fa-fw"></i> Events</a>
+                <a href="<?php echo base_url();?>index.php/event/index"><span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;Evenements</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i> Sales</a>
+                <a href="<?php echo base_url();?>index.php/sale/index"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Ventes</a>
             </li>
             <li>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="login.html">Login Page</a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
+                <a href="<?php echo base_url();?>index.php/sale/index"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Mailing</a>
             </li>
         </ul>
     </div>
