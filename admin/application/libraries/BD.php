@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 require('application/config/database.php');
 
-define('HOSTNAME' ,$db['default']['hostname']);
+define('HOSTNAME',$db['default']['hostname']);
 define('USERNAME',$db['default']['username']);
 define('PASSWORD',$db['default']['password']);
 define('DATABASE',$db['default']['database']);
@@ -18,7 +18,6 @@ class BD {
     public $password;
 
     public function query($query, $query_mode = PDO::FETCH_ASSOC) {
-
         $tabRes = array();
          try {
             $result = $this->link->query(($query));
@@ -56,8 +55,8 @@ class BD {
         
         try {
             $this->link = new PDO('mysql:host=' . HOSTNAME . ';dbname=' . DATABASE, USERNAME, PASSWORD);
-            //$this->link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-            //$this->link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+            $this->link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->link->exec("SET NAMES 'utf8';");
             
         } catch (Exception $e) {

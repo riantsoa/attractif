@@ -34,6 +34,7 @@
     <!--[if lt IE 9]>
     <script src="<?php echo $base_url;?>js/html5shiv.js"></script>
     <script src="<?php echo $base_url;?>jsrespond.min.js"></script>
+    <script src="<?php echo $base_url;?>js/jquery.js"></script>
     <![endif]-->
 
 </head>
@@ -256,7 +257,7 @@
         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Réglages</a>
         </li>
         <li class="divider"></li>
-        <li><a href="<?php echo site_url();?>/user_ctrl/login"><i class="fa fa-sign-out fa-fw"></i> Deconnecter</a>
+        <li><a href="<?php echo site_url();?>/userctrl/deconnecter"><i class="fa fa-sign-out fa-fw"></i> Deconnecter</a>
         </li>
     </ul>
     <!-- /.dropdown-user -->
