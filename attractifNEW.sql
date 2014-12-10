@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Mar 09 Décembre 2014 à 21:40
+-- Généré le : Mer 10 Décembre 2014 à 08:31
 -- Version du serveur: 5.5.20
 -- Version de PHP: 5.3.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de données: `attractif`
@@ -46,23 +40,23 @@ INSERT INTO `event` (`id`, `nom`, `description`, `date`, `location`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `event_type`
+-- Structure de la table `event_product`
 --
 
-CREATE TABLE IF NOT EXISTS `event_type` (
+CREATE TABLE IF NOT EXISTS `event_product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `event_id` int(11) NOT NULL,
-  `type_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `event_id` (`event_id`),
-  KEY `type_id` (`type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Gestion des differents types de produits sur les VP' AUTO_INCREMENT=3 ;
+  KEY `product_id` (`product_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Gestion des differents produits sur les VP' AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `event_type`
+-- Contenu de la table `event_product`
 --
 
-INSERT INTO `event_type` (`id`, `event_id`, `type_id`) VALUES
+INSERT INTO `event_product` (`id`, `event_id`, `product_id`) VALUES
 (1, 1, 1),
 (2, 2, 2);
 
@@ -223,11 +217,11 @@ INSERT INTO `user_sales` (`id`, `user_id`, `product_id`, `date`, `event_id`) VAL
 --
 
 --
--- Contraintes pour la table `event_type`
+-- Contraintes pour la table `event_product`
 --
-ALTER TABLE `event_type`
-  ADD CONSTRAINT `event_type_ibfk_2` FOREIGN KEY (`type_id`) REFERENCES `product_type` (`id`),
-  ADD CONSTRAINT `event_type_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
+ALTER TABLE `event_product`
+  ADD CONSTRAINT `event_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
+  ADD CONSTRAINT `event_product_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`);
 
 --
 -- Contraintes pour la table `event_user`
@@ -257,7 +251,3 @@ ALTER TABLE `user_sales`
   ADD CONSTRAINT `user_sales_ibfk_3` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`),
   ADD CONSTRAINT `user_sales_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `user_sales_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
