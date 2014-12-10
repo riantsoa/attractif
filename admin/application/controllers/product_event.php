@@ -43,7 +43,7 @@ class Product_Event extends CI_Controller {
             $this->input->get_post('event')
         );
 
-        redirect("event/one/12");
+        redirect("event/one/" . $this->input->get_post('id'));
         // TODO redirect last insert $id product_event page
     }
 
