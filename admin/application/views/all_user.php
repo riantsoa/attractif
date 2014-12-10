@@ -3,7 +3,7 @@
 echo "<div class=\"row\">
     <div class=\"col-lg-12\">";
 
-echo "<h1 class=\"page-header\">Users (" . $count_user . ")</h1><br>
+echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-user\"></span>&nbsp;&nbsp;Users (" . $count_user . ")</h1><br>
     </div>
 </div>";
 

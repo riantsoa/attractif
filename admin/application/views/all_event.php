@@ -3,8 +3,7 @@
 // echo $count_event . "events<br>";
 echo "<div class=\"row\">
     <div class=\"col-lg-12\">";
-
-echo "<h1 class=\"page-header\">Events (" . $count_event . ")</h1><br>
+echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-time\"></span>&nbsp;&nbsp;Events (" . $count_event . ")</h1><br>
     </div>
 </div>";
 

@@ -2,7 +2,7 @@
 echo "<div class=\"row\">
     <div class=\"col-lg-12\">";
 
-echo "<h1 class=\"page-header\">Products (" . $count_product . ")</h1><br>
+echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-phone\"></span>&nbsp;&nbsp;Products (" . $count_product . ")</h1><br>
     </div>
 </div>";
 

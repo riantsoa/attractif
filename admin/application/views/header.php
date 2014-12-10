@@ -290,14 +290,6 @@
             <li>
                 <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i>Mailing</a>
             </li>
-            <li>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="login.html">Login Page</a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
-            </li>
         </ul>
     </div>
     <!-- /.sidebar-collapse -->
