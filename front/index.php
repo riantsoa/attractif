@@ -43,7 +43,7 @@ include('header.php');
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
-                $req = $bdd->prepare('SELECT * FROM event WHERE 1');
+                $req = $bdd->prepare('SELECT date FROM event WHERE date >= NOW()');
                 $req->execute();
                 $data = $req->fetch(PDO::FETCH_OBJ);
                 // redirection quand timer arrivé à 0

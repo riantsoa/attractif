@@ -22,6 +22,8 @@ include('header.php');
         echo '<h4>', $enregistrement->name, ' ', '<a href="product_detail.php?id='.$enregistrement->id.'">Voir le produit</a>', '</h4>';
         }
     ?>
+    //form input categorie
+    //sql SELECT * FROM product WHERE category = ".$cat
 </div>
 <?php
 include('footer.php');

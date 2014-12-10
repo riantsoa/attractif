@@ -1,8 +1,8 @@
 <?php
 // On récupère nos variables de session
 if (isset($_SESSION['data'])) {
-    $email = $_SESSION['data']->email;
-    $password = $_SESSION['data']->password;
+    $email = $_SESSION['data']->mail;
+    $password = $_SESSION['data']->pass;
     $id = $_SESSION['data']->id;
 }
 header('Content-Type: text/html; charset=utf-8');
@@ -44,7 +44,7 @@ header('Content-Type: text/html; charset=utf-8');
                         <div><a href="myinfos.php"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Mes infos</a></div>
                         <div><a href="myalerts.php"><i class="glyphicon glyphicon-bell" aria-hidden="true"></i> Mes alertes</a></div>
                         <div><a href="myfav.php"><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Mes favoris</a></div>
-                        <div><a href="mysell.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats / VP</a></div>
+                        <div><a href="mysale.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats / VP</a></div>
                         <br />
                         <div><a href="lib/logout.php"><i class="glyphicon glyphicon-remove-circle" aria-hidden="true"></i> Me déconnecter</a></div>
                     </div>
@@ -83,7 +83,7 @@ header('Content-Type: text/html; charset=utf-8');
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="ventes.php">Ventes en cours</a>
+                            <a href="current_sales.php">Ventes en cours</a>
                             <div class="nav-hover"></div>
                         </li>
                         <li>

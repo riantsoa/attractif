@@ -95,6 +95,16 @@ class User_model extends CI_Model
                 ->get()
                 ->result();
     }
+
+    /***
+     * verifie si l'utilisateur peut se connecter
+     */
+    public function login($mail,$password){
+        //print_r($this->bd);die();
+        $query = $this->bd->link->prepare("SELECT * FROM user WHERE mail= :mail AND pass= :password AND admin=1");
+        $query->execute(array('mail'=>$mail, 'password'=>$password));
+        return $query->fetch();
+    }
 }
 
 

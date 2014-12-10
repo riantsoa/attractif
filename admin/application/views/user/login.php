@@ -28,6 +28,7 @@
     <!--[if lt IE 9]>
         <script src="<?php echo $base_url;?>js/html5shiv.js"></script>
         <script src="<?php echo $base_url;?>js/respond.min.js"></script>
+        <script src="<?php echo $base_url;?>js/jquery.js"></script>
     <![endif]-->
 
 </head>
@@ -42,10 +43,10 @@
                         <h3 class="panel-title"><img src="<?php echo base_url();?>img/logotype.png" height="40px"></h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="<?php echo site_url('userctrl')?>/login" method="post" id="form_login">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="login" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Mot de passe" name="password" type="password" value="">
@@ -56,7 +57,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Connexion</a>
+                                <input type="submit" class="btn btn-lg btn-success btn-block" value="Connexion"/>
                             </fieldset>
                         </form>
                     </div>

@@ -4,15 +4,13 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /**
- * @author Riantsoa, Clement
+ * @author Riantsoa
  * 
  * Classe pour gerer les connexions et gerer les sessions des utilisateurs
  */
 class UserLib {
-    public static $ASSO = 1;
-    public static $AUDIT = 2;
-    public static $ADMIN = 3;
-    public static $ENTERPRISE = 4;
+    public static $CLIENT = 1;
+    public static $ADMIN = 2;
 
     public static function verifier_si_connecté(){
         self::verify();
@@ -25,10 +23,8 @@ class UserLib {
     protected static function verify() {
         if (empty($_SESSION))
             session_start();
-        //$this->setProfil(UserLib::$ADMIN);
-        //$this->setUserName("kaki");
         if (!isset($_SESSION['user'])) {
-            redirect('login_vitrine/login', 'refresh');
+            redirect('userctrl/login', 'refresh');
         }
         return true;
     }
@@ -37,7 +33,7 @@ class UserLib {
      * Redirige vers la une page donné si le profil ne correspond pas
      */
     protected static function redirectToProfilMismatchPage() {
-        redirect('/user/cantdothat', 'refresh');
+        redirect('userctrl/not_permited', 'refresh');
     }
 
     /**
@@ -58,9 +54,7 @@ class UserLib {
     //Verifie si au moins uns des profils est connecté
     public static function forAllProfil(){
         self::verify();
-        if(self::getProfil() == self::$ENTERPRISE |
-            self::getProfil() == self::$AUDIT |
-            self::getProfil() == self::$ASSO |
+        if(self::getProfil() == self::$CLIENT |
             self::getProfil() == self::$ADMIN) {
 
         }
