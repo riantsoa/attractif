@@ -3,10 +3,12 @@ session_start();
 include('dbconnect.php');
 
 //Je vérifie le pseudo et le mot de passe
-$req = $bdd->prepare('SELECT mail, pass, id FROM user WHERE pass = :pass AND mail = :mail');
+$req = $bdd->prepare('SELECT id, mail, pass
+                    FROM user
+                    WHERE pass = :password AND mail = :email');
 $req->execute(array(
-    'pass' => $_POST['pass'],
-    'mail' => $_POST['mail']
+    'password' => $_POST['password'],
+    'email' => $_POST['email']
 ));
 $data = $req->fetch(PDO::FETCH_OBJ);
 

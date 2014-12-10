@@ -48,7 +48,13 @@ class Event_user extends CI_Controller {
     {
         $this->load->helper('url');
         $this->load->model('event_user_model', 'eventUserManager');
-        $this->eventUserManager->edit($id, $status, $customer, $event, $date);
+        $this->eventUserManager->edit(
+            $id,
+            $this->input->get_post('date'),
+            $this->input->get_post('place'),
+            $this->input->get_post('descript'),
+            $this->input->get_post('name')
+        );
 
         redirect("event_user/one/" . $id);
     }

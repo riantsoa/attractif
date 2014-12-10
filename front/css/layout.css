@@ -61,7 +61,7 @@ body {
 * NAV / SLIDER
 */
 .navbar {
-    background: none repeat scroll 0 0 #7fcab3;
+    background: none repeat scroll 0 0 #01A79D;
     border-radius: 0;
     border: none;
     min-height: 50px;
@@ -74,23 +74,23 @@ body {
 }
 .navbar .container .navbar-nav li a {
     font-weight: bold;
-    color: #44716f;
+    color: #eee;
     padding-bottom: 3px;
     text-transform: uppercase;
     transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;
 }
 .navbar .container .navbar-nav li a:hover {
-    /*color: #00a79d;*/
+    color: #fff;
     transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;
 }
 .navbar .container .navbar-nav li .nav-hover {
-    border-bottom: 3px solid;
+    border-bottom: 3px solid rgba(255,255,255,0);
     margin: 0 0 10px 50%;
     width: 0;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 .navbar .container .navbar-nav li:hover .nav-hover {
-    border-bottom: 3px solid #00a79d;
+    border-bottom: 3px solid #fff;
     margin: 0 0 10px 3%;
     width: 95%;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;

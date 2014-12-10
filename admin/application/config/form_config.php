@@ -10,19 +10,14 @@ $config['user'] =  array(
                      'label' => 'Mail',
                      'rules' => 'trim|required|valid_email'
                      ),
-           // 'pass' => array(
-                     // 'field' => 'pass',
-                     // 'label' => 'Pass',
-                     // 'rules' => 'trim|required|xss_clean'
-                     // ),
+           'pass' => array(
+                     'field' => 'pass',
+                     'label' => 'Pass',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
            'newsletter' => array(
                      'field' => 'newsletter',
                      'label' => 'Newsletter',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           'alert' => array(
-                     'field' => 'alert',
-                     'label' => 'Alert',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'admin' => array(
@@ -79,6 +74,78 @@ $config['event'] =  array(
            'name' => array(
                      'field' => 'name',
                      'label' => 'Name',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
+
+$config['category'] =  array(
+           'name' => array(
+                     'field' => 'name',
+                     'label' => 'Name',
+                     'rules' => 'trim|required|xss_clean'
+                     )
+           );
+
+$config['event_user'] =  array(
+           'status' => array(
+                     'field' => 'status',
+                     'label' => 'Status',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'customer' => array(
+                     'field' => 'customer',
+                     'label' => 'Customer',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'event' => array(
+                     'field' => 'event',
+                     'label' => 'Event',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'date' => array(
+                     'field' => 'date',
+                     'label' => 'Date',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
+
+$config['product_event'] =  array(
+           'product' => array(
+                     'field' => 'product',
+                     'label' => 'Product',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'event' => array(
+                     'field' => 'event',
+                     'label' => 'Event',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           );
+
+$config['sale'] =  array(
+           'user' => array(
+                     'field' => 'user',
+                     'label' => 'User',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'product' => array(
+                     'field' => 'product',
+                     'label' => 'Product',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'date' => array(
+                     'field' => 'date',
+                     'label' => 'Date',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'event' => array(
+                     'field' => 'event',
+                     'label' => 'Event',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
+           'product' => array(
+                     'field' => 'product',
+                     'label' => 'Product',
                      'rules' => 'trim|required|xss_clean'
                      ),
            );

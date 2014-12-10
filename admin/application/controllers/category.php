@@ -20,16 +20,27 @@ class Category extends CI_Controller {
 
     public function index()
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
         $this->load->model('category_model', 'categoryManager');
 
         $data = array();
 
+        try
+        {
+            $data["category"] = $this->config->item("category");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
         //  On lance une requête
         $data['all_category'] = $this->categoryManager->all();
         $data['count_category'] = $this->categoryManager->count();
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('all_category', $data);
         $this->load->view('footer');
 
@@ -38,19 +49,24 @@ class Category extends CI_Controller {
     public function add($name)
     {
         $this->load->helper('url');
+        $this->load->helper('form');
         $this->load->model('category_model', 'categoryManager');
-        $this->categoryManager->add($name);
+        $this->categoryManager->add(
+            $this->input->get_post('name')
+        );
 
-        redirect("category/");
+        redirect("category/index");
         // TODO redirect last insert $id category page
     }
 
-    public function edit($id, $name)
+    public function edit($id)
     {
         $this->load->helper('url');
         $this->load->model('category_model', 'categoryManager');
-        $this->categoryManager->edit($id, $name);
-
+        $this->categoryManager->edit(
+            $id,
+            $this->input->get_post('name')
+        );
         redirect("category/one/" . $id);
     }
 
@@ -60,11 +76,14 @@ class Category extends CI_Controller {
         $this->load->model('category_model', 'categoryManager');
         $this->categoryManager->del($id);
 
-        redirect("category/");
+        redirect("category/index");
     }
 
     public function one($id)
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
         $this->load->model('category_model', 'categoryManager');
 
         $data = array();
@@ -72,8 +91,16 @@ class Category extends CI_Controller {
         //  On lance une requête
         $data['one_category'] = $this->categoryManager->one($id);
 
+        try
+        {
+            $data["category"] = $this->config->item("category");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('one_category', $data);
         $this->load->view('footer');
 

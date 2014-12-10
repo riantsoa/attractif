@@ -20,7 +20,7 @@
 <script src="<?php echo $base_url;?>js/plugins/morris/morris-data.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="j<?php echo $base_url;?>s/sb-admin-2.js"></script>
+<script src="<?php echo $base_url;?>js/sb-admin-2.js"></script>
 
 </body>
 

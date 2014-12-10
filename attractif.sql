@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 09 Décembre 2014 à 14:32
+-- Généré le :  Mer 10 Décembre 2014 à 09:53
 -- Version du serveur :  5.5.40-1
 -- Version de PHP :  5.6.2-1
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `category` (
 `id` int(11) NOT NULL,
   `name` varchar(1024) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -39,11 +39,11 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 CREATE TABLE IF NOT EXISTS `event` (
 `id` int(11) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date` datetime NOT NULL,
   `place` varchar(1024) NOT NULL,
   `descript` varchar(1024) NOT NULL,
   `name` varchar(1024) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `category` int(11) NOT NULL,
   `descript` varchar(1024) NOT NULL,
   `image` varchar(1024) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -89,14 +89,13 @@ CREATE TABLE IF NOT EXISTS `product_event` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `sell`
+-- Structure de la table `sale`
 --
 
-CREATE TABLE IF NOT EXISTS `sell` (
+CREATE TABLE IF NOT EXISTS `sale` (
 `id` int(11) NOT NULL,
   `user` int(11) NOT NULL,
   `product` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `event` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
@@ -113,9 +112,22 @@ CREATE TABLE IF NOT EXISTS `user` (
   `mail` varchar(1024) NOT NULL,
   `pass` varchar(1024) NOT NULL,
   `newsletter` tinyint(1) NOT NULL DEFAULT '0',
-  `alert` tinyint(1) NOT NULL DEFAULT '0',
   `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user_favorite`
+--
+
+CREATE TABLE IF NOT EXISTS `user_favorite` (
+`id` int(11) NOT NULL,
+  `user` int(11) NOT NULL,
+  `product` int(11) NOT NULL,
+  `category` int(11) NOT NULL,
+  `event` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Index pour les tables exportées
@@ -152,15 +164,21 @@ ALTER TABLE `product_event`
  ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `sell`
+-- Index pour la table `sale`
 --
-ALTER TABLE `sell`
+ALTER TABLE `sale`
  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `user_favorite`
+--
+ALTER TABLE `user_favorite`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -171,12 +189,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `category`
 --
 ALTER TABLE `category`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `event`
 --
 ALTER TABLE `event`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `event_user`
 --
@@ -186,22 +204,27 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `product_event`
 --
 ALTER TABLE `product_event`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT pour la table `sell`
+-- AUTO_INCREMENT pour la table `sale`
 --
-ALTER TABLE `sell`
+ALTER TABLE `sale`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pour la table `user_favorite`
+--
+ALTER TABLE `user_favorite`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

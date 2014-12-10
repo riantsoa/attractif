@@ -1,13 +1,6 @@
 <?php
 session_start();
 include('lib/dbconnect.php');
-
-// On récupère nos variables de session
-if (isset($_SESSION['data'])) {
-    $mail = $_SESSION['data']->mail;
-    $password = $_SESSION['data']->pass;
-}
-
 include('header.php');
 ?>
 <!-- Page Content -->
@@ -26,7 +19,7 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
         // Affichage des enregistrements
-        echo '<h4>', $enregistrement->name, ' ', '<a href="product-index.php?id='.$enregistrement->id.'">Voir le produit</a>', '</h4>';
+        echo '<h4>', $enregistrement->name, ' ', '<a href="product_detail.php?id='.$enregistrement->id.'">Voir le produit</a>', '</h4>';
         }
     ?>
 </div>

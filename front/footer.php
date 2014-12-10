@@ -42,12 +42,12 @@
 </script>
 <script type="text/javascript" src="js/mfcarousel.js"></script>
 <script>
-$(function() {
-$(".mfcarousel").MFCarousel({
-    btnNext: ".next",
-    btnPrev: ".prev"
-});
-});
+    $(function() {
+        $(".mfcarousel").MFCarousel({
+            btnNext: ".next",
+            btnPrev: ".prev"
+        });
+    });
 </script>
 </body>
 </html>

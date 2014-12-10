@@ -27,26 +27,41 @@ class User extends CI_Controller {
 
         $data = array();
 
+        try
+        {
+            $data["user"] = $this->config->item("user");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  On lance une requête
         $data['all_user'] = $this->userManager->all();
         $data['count_user'] = $this->userManager->count();
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('all_user', $data);
         $this->load->view('footer');
 
     }
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add()
     {
         $this->load->helper('url');
         $this->load->view('header');
         $this->load->helper('form');
 
         $this->load->model('user_model', 'userManager');
-        $this->userManager->add($name, $mail, $pass, $newsletter, $alert, $admin);
+        $this->userManager->add(
+            $this->input->get_post('name'),
+            $this->input->get_post('mail'),
+            $this->input->get_post('pass'),
+            $this->input->get_post('newsletter'),
+            $this->input->get_post('admin')
+        );
 
-        redirect("user/");
+        redirect("user/index");
         // TODO redirect last insert $id user page
     }
 
@@ -63,7 +78,6 @@ class User extends CI_Controller {
             $this->input->get_post('mail'),
             // $this->input->get_post('pass'),
             $this->input->get_post('newsletter'),
-            $this->input->get_post('alert'),
             $this->input->get_post('admin')
         );
 
@@ -79,7 +93,7 @@ class User extends CI_Controller {
         $this->load->model('user_model', 'userManager');
         $this->userManager->del($id);
 
-        redirect("user/");
+        redirect("user/index");
     }
 
     public function one($id)

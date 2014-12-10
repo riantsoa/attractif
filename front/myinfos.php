@@ -3,23 +3,18 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 
-// On récupère nos variables de session
-if (isset($_SESSION['data'])) {
-    $mail = $_SESSION['data']->mail;
-    $password = $_SESSION['data']->pass;
-}
 if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $mail = $_POST['mail'];
-    $pass = $_POST['pass'];
+    $nom = $_POST['nom'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
     //Je vérifie les infos et je les insert
-    $insert = $bdd->prepare('UPDATE user SET name=:name, mail= :mail, pass= :pass ');
+    $insert = $bdd->prepare('UPDATE user SET name=:nom, mail= :email, pass= :password ');
     try {
         // On envois la requète
         $success = $insert->execute(array(
-            'name' => $name,
-            'mail' => $mail,
-            'pass' => $pass
+            'nom' => $nom,
+            'email' => $email,
+            'password' => $password
         ));
 
         if ($success) {
@@ -29,12 +24,12 @@ if (isset($_POST['submit'])) {
         echo 'Erreur de requète : ', $e->getMessage();
     }
 }
-$req = $bdd->prepare('SELECT * FROM user WHERE pass = :pass AND mail = :mail');
+$req = $bdd->prepare('SELECT * FROM user WHERE pass = :password AND mail = :email');
 $req->execute(array(
-    'pass' => $password,
-    'mail' => $mail
+    'password' => $password,
+    'email' => $email
 ));
-$data = $req->setFetchMode(PDO::FETCH_OBJ);
+$data = $req->fetch(PDO::FETCH_OBJ);
 ?>
 <!-- Page Content -->
 <div id="content">
@@ -43,21 +38,14 @@ $data = $req->setFetchMode(PDO::FETCH_OBJ);
             <h2 class="page-header">Liste de nos produits</h2>
         </div>
         <div class="col-md-12 col-sm-6">
-            <?php
-            while ($enregistrement = $req->fetch()) {
-                // Affichage des enregistrements
-
-                echo '
-    <div class="col-md-12 col-sm-6">
-       <form action="myinfos.php" method="post">
-            <input type="text" placeholder="Nom" name="name" value="' . $enregistrement->name . '" /><br />
-            <input type="email" placeholder="Email" name="mail" value="' . $enregistrement->mail . '" /><br />
-            <input type="text" placeholder="Mot de passe" name="pass" value="' . $enregistrement->pass . '"/><br />
-            <input type="submit" name="submit" value="Enregistrer modifications">
-        </form>
-    </div>';
-            }
-            ?>
+            <div class="col-md-12 col-sm-6">
+                <form action="myinfos.php" method="post">
+                    <input type="text" placeholder="Nom" name="nom" value="<?php echo $data->name; ?>" /><br />
+                    <input type="email" placeholder="Email" name="email" value="<?php echo $data->mail; ?>" /><br />
+                    <input type="text" placeholder="Mot de passe" name="password" value="<?php echo $data->pass; ?>"/><br />
+                    <input type="submit" name="submit" value="Enregistrer modifications">
+                </form>
+            </div>
         </div>
         <?php
         include('footer.php');

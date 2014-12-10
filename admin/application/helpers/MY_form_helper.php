@@ -43,7 +43,7 @@ if ( ! function_exists('form_datetime'))
     {
         if ( ! is_array($data))
         {
-            $data = array('name' => $data);
+            $data = array('name' => $data, '');
         }
 
         $data['type'] = 'datetime';
