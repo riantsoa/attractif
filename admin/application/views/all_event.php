@@ -2,7 +2,7 @@
 <?php
 
 // echo $count_event . "events<br>";
-echo "<h1>" . $count_event . " events</h1><br>";
+echo "<h1>Events (" . $count_event . ")</h1><br>";
 
 foreach ($all_event as $key=>$value)
 {

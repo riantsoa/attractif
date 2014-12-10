@@ -1,7 +1,7 @@
 <pre>
 <?php
 
-echo $count_sale . "sales<br>";
+echo "<h1>Sales (" . $count_sale . ")</h1><br>";
 
 foreach ($all_sale as $key=>$value)
 {

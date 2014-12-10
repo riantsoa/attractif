@@ -1,5 +1,7 @@
 <pre>
 <?php
+echo "<h1>Users (" . $count_user . ")</h1><br>";
+
 foreach ($all_user as $key=>$value)
 {
     echo "<strong>" . $value->name  . " (" . $value->id . ")</strong><br>";
