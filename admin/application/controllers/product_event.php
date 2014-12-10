@@ -34,21 +34,27 @@ class Product_Event extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function add($product, $event)
+    public function add()
     {
         $this->load->helper('url');
         $this->load->model('product_event_model', 'productEventManager');
-        $this->productEventManager->add($product, $event);
+        $this->productEventManager->add(
+            $this->input->get_post('product'),
+            $this->input->get_post('event')
+        );
 
         redirect("product_event/");
         // TODO redirect last insert $id product_event page
     }
 
-    public function edit($id, $product, $event)
+    public function edit($id)
     {
         $this->load->helper('url');
         $this->load->model('product_event_model', 'productEventManager');
-        $this->productEventManager->edit($id, $product, $event);
+        $this->productEventManager->edit(
+            $this->input->get_post('product'),
+            $this->input->get_post('event')
+        );
 
         redirect("product_event/one/" . $id);
     }
@@ -67,7 +73,6 @@ class Product_Event extends CI_Controller {
         $this->load->model('product_event_model', 'productEventManager');
 
         $data = array();
-
         //  On lance une requête
         $data['one_product_event'] = $this->productEventManager->one($id);
 
