@@ -3562,3 +3562,1131 @@ DEBUG - 2014-12-10 13:56:24 --> File loaded: application/views/body_admin.php
 DEBUG - 2014-12-10 13:56:24 --> File loaded: application/views/footer.php
 DEBUG - 2014-12-10 13:56:24 --> Final output sent to browser
 DEBUG - 2014-12-10 13:56:24 --> Total execution time: 0.0195
+DEBUG - 2014-12-10 14:06:59 --> Config Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:06:59 --> URI Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Router Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Output Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Security Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Input Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:06:59 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:06:59 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:06:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:06:59 --> Language Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:06:59 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:06:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:06:59 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:06:59 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:06:59 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:06:59 --> Model Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> Model Class Initialized
+DEBUG - 2014-12-10 14:06:59 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:06:59 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:06:59 --> Final output sent to browser
+DEBUG - 2014-12-10 14:06:59 --> Total execution time: 0.0266
+DEBUG - 2014-12-10 14:07:23 --> Config Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:07:23 --> URI Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Router Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Output Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Security Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Input Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:07:23 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:07:23 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:07:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:07:23 --> Language Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:07:23 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:07:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:07:23 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:07:23 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:07:23 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:07:23 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:07:23 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:07:23 --> Final output sent to browser
+DEBUG - 2014-12-10 14:07:23 --> Total execution time: 0.0089
+DEBUG - 2014-12-10 14:07:34 --> Config Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:07:34 --> URI Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Router Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Output Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Security Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Input Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:07:34 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:07:34 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:07:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:07:34 --> Language Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:07:34 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:07:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:07:34 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:07:34 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:07:34 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:07:34 --> Model Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> Model Class Initialized
+DEBUG - 2014-12-10 14:07:34 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:07:34 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:07:34 --> Final output sent to browser
+DEBUG - 2014-12-10 14:07:34 --> Total execution time: 0.0115
+DEBUG - 2014-12-10 14:08:08 --> Config Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:08:08 --> URI Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Router Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Output Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Security Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Input Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:08:08 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:08:08 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:08:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:08:08 --> Language Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:08:08 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:08:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:08:08 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:08:08 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:08:08 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:08:08 --> Model Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> Model Class Initialized
+DEBUG - 2014-12-10 14:08:08 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:08:08 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:08:08 --> Final output sent to browser
+DEBUG - 2014-12-10 14:08:08 --> Total execution time: 0.0116
+DEBUG - 2014-12-10 14:10:51 --> Config Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:10:51 --> URI Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Router Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Output Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Security Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Input Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:51 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:51 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:10:51 --> Language Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:10:51 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:10:51 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:10:51 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:10:51 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:10:51 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:10:51 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:51 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:10:51 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:10:51 --> Final output sent to browser
+DEBUG - 2014-12-10 14:10:51 --> Total execution time: 0.0118
+DEBUG - 2014-12-10 14:10:53 --> Config Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:10:53 --> URI Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Router Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Output Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Security Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Input Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:53 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:53 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:10:53 --> Language Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:10:53 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:10:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:10:53 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:10:53 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:10:53 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:10:53 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:53 --> File loaded: application/views/all_product.php
+DEBUG - 2014-12-10 14:10:53 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:10:53 --> Final output sent to browser
+DEBUG - 2014-12-10 14:10:53 --> Total execution time: 0.0145
+DEBUG - 2014-12-10 14:10:55 --> Config Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:10:55 --> URI Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Router Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Output Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Security Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Input Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:55 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:55 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:10:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:10:55 --> Language Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:10:55 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:10:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:10:55 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:10:55 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:10:55 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:10:55 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> Model Class Initialized
+DEBUG - 2014-12-10 14:10:55 --> File loaded: application/views/all_category.php
+DEBUG - 2014-12-10 14:10:55 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:10:55 --> Final output sent to browser
+DEBUG - 2014-12-10 14:10:55 --> Total execution time: 0.0119
+DEBUG - 2014-12-10 14:12:18 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:18 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:18 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:18 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:18 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:18 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:18 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:18 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:18 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:18 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:18 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:12:18 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:18 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:18 --> Total execution time: 0.0116
+DEBUG - 2014-12-10 14:12:19 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:19 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:19 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:19 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:19 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:19 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:19 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:19 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:19 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:19 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:19 --> File loaded: application/views/all_product.php
+DEBUG - 2014-12-10 14:12:19 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:19 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:19 --> Total execution time: 0.0128
+DEBUG - 2014-12-10 14:12:26 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:26 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:26 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:26 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:26 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:26 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:26 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:26 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:26 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:26 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:12:26 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:26 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:26 --> Total execution time: 0.0095
+DEBUG - 2014-12-10 14:12:28 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:28 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:28 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:28 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:28 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:28 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:28 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:28 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:28 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:28 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:28 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:12:28 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:28 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:28 --> Total execution time: 0.0112
+DEBUG - 2014-12-10 14:12:48 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:48 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:48 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:48 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:48 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:48 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:48 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:48 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:48 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:48 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:12:48 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:48 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:48 --> Total execution time: 0.0212
+DEBUG - 2014-12-10 14:12:50 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:50 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:50 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:50 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:50 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:50 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:50 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:50 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:50 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:50 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:50 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:50 --> File loaded: application/views/all_product.php
+DEBUG - 2014-12-10 14:12:50 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:50 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:50 --> Total execution time: 0.0114
+DEBUG - 2014-12-10 14:12:52 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:52 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:52 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:52 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:52 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:52 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:52 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:52 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:52 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:52 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:52 --> File loaded: application/views/all_category.php
+DEBUG - 2014-12-10 14:12:52 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:52 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:52 --> Total execution time: 0.0106
+DEBUG - 2014-12-10 14:12:53 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:53 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:53 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:53 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:53 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:53 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:53 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:53 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:53 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:53 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:53 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:53 --> File loaded: application/views/all_event.php
+DEBUG - 2014-12-10 14:12:53 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:53 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:53 --> Total execution time: 0.0185
+DEBUG - 2014-12-10 14:12:54 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:54 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:54 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:54 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:54 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:54 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:54 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:54 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:54 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:54 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:54 --> DB Transaction Failure
+ERROR - 2014-12-10 14:12:54 --> Query error: Table 'attratcif.sale' doesn't exist
+DEBUG - 2014-12-10 14:12:54 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2014-12-10 14:12:59 --> Config Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:12:59 --> URI Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Router Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Output Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Security Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Input Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:59 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:59 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:12:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:12:59 --> Language Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:12:59 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:12:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:12:59 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:12:59 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:12:59 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:12:59 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> Model Class Initialized
+DEBUG - 2014-12-10 14:12:59 --> File loaded: application/views/all_event.php
+DEBUG - 2014-12-10 14:12:59 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:12:59 --> Final output sent to browser
+DEBUG - 2014-12-10 14:12:59 --> Total execution time: 0.0187
+DEBUG - 2014-12-10 14:19:55 --> Config Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:19:55 --> URI Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Router Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Output Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Security Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Input Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:19:55 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:19:55 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:19:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:19:55 --> Language Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:19:55 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:19:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:19:55 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:19:55 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:19:55 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:19:55 --> Model Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> Model Class Initialized
+DEBUG - 2014-12-10 14:19:55 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:19:55 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:19:55 --> Final output sent to browser
+DEBUG - 2014-12-10 14:19:55 --> Total execution time: 0.0113
+DEBUG - 2014-12-10 14:19:58 --> Config Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:19:58 --> URI Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Router Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Output Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Security Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Input Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:19:58 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:19:58 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:19:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:19:58 --> Language Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:19:58 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:19:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:19:58 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:19:58 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:19:58 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:19:58 --> Model Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> Model Class Initialized
+DEBUG - 2014-12-10 14:19:58 --> File loaded: application/views/one_user.php
+DEBUG - 2014-12-10 14:19:58 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:19:58 --> Final output sent to browser
+DEBUG - 2014-12-10 14:19:58 --> Total execution time: 0.0145
+DEBUG - 2014-12-10 14:20:09 --> Config Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:20:09 --> URI Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Router Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Output Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Security Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Input Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:20:09 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:20:09 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:20:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:20:09 --> Language Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:20:09 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:20:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:20:09 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:20:09 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:20:09 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:20:09 --> Model Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Model Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> Model Class Initialized
+DEBUG - 2014-12-10 14:20:09 --> File loaded: application/views/all_product.php
+DEBUG - 2014-12-10 14:20:09 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:20:09 --> Final output sent to browser
+DEBUG - 2014-12-10 14:20:09 --> Total execution time: 0.0114
+DEBUG - 2014-12-10 14:28:13 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:13 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:13 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:13 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:13 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:13 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:13 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:13 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:13 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:13 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:13 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:28:13 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:13 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:13 --> Total execution time: 0.0164
+DEBUG - 2014-12-10 14:28:16 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:16 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:16 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:16 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:16 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:16 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:16 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:16 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:28:16 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:16 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:16 --> Total execution time: 0.0102
+DEBUG - 2014-12-10 14:28:18 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:18 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:18 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:18 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:18 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:18 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:18 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:18 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:18 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:18 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:28:18 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:18 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:18 --> Total execution time: 0.0082
+DEBUG - 2014-12-10 14:28:21 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:21 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:21 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:21 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:21 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:21 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:21 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:21 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:21 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:21 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:28:21 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:21 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:21 --> Total execution time: 0.0098
+DEBUG - 2014-12-10 14:28:42 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:42 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:42 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:42 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:42 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:42 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:42 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:42 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:42 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:28:42 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:42 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:28:42 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:42 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:42 --> Total execution time: 0.0122
+DEBUG - 2014-12-10 14:28:45 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:45 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:45 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:45 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:45 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:45 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:45 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:45 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:45 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:28:45 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:45 --> File loaded: application/views/all_product.php
+DEBUG - 2014-12-10 14:28:45 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:45 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:45 --> Total execution time: 0.0114
+DEBUG - 2014-12-10 14:28:46 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:46 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:46 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:46 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:46 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:46 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:46 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:46 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:46 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:28:46 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:46 --> File loaded: application/views/all_category.php
+DEBUG - 2014-12-10 14:28:46 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:46 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:46 --> Total execution time: 0.0102
+DEBUG - 2014-12-10 14:28:47 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:47 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:47 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:47 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:47 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:47 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:47 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:47 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:47 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:28:47 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:47 --> File loaded: application/views/all_event.php
+DEBUG - 2014-12-10 14:28:47 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:28:47 --> Final output sent to browser
+DEBUG - 2014-12-10 14:28:47 --> Total execution time: 0.0144
+DEBUG - 2014-12-10 14:28:48 --> Config Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:28:48 --> URI Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Router Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Output Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Security Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Input Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:48 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:48 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:28:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:28:48 --> Language Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:28:48 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:28:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:28:48 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:28:48 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:28:48 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:28:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> Model Class Initialized
+DEBUG - 2014-12-10 14:28:48 --> DB Transaction Failure
+ERROR - 2014-12-10 14:28:48 --> Query error: Table 'attratcif.sale' doesn't exist
+DEBUG - 2014-12-10 14:28:48 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2014-12-10 14:29:14 --> Config Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:29:14 --> URI Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Router Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Output Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Security Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Input Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:14 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:14 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:29:14 --> Language Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:29:14 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:29:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:29:14 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:29:14 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:29:14 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:29:14 --> Model Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> Model Class Initialized
+DEBUG - 2014-12-10 14:29:14 --> File loaded: application/views/all_event.php
+DEBUG - 2014-12-10 14:29:14 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:29:14 --> Final output sent to browser
+DEBUG - 2014-12-10 14:29:14 --> Total execution time: 0.0177
+DEBUG - 2014-12-10 14:29:16 --> Config Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:29:16 --> URI Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Router Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Output Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Security Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Input Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:29:16 --> Language Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:29:16 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:29:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:29:16 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:29:16 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:29:16 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:29:16 --> Model Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> Model Class Initialized
+DEBUG - 2014-12-10 14:29:16 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:29:16 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:29:16 --> Final output sent to browser
+DEBUG - 2014-12-10 14:29:16 --> Total execution time: 0.0119
+DEBUG - 2014-12-10 14:29:17 --> Config Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:29:17 --> URI Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Router Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Output Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Security Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Input Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:17 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:17 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:17 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:29:17 --> Language Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:29:17 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:29:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:29:17 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:29:17 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:29:17 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:29:17 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:29:17 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:29:17 --> Final output sent to browser
+DEBUG - 2014-12-10 14:29:17 --> Total execution time: 0.0096
+DEBUG - 2014-12-10 14:29:19 --> Config Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:29:19 --> URI Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Router Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Output Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Security Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Input Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:19 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:19 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:29:19 --> Language Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:29:19 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:29:19 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:29:19 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:29:19 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:29:19 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:29:19 --> Model Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> Model Class Initialized
+DEBUG - 2014-12-10 14:29:19 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:29:19 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:29:19 --> Final output sent to browser
+DEBUG - 2014-12-10 14:29:19 --> Total execution time: 0.0144
+DEBUG - 2014-12-10 14:29:21 --> Config Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:29:21 --> URI Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Router Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Output Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Security Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Input Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:21 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:21 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:29:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:29:21 --> Language Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:29:21 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:29:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:29:21 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:29:21 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:29:21 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:29:21 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:29:21 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:29:21 --> Final output sent to browser
+DEBUG - 2014-12-10 14:29:21 --> Total execution time: 0.0111
+DEBUG - 2014-12-10 14:32:12 --> Config Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:32:12 --> URI Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Router Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Output Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Security Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Input Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:32:12 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:32:12 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:32:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:32:12 --> Language Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:32:12 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:32:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:32:12 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:32:12 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:32:12 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:32:12 --> Model Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> Model Class Initialized
+DEBUG - 2014-12-10 14:32:12 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:32:12 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:32:12 --> Final output sent to browser
+DEBUG - 2014-12-10 14:32:12 --> Total execution time: 0.0208
+DEBUG - 2014-12-10 14:32:32 --> Config Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:32:32 --> URI Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Router Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Output Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Security Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Input Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:32:32 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:32:32 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:32:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:32:32 --> Language Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:32:32 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:32:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:32:32 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:32:32 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:32:32 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:32:32 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:32:32 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:32:32 --> Final output sent to browser
+DEBUG - 2014-12-10 14:32:32 --> Total execution time: 0.0108
+DEBUG - 2014-12-10 14:37:08 --> Config Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:37:08 --> URI Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Router Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Output Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Security Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Input Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:08 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:08 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:37:08 --> Language Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:37:08 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:37:08 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:37:08 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:37:08 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:37:08 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:37:08 --> File loaded: application/views/body_admin.php
+DEBUG - 2014-12-10 14:37:08 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:37:08 --> Final output sent to browser
+DEBUG - 2014-12-10 14:37:08 --> Total execution time: 0.0086
+DEBUG - 2014-12-10 14:37:11 --> Config Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:37:11 --> URI Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Router Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Output Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Security Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Input Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:11 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:11 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:37:11 --> Language Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:37:11 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:37:11 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:37:11 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:37:11 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:37:11 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:37:11 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:11 --> File loaded: application/views/all_user.php
+DEBUG - 2014-12-10 14:37:11 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:37:11 --> Final output sent to browser
+DEBUG - 2014-12-10 14:37:11 --> Total execution time: 0.0113
+DEBUG - 2014-12-10 14:37:14 --> Config Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:37:14 --> URI Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Router Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Output Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Security Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Input Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:14 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:14 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:37:14 --> Language Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:37:14 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:37:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:37:14 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:37:14 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:37:14 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:37:14 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:14 --> File loaded: application/views/all_product.php
+DEBUG - 2014-12-10 14:37:14 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:37:14 --> Final output sent to browser
+DEBUG - 2014-12-10 14:37:14 --> Total execution time: 0.0127
+DEBUG - 2014-12-10 14:37:15 --> Config Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:37:15 --> URI Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Router Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Output Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Security Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Input Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:15 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:15 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:37:15 --> Language Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:37:15 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:37:15 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:37:15 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:37:15 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:37:15 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:37:15 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:15 --> File loaded: application/views/all_event.php
+DEBUG - 2014-12-10 14:37:15 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:37:15 --> Final output sent to browser
+DEBUG - 2014-12-10 14:37:15 --> Total execution time: 0.0106
+DEBUG - 2014-12-10 14:37:16 --> Config Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Hooks Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Utf8 Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> UTF-8 Support Enabled
+DEBUG - 2014-12-10 14:37:16 --> URI Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Router Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Output Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Security Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Input Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:16 --> XSS Filtering completed
+DEBUG - 2014-12-10 14:37:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-12-10 14:37:16 --> Language Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Loader Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Helper loaded: url_helper
+DEBUG - 2014-12-10 14:37:16 --> Database Driver Class Initialized
+ERROR - 2014-12-10 14:37:16 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/vigeointra/public_html/attractif/admin/system/database/drivers/mysql/mysql_driver.php 91
+DEBUG - 2014-12-10 14:37:16 --> Config file loaded: application/config/config.php
+DEBUG - 2014-12-10 14:37:16 --> Controller Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> File loaded: application/views/header.php
+DEBUG - 2014-12-10 14:37:16 --> Helper loaded: form_helper
+DEBUG - 2014-12-10 14:37:16 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> Model Class Initialized
+DEBUG - 2014-12-10 14:37:16 --> File loaded: application/views/all_category.php
+DEBUG - 2014-12-10 14:37:16 --> File loaded: application/views/footer.php
+DEBUG - 2014-12-10 14:37:16 --> Final output sent to browser
+DEBUG - 2014-12-10 14:37:16 --> Total execution time: 0.0123
