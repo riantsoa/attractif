@@ -107,6 +107,20 @@ header.carousel {
     background: repeat #47D9C9;
     opacity: 1;
 }
+header.carousel .carousel-caption.left {
+    right: 10%;
+    left: 60%;
+    top: 15%;
+}
+header.carousel .carousel-caption.right {
+    right: 60%;
+    left: 10%;
+    top: 15%;
+}
+header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
+    background: rgba(0,157,167,0.5);
+    padding: 15px 0;
+}
 /*
 * CONTENT
 */
