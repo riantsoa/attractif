@@ -13,6 +13,10 @@ foreach ($product as $key=>$value)
     {
         echo form_dropdown('category', $options, $one_product[0]->$key);
     }
+    elseif ($product[$key]["field"] == 'descript')
+    {
+        echo form_textarea($product[$key]["field"], $one_product[0]->$key);
+    }
     else
     {
         echo form_input($product[$key]["field"], $one_product[0]->$key);

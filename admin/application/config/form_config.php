@@ -2,17 +2,17 @@
 $config['user'] =  array(
            'name' => array(
                      'field' => 'name',
-                     'label' => 'Name',
+                     'label' => 'Nom',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'mail' => array(
                      'field' => 'mail',
-                     'label' => 'Mail',
+                     'label' => 'Email',
                      'rules' => 'trim|required|valid_email'
                      ),
            'pass' => array(
                      'field' => 'pass',
-                     'label' => 'Pass',
+                     'label' => 'Mot de passe',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'newsletter' => array(
@@ -22,7 +22,7 @@ $config['user'] =  array(
                      ),
            'admin' => array(
                      'field' => 'admin',
-                     'label' => 'Admin',
+                     'label' => 'Administrateur',
                      'rules' => 'trim|required|xss_clean'
                      ),
            );
@@ -30,22 +30,22 @@ $config['user'] =  array(
 $config['product'] =  array(
            'name' => array(
                      'field' => 'name',
-                     'label' => 'Name',
+                     'label' => 'Nom',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'quantity' => array(
                      'field' => 'quantity',
-                     'label' => 'Quantity',
+                     'label' => 'Quantité',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'category' => array(
                      'field' => 'category',
-                     'label' => 'Category',
+                     'label' => 'Categorie',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'descript' => array(
                      'field' => 'descript',
-                     'label' => 'Descript',
+                     'label' => 'Description',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'image' => array(
@@ -73,7 +73,7 @@ $config['event'] =  array(
                      ),
            'name' => array(
                      'field' => 'name',
-                     'label' => 'Name',
+                     'label' => 'Nom',
                      'rules' => 'trim|required|xss_clean'
                      ),
            );
@@ -81,7 +81,7 @@ $config['event'] =  array(
 $config['category'] =  array(
            'name' => array(
                      'field' => 'name',
-                     'label' => 'Name',
+                     'label' => 'Nom',
                      'rules' => 'trim|required|xss_clean'
                      )
            );
@@ -94,12 +94,12 @@ $config['event_user'] =  array(
                      ),
            'customer' => array(
                      'field' => 'customer',
-                     'label' => 'Customer',
+                     'label' => 'Client',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'event' => array(
                      'field' => 'event',
-                     'label' => 'Event',
+                     'label' => '   ',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'date' => array(
@@ -112,12 +112,12 @@ $config['event_user'] =  array(
 $config['product_event'] =  array(
            'product' => array(
                      'field' => 'product',
-                     'label' => 'Product',
+                     'label' => 'Produit',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'event' => array(
                      'field' => 'event',
-                     'label' => 'Event',
+                     'label' => 'Événement',
                      'rules' => 'trim|required|xss_clean'
                      ),
            );
@@ -125,12 +125,12 @@ $config['product_event'] =  array(
 $config['sale'] =  array(
            'user' => array(
                      'field' => 'user',
-                     'label' => 'User',
+                     'label' => 'Utilisateur',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'product' => array(
                      'field' => 'product',
-                     'label' => 'Product',
+                     'label' => 'Produit',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'date' => array(
@@ -140,12 +140,12 @@ $config['sale'] =  array(
                      ),
            'event' => array(
                      'field' => 'event',
-                     'label' => 'Event',
+                     'label' => 'Événement',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'product' => array(
                      'field' => 'product',
-                     'label' => 'Product',
+                     'label' => 'Produit',
                      'rules' => 'trim|required|xss_clean'
                      ),
            );

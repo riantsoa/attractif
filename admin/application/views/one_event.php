@@ -12,6 +12,11 @@ foreach ($event as $key=>$value)
     {
         echo form_datetime('date', $one_event[0]->$key, "id='datetimepicker'");
     }
+    elseif ($event[$key]["field"] == 'descript')
+    {
+        echo form_textarea($event[$key]["field"], $one_event[0]->$key);
+
+    }
     else
     {
         echo form_input($event[$key]["field"], $one_event[0]->$key);
