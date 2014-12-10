@@ -1,3 +1,4 @@
+<div class="col-md-9">
 <?php
 echo "<div class=\"row\">
     <div class=\"col-lg-12\">";
@@ -14,7 +15,11 @@ foreach ($all_user as $key=>$value)
     echo "<a href='del/" . $value->id  . "'>Delete </a><br>";
     echo '<br>';
 }
-
+?>
+</div>
+<div class="col-md-3">
+    <h1>Add new user</h1>
+<?php
 echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));
 
@@ -32,6 +37,8 @@ echo form_close();
 
 
 ?>
+</div>
+<div class="col-md-12">
 <pre>
 <?php
 var_dump($count_user);
@@ -39,4 +46,5 @@ var_dump($all_user);
 
 ?>
 </pre>
+</div>
 
