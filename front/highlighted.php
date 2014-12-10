@@ -12,12 +12,12 @@ include('header.php');
     <div class="col-md-12 col-sm-6">
         <?php
         //Je vérifie le pseudo et le mot de passe
-        $req = $bdd->prepare('SELECT COUNT (DISTINCT p.name)
-                              FROM product AS p
-                              LEFT JOIN sale AS s ON (s.product = p.id)
-                              WHERE s.event = 1
-                              LIMIT 10
-                              ');
+        $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb
+                            FROM product as p
+                            INNER JOIN sale as s ON (p.id = s.product)
+                            GROUP BY p.id
+                            ORDER BY nb DESC
+                            LIMIT 0,10');
         //SELECT s.product FROM sales as s WHERE event = 4
         $req->execute();
         $data = $req->setFetchMode(PDO::FETCH_OBJ);
@@ -25,7 +25,6 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
             // Affichage des enregistrements
-            echo count ($enregistrement->id);
             echo '<img src="img/products/' . $enregistrement->image . '" width="200" alt="'.$enregistrement->name.'" /><br />';
         }
         ?>
