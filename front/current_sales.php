@@ -3,12 +3,14 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 ?>
-    <!-- Page Content -->
-    <div id="content">
-        <div class="container">
-            <div class="col-lg-12">
-                <h2 class="page-header">Liste de nos événements</h2>
+<!-- Page Content -->
+<div id="content">
+    <div class="container">
+        <!-- Selection 3 blocks -->
+        <div class="col-lg-12">
+                <h2 class="page-header">Ventes en cours</h2>
             </div>
+        <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
@@ -18,7 +20,7 @@ include('header.php');
 //                $hmoins1 = date('Y-m-d H:i:s', strtotime(date('H:i:s')) - 3600);
                 $req = $bdd->prepare('SELECT *
                                     FROM event
-                                    WHERE date > :hplus3
+                                    WHERE date < :hplus3
                                     
                                     ');
                 //AND date > :hmoins1
@@ -29,14 +31,17 @@ include('header.php');
                 $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
                 while ($enregistrement = $req->fetch()) {
-                    // Affichage des enregistrements
-                    echo '<h1>', $enregistrement->name, ' ', $enregistrement->date, '</h1>';
-                    echo '<p>', $enregistrement->place, '</p>';
-                    echo '<p>', $enregistrement->descript, '</p>';
-                    echo '<br />';
+//                    affiche le timer ('à voir plus tard')
+//                    $secondes = time() - strtotime($enregistrement->date);
+//                    echo '<div id="timer"></div>';
+                    echo $enregistrement->name.'<br />';
+                    echo $enregistrement->place.'<br />';
+                    echo $enregistrement->descript.'<br /><br />';
                 }
+//                $secondes = strtotime($hplus3) - time();
                 ?>
             </div>
-            <?php
-            include('footer.php');
-            
+        </div>
+        <?php
+        include('footer.php');
+        
