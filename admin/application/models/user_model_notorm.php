@@ -6,6 +6,6 @@
  * Time: 21:39
  */
 
-class user_model_notorm {
+class User_model_notorm {
 
-} 
+}

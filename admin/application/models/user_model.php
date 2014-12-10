@@ -100,6 +100,13 @@ class User_model extends CI_Model
                 ->get()
                 ->result();
     }
+
+    /***
+     * verifie si l'utilisateur peut se connecter ou pas
+     */
+    public function login(){
+
+    }
 }
 
 

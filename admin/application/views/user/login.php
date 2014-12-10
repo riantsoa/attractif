@@ -42,10 +42,10 @@
                         <h3 class="panel-title"><img src="<?php echo base_url();?>img/logotype.png" height="40px"></h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="<?php echo site_url('user_ctrl')?>" method="post">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="login" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Mot de passe" name="password" type="password" value="">

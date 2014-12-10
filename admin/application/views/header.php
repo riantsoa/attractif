@@ -51,7 +51,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">ATTRACTIF</a>
+    <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>img/logotype.png" height="30px"></a>
 </div>
 <!-- /.navbar-header -->
 
@@ -256,7 +256,7 @@
         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Réglages</a>
         </li>
         <li class="divider"></li>
-        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Deconnecter</a>
+        <li><a href="<?php echo site_url();?>/user_ctrl/login"><i class="fa fa-sign-out fa-fw"></i> Deconnecter</a>
         </li>
     </ul>
     <!-- /.dropdown-user -->
