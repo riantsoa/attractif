@@ -270,8 +270,8 @@
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a class="active" href="<?php echo base_url();?>index.php/welcome"><i class="fa fa-dashboard fa-fw"></i> Acceuil</a>
-            </li>
+                <a class="active" href="<?php echo base_url();?>index.php/welcome"><i class="fa fa-dashboard fa-fw"></i> Accueil</a>
+            </li
             <li>
                 <a href="<?php echo base_url();?>index.php/user/index"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Utilisateurs</a>
             </li>
