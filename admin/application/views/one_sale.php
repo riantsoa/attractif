@@ -1,7 +1,7 @@
 <pre>
 <?php
 
-var_dump($one_sell);
+var_dump($one_sale);
 
 ?>
 </pre>

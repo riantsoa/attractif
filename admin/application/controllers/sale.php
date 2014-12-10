@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Sell extends CI_Controller {
+class Sale extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -15,65 +15,65 @@ class Sell extends CI_Controller {
      *
      * So any other public methods not prefixed with an underscore will
      * map to /index.php/welcome/<method_user>
-     * @see http://codeigniter.com/sell_guide/general/urls.html
+     * @see http://codeigniter.com/sale_guide/general/urls.html
      */
 
     public function index()
     {
-        $this->load->model('sell_model', 'sellManager');
+        $this->load->model('sale_model', 'saleManager');
 
         $data = array();
 
         //  On lance une requête
-        $data['all_sell'] = $this->sellManager->all();
-        $data['count_sell'] = $this->sellManager->count();
+        $data['all_sale'] = $this->saleManager->all();
+        $data['count_sale'] = $this->saleManager->count();
 
         //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('all_sell', $data);
+        $this->load->view('all_sale', $data);
         $this->load->view('footer');
     }
 
     public function add($user, $product, $quantity, $date, $event)
     {
         $this->load->helper('url');
-        $this->load->model('sell_model', 'sellManager');
-        $this->sellManager->add($user, $product, $quantity, $date, $event);
+        $this->load->model('sale_model', 'saleManager');
+        $this->saleManager->add($user, $product, $quantity, $date, $event);
 
-        redirect("sell/");
-        // TODO redirect last insert $id sell page
+        redirect("sale/");
+        // TODO redirect last insert $id sale page
     }
 
     public function edit($id, $user, $product, $quantity, $date, $event)
     {
         $this->load->helper('url');
-        $this->load->model('sell_model', 'sellManager');
-        $this->sellManager->edit($id, $user, $product, $quantity, $date, $event);
+        $this->load->model('sale_model', 'saleManager');
+        $this->saleManager->edit($id, $user, $product, $quantity, $date, $event);
 
-        redirect("sell/one/" . $id);
+        redirect("sale/one/" . $id);
     }
 
     public function del($id)
     {
         $this->load->helper('url');
-        $this->load->model('sell_model', 'sellManager');
-        $this->sellManager->del($id);
+        $this->load->model('sale_model', 'saleManager');
+        $this->saleManager->del($id);
 
-        redirect("sell/");
+        redirect("sale/");
     }
 
     public function one($id)
     {
-        $this->load->model('sell_model', 'sellManager');
+        $this->load->model('sale_model', 'saleManager');
 
         $data = array();
 
         //  On lance une requête
-        $data['one_sell'] = $this->sellManager->one($id);
+        $data['one_sale'] = $this->saleManager->one($id);
 
         //  Et on inclut une vue
         $this->load->view('header');
-        $this->load->view('one_sell', $data);
+        $this->load->view('one_sale', $data);
         $this->load->view('footer');
 
     }

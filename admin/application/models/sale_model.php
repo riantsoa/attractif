@@ -1,11 +1,11 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Sell_model extends CI_Model
+class Sale_model extends CI_Model
 {
-    protected $table = 'sell';
+    protected $table = 'sale';
 
     /**
-     *  Ajoute un sell
+     *  Ajoute un sale
      */
     public function add($user, $product, $quantity, $date, $event)
     {
@@ -25,7 +25,7 @@ class Sell_model extends CI_Model
     }
 
     /**
-     *  Édite une sell déjà existante
+     *  Édite une sale déjà existante
      */
     public function edit($id, $user = null, $product = null, $quantity = null, $date = null, $event = null, $admin = null)
     {
@@ -57,7 +57,7 @@ class Sell_model extends CI_Model
     }
 
     /**
-     *  Supprime une sell
+     *  Supprime une sale
      */
     public function del($id)
     {
@@ -66,7 +66,7 @@ class Sell_model extends CI_Model
     }
 
     /**
-     *  Retourne le nombre de sell
+     *  Retourne le nombre de sale
      */
     public function count($where = array())
     {
@@ -75,7 +75,7 @@ class Sell_model extends CI_Model
     }
 
     /**
-     *  Retourne une liste de sell
+     *  Retourne une liste de sale
      */
     public function one($id)
     {
@@ -86,7 +86,7 @@ class Sell_model extends CI_Model
                 ->result();
     }
     /**
-     *  Retourne une liste de sell
+     *  Retourne une liste de sale
      */
     public function all($nb = 100, $debut = 0)
     {
@@ -100,5 +100,5 @@ class Sell_model extends CI_Model
 }
 
 
-/* End of file sell_model.php */
-/* Location: ./application/models/sell_model.php */
+/* End of file sale_model.php */
+/* Location: ./application/models/sale_model.php */

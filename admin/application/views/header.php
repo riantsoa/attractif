@@ -284,6 +284,9 @@
                 <a href="<?php echo base_url();?>index.php/event/index"><i class="fa fa-table fa-fw"></i> Events</a>
             </li>
             <li>
+                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i> Sales</a>
+            </li>
+            <li>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="login.html">Login Page</a>
