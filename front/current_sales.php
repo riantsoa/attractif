@@ -14,28 +14,36 @@ include('header.php');
                 // redirection quand timer arrivé à 0
                 $redirection = 'index.php';
                 $hplus3 = date('Y-m-d H:i:s', strtotime(date('H:i:s')) + 10800);
-                $hmoins1 = date('Y-m-d H:i:s', strtotime(date('H:i:s')) - 3600);
-                $req = $bdd->prepare('SELECT date
+//                $hmoins1 = date('Y-m-d H:i:s', strtotime(date('H:i:s')) - 3600);
+                $req = $bdd->prepare('SELECT *
                                     FROM event
                                     WHERE date < :hplus3
-                                    AND date > :hmoins1');
+                                    
+                                    ');
+                //AND date > :hmoins1
                 $req->execute(array(
                     'hplus3' => $hplus3,
-                    'hmoins1' => $hmoins1
+//                    'hmoins1' => $hmoins1
                 ));
                 $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
+                echo '<h2>VENTES EN COURS</h2>';
+
                 while ($enregistrement = $req->fetch()) {
-                    $secondes = strtotime($enregistrement->date) - time();
-                    echo $secondes;
+//                    affiche le timer ('à voir plus tard')
+//                    $secondes = time() - strtotime($enregistrement->date);
 //                    echo '<div id="timer"></div>';
+                    echo $enregistrement->name.'<br />';
+                    echo $enregistrement->place.'<br />';
+                    echo $enregistrement->descript.'<br /><br />';
                 }
+//                $secondes = strtotime($hplus3) - time();
                 ?>
-                <!--<h2>PROCHAINE VENTE DANS </h2>-->
-                                <!--<div id="timer"></div>-->
-<!--                                <div class="participate green">
-                                    <a href="#">PARTICIPER</a>
-                                </div>-->
+                <!--                <h2>PROCHAINE VENTE DANS </h2>
+                                                <div id="timer"></div>
+                                                <div class="participate green">
+                                                    <a href="#">PARTICIPER</a>
+                                                </div>-->
             </div>
         </div>
         <?php
