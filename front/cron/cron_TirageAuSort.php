@@ -19,7 +19,7 @@ while ($enregistrement = $req->fetch()) {
     //insert des users pour un event avec status 1
     $req = $bdd->prepare('INSERT INTO event_user VALUES (NULL, :status, :client, :event, :date)');
     // On envois la requète
-    $success = $insert->execute(array(
+    $success = $req->execute(array(
         'status' => $enregistrement->status,
         'client' => $enregistrement->client,
         'event' => $enregistrement->event,
