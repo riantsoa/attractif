@@ -12,16 +12,16 @@ include('header.php');
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Je vérifie le pseudo et le mot de passe
-                $req = $bdd->prepare('SELECT nom, description, date, location FROM event WHERE 1');
+                $req = $bdd->prepare('SELECT * FROM event WHERE 1');
                 $req->execute();
                 $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
                 // Nous traitons les résultats en boucle
                 while ($enregistrement = $req->fetch()) {
                     // Affichage des enregistrements
-                    echo '<h1>', $enregistrement->nom, ' ', $enregistrement->date, '</h1>';
-                    echo '<p>', $enregistrement->location, '</p>';
-                    echo '<p>', $enregistrement->description, '</p>';
+                    echo '<h1>', $enregistrement->name, ' ', $enregistrement->date, '</h1>';
+                    echo '<p>', $enregistrement->place, '</p>';
+                    echo '<p>', $enregistrement->descript, '</p>';
                     echo '<br />';
                 }
                 ?>
