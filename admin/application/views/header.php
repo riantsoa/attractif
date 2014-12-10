@@ -270,22 +270,25 @@
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a class="active" href="<?php echo base_url();?>index.php/index/index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a class="active" href="<?php echo base_url();?>index.php/welcome"><i class="fa fa-dashboard fa-fw"></i> Acceuil</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/user/index"><i class="fa fa-table fa-fw"></i> Users</a>
+                <a href="<?php echo base_url();?>index.php/user/index"><i class="fa fa-table fa-fw"></i> Utilisateurs</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/product/index"><i class="fa fa-table fa-fw"></i> Products</a>
+                <a href="<?php echo base_url();?>index.php/product/index"><i class="fa fa-table fa-fw"></i> Produits</a>
             </li>
             <li>
                 <a href="<?php echo base_url();?>index.php/category/index"><i class="fa fa-table fa-fw"></i> Categories</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/event/index"><i class="fa fa-table fa-fw"></i> Events</a>
+                <a href="<?php echo base_url();?>index.php/event/index"><i class="fa fa-table fa-fw"></i> Evenement</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i> Sales</a>
+                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i> Ventes</a>
+            </li>
+            <li>
+                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i>Mailing</a>
             </li>
             <li>
                 <ul class="nav nav-second-level">
