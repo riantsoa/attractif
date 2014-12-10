@@ -43,7 +43,7 @@ include('header.php');
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
-                $req = $bdd->prepare('SELECT date FROM event WHERE date >= NOW()');
+                $req = $bdd->prepare('SELECT id, date FROM event WHERE date >= NOW()');
                 $req->execute();
                 $data = $req->fetch(PDO::FETCH_OBJ);
                 // redirection quand timer arrivé à 0
@@ -53,7 +53,11 @@ include('header.php');
                 <h2>PROCHAINE VENTE DANS </h2>
                 <div id="timer"></div>
                 <div class="participate green">
-                    <a href="#">PARTICIPER</a>
+                    <?php if (isset($_SESSION['data'])) { ?>
+                        <a href="participate.php?event=<?php echo $data->id; ?>">PARTICIPER</a>
+                    <?php } else { ?>
+                        <a href="#">PARTICIPER</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>

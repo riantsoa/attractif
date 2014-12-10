@@ -31,7 +31,7 @@ header('Content-Type: text/html; charset=utf-8');
     <body>
         <div id="header">
             <div id="logo" class="inline col-md-4 col-sm-6">
-                <a href="index.php"><img src="img/logotype.png" alt="Attractif - vente privée high tech" width="200"></a>
+                <a href="index.php"><img src="img/logotype-attractif-slogan.png" alt="Attractif - vente privée high tech" width="200"></a>
             </div>
             <div id="login" class="inline col-md-8 col-sm-6">
                 <?php
