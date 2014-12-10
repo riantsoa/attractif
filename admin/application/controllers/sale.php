@@ -20,25 +20,44 @@ class Sale extends CI_Controller {
 
     public function index()
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
         $this->load->model('sale_model', 'saleManager');
 
         $data = array();
+
+        $this->load->model('product_model', 'productManager');
+        $data['all_product'] = $this->productManager->all();
+        $this->load->model('event_model', 'eventManager');
+        $data['all_event'] = $this->eventManager->all();
+        $this->load->model('user_model', 'userManager');
+        $data['all_user'] = $this->userManager->all();
+
+        try
+        {
+            $data["sale"] = $this->config->item("sale");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
 
         //  On lance une requête
         $data['all_sale'] = $this->saleManager->all();
         $data['count_sale'] = $this->saleManager->count();
 
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('all_sale', $data);
         $this->load->view('footer');
     }
 
-    public function add($user, $product, $quantity, $date, $event)
+    public function add($user, $product, $quantity, $date, $sale)
     {
         $this->load->helper('url');
         $this->load->model('sale_model', 'saleManager');
-        $this->saleManager->add($user, $product, $quantity, $date, $event);
+        $this->saleManager->add($user, $product, $quantity, $date, $sale);
 
         redirect("sale/");
         // TODO redirect last insert $id sale page
@@ -48,7 +67,14 @@ class Sale extends CI_Controller {
     {
         $this->load->helper('url');
         $this->load->model('sale_model', 'saleManager');
-        $this->saleManager->edit($id, $user, $product, $quantity, $date, $event);
+        $this->saleManager->edit(
+            $id,
+            $this->input->get_post('user'),
+            $this->input->get_post('product'),
+            $this->input->get_post('quantity'),
+            $this->input->get_post('date'),
+            $this->input->get_post('event')
+        );
 
         redirect("sale/one/" . $id);
     }
@@ -62,17 +88,36 @@ class Sale extends CI_Controller {
         redirect("sale/");
     }
 
+
     public function one($id)
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->helper('form');
         $this->load->model('sale_model', 'saleManager');
 
         $data = array();
 
+        $this->load->model('product_model', 'productManager');
+        $data['all_product'] = $this->productManager->all();
+        $this->load->model('event_model', 'eventManager');
+        $data['all_event'] = $this->eventManager->all();
+        $this->load->model('user_model', 'userManager');
+        $data['all_user'] = $this->userManager->all();
+
         //  On lance une requête
         $data['one_sale'] = $this->saleManager->one($id);
 
+        try
+        {
+            $data["sale"] = $this->config->item("sale");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
         //  Et on inclut une vue
-        $this->load->view('header');
         $this->load->view('one_sale', $data);
         $this->load->view('footer');
 

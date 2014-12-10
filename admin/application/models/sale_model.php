@@ -27,9 +27,8 @@ class Sale_model extends CI_Model
     /**
      *  Édite une sale déjà existante
      */
-    public function edit($id, $user = null, $product = null, $quantity = null, $date = null, $event = null, $admin = null)
+    public function edit($id, $user = null, $product = null, $quantity = null, $date = null, $event = null)
     {
-        $user = time();
         if($user != null)
         {
             $this->db->set('user', $user);
@@ -53,7 +52,7 @@ class Sale_model extends CI_Model
         //  La condition
         $this->db->where('id', (int) $id);
 
-        return $this->db->upuser($this->table);
+        return $this->db->update($this->table);
     }
 
     /**

@@ -127,7 +127,7 @@ $config['product_event'] =  array(
                      ),
            );
 
-$config['sell'] =  array(
+$config['sale'] =  array(
            'user' => array(
                      'field' => 'user',
                      'label' => 'User',

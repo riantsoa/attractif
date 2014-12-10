@@ -90,6 +90,7 @@ class Event extends CI_Controller {
 
         redirect("event//index");
     }
+
     public function one($id)
     {
         $this->load->helper('url');

@@ -3,7 +3,10 @@
 
 foreach ($all_category as $key=>$value)
 {
-    echo "<a href='one/" . $value->id  . "'>Edit " . $value->name . "</a><br>";
+    echo "<strong>" . $value->name  . " (" . $value->id . ")</strong><br>";
+    echo "<a href='one/" . $value->id  . "'>Edit </a> ";
+    echo "<a href='del/" . $value->id  . "'>Delete </a><br>";
+    echo '<br>';
 }
 
 echo form_open($this->uri->segment(1) . '/add/', '');
