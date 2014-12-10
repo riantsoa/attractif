@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     //Je vérifie les infos et je les insert
-    $insert = $bdd->prepare('UPDATE user SET nom=:nom, email= :email, password= :password ');
+    $insert = $bdd->prepare('UPDATE user SET name=:nom, mail= :email, pass= :password ');
     try {
         // On envois la requète
         $success = $insert->execute(array(
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         echo 'Erreur de requète : ', $e->getMessage();
     }
 }
-$req = $bdd->prepare('SELECT * FROM user WHERE password = :password AND email = :email');
+$req = $bdd->prepare('SELECT * FROM user WHERE pass = :password AND mail = :email');
 $req->execute(array(
     'password' => $password,
     'email' => $email
@@ -40,9 +40,9 @@ $data = $req->fetch(PDO::FETCH_OBJ);
         <div class="col-md-12 col-sm-6">
             <div class="col-md-12 col-sm-6">
                 <form action="myinfos.php" method="post">
-                    <input type="text" placeholder="Nom" name="nom" value="<?php echo $data->nom; ?>" /><br />
-                    <input type="email" placeholder="Email" name="email" value="<?php echo $data->email; ?>" /><br />
-                    <input type="text" placeholder="Mot de passe" name="password" value="<?php echo $data->password; ?>"/><br />
+                    <input type="text" placeholder="Nom" name="nom" value="<?php echo $data->name; ?>" /><br />
+                    <input type="email" placeholder="Email" name="email" value="<?php echo $data->mail; ?>" /><br />
+                    <input type="text" placeholder="Mot de passe" name="password" value="<?php echo $data->pass; ?>"/><br />
                     <input type="submit" name="submit" value="Enregistrer modifications">
                 </form>
             </div>

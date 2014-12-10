@@ -3,7 +3,7 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 
-$nb = $bdd->prepare('SELECT COUNT(id) AS count FROM user_sales WHERE user_id = :id');
+$nb = $bdd->prepare('SELECT COUNT(id) AS count FROM sell WHERE user = :id_user ');
 $nb->execute(array(
     'id' => $id
 ));
