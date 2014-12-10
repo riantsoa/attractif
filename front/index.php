@@ -13,7 +13,7 @@ include('header.php');
     <!-- Slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+            <div class="fill" style="background-image:url('img/slide3.png');"></div>
             <div class="carousel-caption">
                 <h2>Caption 1</h2>
             </div>
@@ -43,7 +43,7 @@ include('header.php');
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
-                $req = $bdd->prepare('SELECT date FROM event WHERE date >= NOW()');
+                $req = $bdd->prepare('SELECT id, date FROM event WHERE date >= NOW()');
                 $req->execute();
                 $data = $req->fetch(PDO::FETCH_OBJ);
                 // redirection quand timer arrivé à 0
@@ -53,7 +53,11 @@ include('header.php');
                 <h2>PROCHAINE VENTE DANS </h2>
                 <div id="timer"></div>
                 <div class="participate green">
-                    <a href="#">PARTICIPER</a>
+                    <?php if (isset($_SESSION['data'])) { ?>
+                        <a href="participate.php?event=<?php echo $data->id; ?>">PARTICIPER</a>
+                    <?php } else { ?>
+                        <a href="#">PARTICIPER</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -63,24 +67,29 @@ include('header.php');
             <div class="best-products">
                 <div class="col-md-12">
                     <div id="carousel">
-                        <button class="prev inline"></button>
-                        <div class="mfcarousel inline">
-                            <ul>
-                                <li><img src="http://malsup.github.io/images/beach1.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach2.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach3.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach4.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach5.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach6.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach7.jpg"></li>
-                                <li><img src="http://malsup.github.io/images/beach8.jpg"></li>
-                            </ul>
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                                <?php
+                                //Je vérifie le pseudo et le mot de passe
+                                $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb
+                            FROM product as p
+                            LEFT JOIN sale as s ON (p.id = s.product)
+                            GROUP BY p.id
+                            ORDER BY nb DESC
+                            LIMIT 0,10');
+                                //SELECT s.product FROM sales as s WHERE event = 4
+                                $req->execute();
+                                $data = $req->setFetchMode(PDO::FETCH_OBJ);
+
+                                // Nous traitons les résultats en boucle
+                                while ($enregistrement = $req->fetch()) {
+                                    ?>
+                                     <div class="item"><?php echo '<img src="img/products/' . $enregistrement->image . '" width="200" alt="'.$enregistrement->name.'" />'; ?></div>
+                                <?php } ?>
+                            </div>
                         </div>
-                        <button class="next inline"></button>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php
-        include('footer.php');
-        
+            <?php
+            include('footer.php');
+            
