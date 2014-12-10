@@ -37,6 +37,16 @@ class Event extends CI_Controller {
             return show_error($err->getMessage());
         }
 
+        try
+        {
+            $data["form_product_event"] = $this->config->item("product_event");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
+
         //  On lance une requête
         $data['all_event'] = $this->eventManager->all();
         $data['count_event'] = $this->eventManager->count();
@@ -97,12 +107,37 @@ class Event extends CI_Controller {
         $this->load->view('header');
         $this->load->helper('form');
         $this->load->model('event_model', 'eventManager');
+        $this->load->model('product_event_model', 'productEventManager');
 
+        $this->load->model('product_model', 'productManager');
         $data = array();
+        try
+        {
+            $data["form_product_event"] = $this->config->item("product_event");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
 
+
+        $data['all_product'] = $this->productManager->all();
+        $data['all_product_event'] = $this->productEventManager->one($id)[0];
+        $data['id'] = $id;
         //  On lance une requête
         $data['one_event'] = $this->eventManager->one($id);
 
+
+        try
+        {
+            $data["product_event"] = $this->config->item("product_event");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
         try
         {
             $data["event"] = $this->config->item("event");

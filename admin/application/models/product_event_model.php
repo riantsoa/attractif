@@ -10,7 +10,6 @@ class Product_event_model extends CI_Model
     public function add($product, $event)
     {
         //  Ces données seront automatiquement échappées
-        $date = time();
         return $this->db
             ->set('product',  $product)
             ->set('event',   $event)
@@ -43,9 +42,11 @@ class Product_event_model extends CI_Model
     /**
      *  Supprime une product_event
      */
-    public function del($id)
+    public function del($product, $event)
     {
-        return $this->db->where('id', (int) $id)
+        return $this->db
+        ->where('product', (int) $product)
+        ->where('event', (int) $event)
                 ->delete($this->table);
     }
 
@@ -63,11 +64,13 @@ class Product_event_model extends CI_Model
      */
     public function one($id)
     {
-        return $this->db->select('*')
+        return array($this->db->select('*')
                 ->from($this->table)
-                ->where('id', (int) $id)
+                ->join('product', 'product_event.product = product.id', 'left')
+                ->group_by('product_event.id')
+                ->having('event', (int) $id)
                 ->get()
-                ->result();
+                ->result(), $id);
     }
     /**
      *  Retourne une liste de product_event

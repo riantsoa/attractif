@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-$db['default']['database'] = 'attratcif';
+$db['default']['hostname'] = '127.0.0.1';
+$db['default']['username'] = 'user';
+$db['default']['password'] = 'user';
+$db['default']['database'] = 'attractif';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

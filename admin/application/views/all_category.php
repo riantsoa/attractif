@@ -1,6 +1,10 @@
 <?php
+echo "<div class=\"row\">
+    <div class=\"col-lg-12\">";
 
-echo "<h1>Categories (" . $count_category . ")</h1><br>";
+echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-tasks\"></span>&nbsp;&nbsp;Categories (" . $count_category . ")</h1><br>
+    </div>
+</div>";
 
 foreach ($all_category as $key=>$value)
 {

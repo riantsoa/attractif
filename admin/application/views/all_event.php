@@ -1,7 +1,12 @@
 <?php
 
 // echo $count_event . "events<br>";
-echo "<h1>Events (" . $count_event . ")</h1><br>";
+echo "<div class=\"row\">
+    <div class=\"col-lg-12\">";
+echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-time\"></span>&nbsp;&nbsp;Evenements (" . $count_event . ")</h1><br>
+    </div>
+</div>";
+
 
 foreach ($all_event as $key=>$value)
 {

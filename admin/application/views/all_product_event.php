@@ -2,7 +2,7 @@
 
 foreach ($all_product_event as $key=>$value)
 {
-    echo "<strong>" . $value->name  . " (" . $value->id . ")</strong><br>";
+    // echo "<strong>" . $value->name  . " (" . $value->id . ")</strong><br>";
     echo "<a href='one/" . $value->id  . "'>Edit </a> ";
     echo "<a href='del/" . $value->id  . "'>Delete </a><br>";
     echo '<br>';

@@ -24,7 +24,7 @@ class UserLib {
         if (empty($_SESSION))
             session_start();
         if (!isset($_SESSION['user'])) {
-            redirect('user_ctrl/login', 'refresh');
+            redirect('userctrl/login', 'refresh');
         }
         return true;
     }
@@ -33,7 +33,7 @@ class UserLib {
      * Redirige vers la une page donné si le profil ne correspond pas
      */
     protected static function redirectToProfilMismatchPage() {
-        redirect('user_ctrl/not_permited', 'refresh');
+        redirect('userctrl/not_permited', 'refresh');
     }
 
     /**
