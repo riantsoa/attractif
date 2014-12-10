@@ -22,7 +22,9 @@ form_hidden('id', $this->uri->segment(3));
 foreach ($event as $key=>$value)
 {
     echo form_label($event[$key]["label"], $event[$key]["field"]) . '<br>';
-    echo form_input($event[$key]["field"], '');
+    if($key == 'date'){
+        echo form_input(array('name' => $event[$key]["field"] , 'id' => 'evenement_date'));
+    }else echo form_input($event[$key]["field"], '');
 
     echo '<br><br>';
 }
@@ -38,4 +40,9 @@ var_dump($all_event);
 
 ?>
 </pre>
+<script>
+    $(function() {
+        jQuery('#evenement_date').datetimepicker({lang:'fr',startDate:'+1971/05/01'});
+    });
+</script>
 
