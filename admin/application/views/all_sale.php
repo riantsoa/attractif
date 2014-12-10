@@ -1,6 +1,11 @@
 <?php
+echo "<div class=\"row\">
+    <div class=\"col-lg-12\">";
 
-echo "<h1>Sales (" . $count_sale . ")</h1><br>";
+echo "<h1 class=\"page-header\">Sales (" . $count_sale . ")</h1><br>
+    </div>
+</div>";
+
 
 foreach ($all_sale as $key=>$value)
 {

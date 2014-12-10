@@ -273,30 +273,22 @@
                 <a class="active" href="<?php echo base_url();?>index.php/welcome"><i class="fa fa-dashboard fa-fw"></i> Acceuil</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/user/index"><i class="fa fa-table fa-fw"></i> Utilisateurs</a>
+                <a href="<?php echo base_url();?>index.php/user/index"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Utilisateurs</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/product/index"><i class="fa fa-table fa-fw"></i> Produits</a>
+                <a href="<?php echo base_url();?>index.php/product/index"><span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;Produits</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/category/index"><i class="fa fa-table fa-fw"></i> Categories</a>
+                <a href="<?php echo base_url();?>index.php/category/index"><span class="glyphicon glyphicon-tasks"></span>&nbsp;&nbsp;Categories</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/event/index"><i class="fa fa-table fa-fw"></i> Evenement</a>
+                <a href="<?php echo base_url();?>index.php/event/index"><span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;Evenements</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i> Ventes</a>
+                <a href="<?php echo base_url();?>index.php/sale/index"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Ventes</a>
             </li>
             <li>
-                <a href="<?php echo base_url();?>index.php/sale/index"><i class="fa fa-table fa-fw"></i>Mailing</a>
-            </li>
-            <li>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="login.html">Login Page</a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
+                <a href="<?php echo base_url();?>index.php/sale/index"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Mailing</a>
             </li>
         </ul>
     </div>
