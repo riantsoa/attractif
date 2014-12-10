@@ -7,7 +7,7 @@ class User_model extends CI_Model
     /**
      *  Ajoute un user
      */
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add($name, $mail, $pass, $newsletter = 0, $admin = 0)
     {
         //  Ces données seront automatiquement échappées
         return $this->db
@@ -15,7 +15,6 @@ class User_model extends CI_Model
             ->set('mail',   $mail)
             ->set('pass', $pass)
             ->set('newsletter', $newsletter)
-            ->set('alert', $alert)
             ->set('admin', $admin)
             ->insert($this->table);
         ;
@@ -27,7 +26,7 @@ class User_model extends CI_Model
     /**
      *  Édite une user déjà existante
      */
-    public function edit($id, $name = null, $mail = null, $newsletter = null, $alert = null, $admin = null)
+    public function edit($id, $name = null, $mail = null, $newsletter = null, $admin = null)
     {
         if($name != null)
         {
@@ -44,10 +43,6 @@ class User_model extends CI_Model
         if($newsletter != null)
         {
             $this->db->set('newsletter', $newsletter);
-        }
-        if($alert != null)
-        {
-            $this->db->set('alert', $alert);
         }
         if($admin != null)
         {

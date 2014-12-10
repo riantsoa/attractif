@@ -64,7 +64,7 @@ class Product extends CI_Controller {
             $this->input->get_post('image')
         );
 
-        redirect("product/one/index");
+        redirect("product/index");
         // TODO redirect last insert $id product page
     }
 

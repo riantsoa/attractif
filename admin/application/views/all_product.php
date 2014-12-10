@@ -1,4 +1,3 @@
-<pre>
 <?php
 
 echo "<h1>Products (" . $count_product . ")</h1><br>";
@@ -38,6 +37,9 @@ echo form_submit('submit', 'Submit');
 echo form_close();
 
 
+?>
+<pre>
+<?php
 var_dump($count_product);
 var_dump($all_product);
 

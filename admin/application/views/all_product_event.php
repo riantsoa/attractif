@@ -1,4 +1,3 @@
-<pre>
 <?php
 
 foreach ($all_product_event as $key=>$value)
@@ -8,6 +7,11 @@ foreach ($all_product_event as $key=>$value)
     echo "<a href='del/" . $value->id  . "'>Delete </a><br>";
     echo '<br>';
 }
+
+
+?>
+<pre>
+<?php
 var_dump($count_product_event);
 var_dump($all_product_event);
 

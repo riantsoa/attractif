@@ -1,4 +1,3 @@
-<pre>
 <?php
 
 echo "<h1>Sales (" . $count_sale . ")</h1><br>";
@@ -68,6 +67,9 @@ echo form_submit('submit', 'Submit');
 echo form_close();
 
 
+?>
+<pre>
+<?php
 var_dump($count_sale);
 var_dump($all_sale);
 

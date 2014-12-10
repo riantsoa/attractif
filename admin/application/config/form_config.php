@@ -10,19 +10,14 @@ $config['user'] =  array(
                      'label' => 'Mail',
                      'rules' => 'trim|required|valid_email'
                      ),
-           // 'pass' => array(
-                     // 'field' => 'pass',
-                     // 'label' => 'Pass',
-                     // 'rules' => 'trim|required|xss_clean'
-                     // ),
+           'pass' => array(
+                     'field' => 'pass',
+                     'label' => 'Pass',
+                     'rules' => 'trim|required|xss_clean'
+                     ),
            'newsletter' => array(
                      'field' => 'newsletter',
                      'label' => 'Newsletter',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           'alert' => array(
-                     'field' => 'alert',
-                     'label' => 'Alert',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'admin' => array(
@@ -136,11 +131,6 @@ $config['sale'] =  array(
            'product' => array(
                      'field' => 'product',
                      'label' => 'Product',
-                     'rules' => 'trim|required|xss_clean'
-                     ),
-           'quantity' => array(
-                     'field' => 'quantity',
-                     'label' => 'Quantity',
                      'rules' => 'trim|required|xss_clean'
                      ),
            'date' => array(
