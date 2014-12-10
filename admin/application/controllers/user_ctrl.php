@@ -11,6 +11,10 @@ class User_ctrl extends CI_Controller {
         $this->load->view('user/login');
     }
 
+    public function not_permited(){
+        $this->load->view('user/not_permited');
+    }
+
 }
 
 /* End of file welcome.php */

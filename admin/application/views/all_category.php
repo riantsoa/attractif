@@ -1,4 +1,3 @@
-<pre>
 <?php
 
 echo "<h1>Categories (" . $count_category . ")</h1><br>";
@@ -24,7 +23,9 @@ foreach ($category as $key=>$value)
 
 echo form_submit('submit', 'Submit');
 echo form_close();
-
+?>
+<pre>
+<?php
 var_dump($count_category);
 var_dump($all_category);
 ?>

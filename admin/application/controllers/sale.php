@@ -53,17 +53,22 @@ class Sale extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function add($user, $product, $quantity, $date, $sale)
+    public function add()
     {
         $this->load->helper('url');
         $this->load->model('sale_model', 'saleManager');
-        $this->saleManager->add($user, $product, $quantity, $date, $sale);
+        $this->saleManager->add(
+            $this->input->get_post('user'),
+            $this->input->get_post('product'),
+            $this->input->get_post('date'),
+            $this->input->get_post('event')
+        );
 
-        redirect("sale/");
+        redirect("sale/index");
         // TODO redirect last insert $id sale page
     }
 
-    public function edit($id, $user, $product, $quantity, $date, $event)
+    public function edit($id, $user, $product, $date, $event)
     {
         $this->load->helper('url');
         $this->load->model('sale_model', 'saleManager');
@@ -71,7 +76,6 @@ class Sale extends CI_Controller {
             $id,
             $this->input->get_post('user'),
             $this->input->get_post('product'),
-            $this->input->get_post('quantity'),
             $this->input->get_post('date'),
             $this->input->get_post('event')
         );

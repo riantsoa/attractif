@@ -1,4 +1,3 @@
-<pre>
 <?php
 
 // echo $count_event . "events<br>";
@@ -26,6 +25,9 @@ foreach ($event as $key=>$value)
 echo form_submit('submit', 'Submit');
 echo form_close();
 
+?>
+<pre>
+<?php
 var_dump($count_event);
 var_dump($all_event);
 

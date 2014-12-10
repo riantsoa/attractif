@@ -1,4 +1,3 @@
-<pre>
 <?php
 echo form_open($this->uri->segment(1) . '/edit/' . $this->uri->segment(3), '');
 form_hidden('id', $this->uri->segment(3));
@@ -57,6 +56,9 @@ echo form_submit('submit', 'Submit');
 echo form_close();
 
 
+?>
+<pre>
+<?php
 var_dump($one_sale);
 
 ?>

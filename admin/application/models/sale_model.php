@@ -7,14 +7,13 @@ class Sale_model extends CI_Model
     /**
      *  Ajoute un sale
      */
-    public function add($user, $product, $quantity, $date, $event)
+    public function add($user, $product, $date, $event)
     {
         //  Ces données seront automatiquement échappées
         $user = time();
         return $this->db
             ->set('user',  $user)
             ->set('product',   $product)
-            ->set('quantity', $quantity)
             ->set('date', $date)
             ->set('event', $event)
             ->insert($this->table);
@@ -27,7 +26,7 @@ class Sale_model extends CI_Model
     /**
      *  Édite une sale déjà existante
      */
-    public function edit($id, $user = null, $product = null, $quantity = null, $date = null, $event = null)
+    public function edit($id, $user = null, $product = null, $date = null, $event = null)
     {
         if($user != null)
         {
@@ -36,10 +35,6 @@ class Sale_model extends CI_Model
         if($product != null)
         {
             $this->db->set('product', $product);
-        }
-        if($quantity != null)
-        {
-            $this->db->set('quantity', $quantity);
         }
         if($date != null)
         {

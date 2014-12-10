@@ -46,19 +46,18 @@ class User extends CI_Controller {
         $this->load->view('footer');
 
     }
-    public function add($name, $mail, $pass, $newsletter = 0, $alert = 0, $admin = 0)
+    public function add()
     {
         $this->load->helper('url');
         $this->load->view('header');
         $this->load->helper('form');
 
         $this->load->model('user_model', 'userManager');
-        $this->userManager->edit(
+        $this->userManager->add(
             $this->input->get_post('name'),
             $this->input->get_post('mail'),
-            //$this->input->get_post('pass'),
+            $this->input->get_post('pass'),
             $this->input->get_post('newsletter'),
-            $this->input->get_post('alert'),
             $this->input->get_post('admin')
         );
 
@@ -79,7 +78,6 @@ class User extends CI_Controller {
             $this->input->get_post('mail'),
             // $this->input->get_post('pass'),
             $this->input->get_post('newsletter'),
-            $this->input->get_post('alert'),
             $this->input->get_post('admin')
         );
 

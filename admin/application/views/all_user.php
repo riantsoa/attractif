@@ -1,4 +1,3 @@
-<pre>
 <?php
 echo "<h1>Users (" . $count_user . ")</h1><br>";
 
@@ -24,6 +23,11 @@ foreach ($user as $key=>$value)
 echo form_submit('submit', 'Submit');
 echo form_close();
 
+
+
+?>
+<pre>
+<?php
 var_dump($count_user);
 var_dump($all_user);
 
