@@ -42,23 +42,9 @@
                         <h3 class="panel-title"><img src="<?php echo base_url();?>img/logotype.png" height="40px"></h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="<?php echo site_url('user_ctrl')?>" method="post">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="login" type="email" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Mot de passe" name="password" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="">Se souvenir de moi
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Connexion</a>
-                            </fieldset>
-                        </form>
+                       <h3>
+                           Cette Action n'est pas autorisé
+                       </h3>
                     </div>
                 </div>
             </div>
