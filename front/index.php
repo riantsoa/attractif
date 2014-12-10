@@ -48,7 +48,7 @@ include('header.php');
                 $data = $req->fetch(PDO::FETCH_OBJ);
                 // redirection quand timer arrivé à 0
                 $redirection = 'index.php';
-                echo $secondes = strtotime($data->date) - time();exit;
+                $secondes = strtotime($data->date) - time();
                 ?>
                 <h2>PROCHAINE VENTE DANS </h2>
                 <div id="timer"></div>
