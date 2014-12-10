@@ -43,7 +43,7 @@ class Product_Event extends CI_Controller {
             $this->input->get_post('event')
         );
 
-        redirect("product_event/");
+        redirect("event/one/12");
         // TODO redirect last insert $id product_event page
     }
 
@@ -59,13 +59,13 @@ class Product_Event extends CI_Controller {
         redirect("product_event/one/" . $id);
     }
 
-    public function del($id)
+    public function del($product, $event)
     {
         $this->load->helper('url');
         $this->load->model('product_event_model', 'productEventManager');
-        $this->productEventManager->del($id);
+        $this->productEventManager->del($product, $event);
 
-        redirect("product_event/");
+        redirect("event/one/" . $event);
     }
 
     public function one($id)

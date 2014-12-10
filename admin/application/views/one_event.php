@@ -32,37 +32,35 @@ echo form_close();
     <?php
     foreach ($all_product_event as $key=>$value)
     {
-        // echo $all_product[$key]->id;
-        // echo $all_product[$key]->name;
-        echo "<li><a href='" . $this->uri->segment(1) . '/../../../product_event/del/' . $all_product_event[$key]->id . "'>Retirer " . $all_product_event[$key]->name . "</a></li>";
-        // var_dump($all_product[$key]->name);
-        // var_dump($all_product[$key]->id);
+        // print_r($all_product_event[$key]);
+        echo "<li><a href='" . $this->uri->segment(1) . '/../../../product_event/del/' . $all_product_event[$key]->id  . "/" . $this->uri->segment(3) . "'>Remove " . $all_product_event[$key]->name . " " . $all_product_event[$key]->id . "</a></li>";
         echo '<br>';
         // die;
     }
     // var_dump($all_product);
     ?>
     </ol>
-    <h2>Add new product</h2>
+<hr>
+<h2>Add new product</h2>
 <?php
-echo form_open($this->uri->segment(1) . '/../../index.php/product_event/add/', '');
+echo form_open($this->uri->segment(1) . '/../product_event/add/', '');
 // //
 
-print_r($form_product_event);
+// print_r($form_product_event);
 $options = array();
 foreach ($all_product as $key=>$value)
 {
-    echo $value->id;
-    echo $value->name;
     $options[] = array($value->id=>$value->name);
 }
-
+// var_dump($options);
+// $options = array('toto'=>'1');
 foreach ($form_product_event as $key=>$value)
 {
+    echo form_hidden('id', $this->uri->segment(3));
+    echo form_hidden('event', $this->uri->segment(3));
     if ($form_product_event[$key]["field"] == 'product')
     {
-        // echo form_label($form_product_event[$key]["label"], $form_product_event[$key]["field"]) . '<br>';
-        echo form_dropdown('product', $options, '' . '<br>');
+        echo form_dropdown('product', $options, '');
     }
     echo '<br><br>';
 }
