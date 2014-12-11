@@ -40,30 +40,31 @@ header('Content-Type: text/html; charset=utf-8');
     </head>
     <body>
         <div id="header">
-            <div id="logo" class="inline col-md-4 col-sm-6">
-                <a href="index.php"><img src="img/logotype-attractif-slogan.png" alt="Attractif - vente privée high tech" width="200"></a>
+            <div id="logo" class="inline col-md-2 col-sm-12">
+                <a href="index.php"><img src="img/logotype-attractif-slogan.png" class="img-responsive img-centered" alt="Attractif - vente privée high tech"></a>
             </div>
-            <div id="login" class="inline col-md-8 col-sm-6">
+            <div id="login" class="inline col-md-10 col-sm-12">
                 <?php
                 // Si non-connecté => Login / Sinon => Mon compte
                 if (isset($password) && isset($email)) {
                     ?>
-                    <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Mon compte</span>
+                    <span id="login-btn" class="green" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Mon compte</span>
                     <div id="login-box">
-                        <div>Bienvenue, <?php echo $email; ?></div>
-                        <div><a href="myinfos.php"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Mes infos</a></div>
-                        <div><a href="#"><i class="glyphicon glyphicon-bell" aria-hidden="true"></i> Mes alertes</a></div>
-                        <div><a href="myfav.php"><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Mes favoris</a></div>
-                        <div><a href="mysale.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats / VP</a></div>
-                        <br />
-                        <div><a href="lib/logout.php"><i class="glyphicon glyphicon-remove-circle" aria-hidden="true"></i> Me déconnecter</a></div>
+                        <div style="padding: 8px;">
+                            <div>Bienvenue, <?php echo $email; ?></div>
+                            <br />
+                            <div><a href="myinfos.php"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Mes infos</a></div>
+                            <div><a href="#"><i class="glyphicon glyphicon-bell" aria-hidden="true"></i> Mes alertes</a></div>
+                            <div><a href="myfav.php"><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Mes favoris</a></div>
+                            <div><a href="mysale.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats / VP</a></div>
+                            <br />
+                            <div><a href="lib/logout.php"><i class="glyphicon glyphicon-remove-circle" aria-hidden="true"></i> Me déconnecter</a></div>
+                        </div>
                     </div>
                     <?php
                 } else {
                     ?>
-                    <div class="connect green">
-                        <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
-                    </div>
+                    <span id="login-btn" class="green" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
                     <div id="login-box">
                         <form action="lib/login.php" method="post">
                             <input type="text" placeholder="E-mail" name="email">
@@ -71,7 +72,7 @@ header('Content-Type: text/html; charset=utf-8');
                             <input type="password" placeholder="Mot de passe" name="password"><br />
                             <input type="submit" value="Connexion">
                         </form>
-                        <div>
+                        <div id="register">
                             <span><a href="forgot.php">Mot de passe oublié ?</a></span>
                             <span class="hr"></span>
                             <span>Pas encore de compte ?<br /><a href="register.php">S'inscrire</a></span>

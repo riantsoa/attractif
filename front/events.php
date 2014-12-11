@@ -8,9 +8,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-            <div class="centerTitle">
-                <h2 class="pageTitle">Prochaines ventes</h2>
-            </div>
+                <h2 class="currentsales gray">Ventes Privées à venir</h2>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
@@ -23,7 +21,7 @@ include('header.php');
                 $req = $bdd->prepare('SELECT *
                                     FROM event
                                     WHERE date > :hplus3
-
+                                    
                                     ');
                 //AND date > :hmoins1
                 $req->execute(array(
@@ -34,39 +32,13 @@ include('header.php');
 
                 while ($enregistrement = $req->fetch()) {
                     // Affichage des enregistrements
-                //    echo '<h1>', $enregistrement->name, ' ', $enregistrement->date, '</h1>';
-                //    echo '<p>', 'Adresse :' .$enregistrement->place, '</p>';
-                //    echo '<p>', 'Infos :' .$enregistrement->descript, '</p>';
-                //    echo '<br />';
-
+                    echo '<h1>', $enregistrement->name, ' ', $enregistrement->date, '</h1>';
+                    echo '<p>', 'Adresse :' .$enregistrement->place, '</p>';
+                    echo '<p>', 'Infos :' .$enregistrement->descript, '</p>';
+                    echo '<br />';
+                }
                 ?>
-                    <div class="responsive-table-line" style="margin:0px auto;max-width:700px;">
-                        <table class="table table-bordered table-condensed table-body-center" >
-                            <thead>
-                            <tr>
-                                <th><span class="label label-info">Nom</span></th>
-                                <th><span class="label label-info">Lieu</span></th>
-                                <th><span class="label label-info">Date</span></th>
-                                <th><span class="label label-info">Infos</span></th>
-                                <th><span class="label label-info"></span></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td data-title="Nom"><?php echo $enregistrement->name ?></td>
-                                <td data-title="Lieu"><?php echo $enregistrement->place ?></td>
-                                <td data-title="Date"><?php echo $enregistrement->date ?></td>
-                                <td data-title="Infos"><?php echo $enregistrement->descript ?></td>
-                                <td><a class="btn btn-primary btn-lg" href="#" role="button">Participer</a></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
-                    <br />
-                <?php } ?>
-
-            </div>
 
             <?php
             include('footer.php');

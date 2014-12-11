@@ -32,10 +32,10 @@ $req->execute(array(
     'id' => $id
 ));
 $req->setFetchMode(PDO::FETCH_OBJ);
-echo '<h2>Vous aimez</h2>';
+echo '<h2>Vous aimez :</h2>';
 while ($enregistrement = $req->fetch()) {
     // Affichage des enregistrements
-    echo '<h5><a href="product_detail.php?id='.$enregistrement->id.'" class="green">' . $enregistrement->name . '</a></h5>';
+    echo '<h5><a href="product_detail.php?id='.$enregistrement->id.'" class="green">' . $enregistrement->name . '</a></h5><br />';
 }
 ?>
             </div>

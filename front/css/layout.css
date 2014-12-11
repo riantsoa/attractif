@@ -12,8 +12,8 @@ body {
     display: block;
     height: 80px;
     margin: 0 auto;
+    padding-top: 5px;
     width: 980px;
-    padding-top: 5px
 }
 #header #logo {
     padding-top: 15px;
@@ -21,12 +21,14 @@ body {
 #header #logo img {
     margin: 0 auto;
     display: block;
+    max-width: 200px;
 }
 #header #login {
     text-align: right;
 }
 #header #login #login-btn {
     cursor: pointer;
+    padding: 5px;
 }
 #header #login #login-box {
     height: 0;
@@ -34,28 +36,54 @@ body {
     position: absolute;
     right: 15px;
     top: 25px;
-    width: 180px;
+    width: 200px;
     z-index: 3;
-    background: #dae8e8;
+    background: #01a79d;
+    color: #fff;
+    box-shadow: -2px 4px 3px 0px rgba(0,0,0,0.2);-moz-box-shadow: -2px 4px 3px 0px rgba(0,0,0,0.2);-webkit-box-shadow: -2px 4px 3px 0px rgba(0,0,0,0.2);-o-box-shadow: -2px 4px 3px 0px rgba(0,0,0,0.2);
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 #header #login #login-box.active {
     height: 180px;
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
-    background-color: rgba(0,167,157,0.8);
+    /*background-color: rgba(0,167,157,0.8);*/
+    background: #01a79d;
     color: #fff;
 }
 #header #login #login-box form {
     padding: 5px;
     color: #111;
+    text-align: center;
 }
 #header #login #login-box input {
     margin: 5px 0;
+    border: none;
+}
+#header #login #login-box input[type=submit] {
+    border: none;
+    background: #fff;
+    color: #01a79d;
 }
 #header #login #login-box span {
     display: block;
     font-size: 10px;
     text-align: center;
+}
+#header #login #login-box div div {
+    text-align: left;
+}
+#header #login #login-box div div a {
+    color: #eee;
+}
+#header #login #login-box div div a:hover {
+    color: #fff;
+}
+#login-box a {
+    text-decoration: none;
+    color: #fff;
+}
+#login-box #register a:hover {
+    text-decoration: underline;
 }
 /*
 * NAV / SLIDER
@@ -130,26 +158,13 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-o-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);
     background: #fff;
 }
-
-.pageTitle{
-    background: #00a79d;
-    color: #fff;
-    font-weight: bold;
-    width: 340px;
-}
-
-.centerTitle{
-    display: inline-block;
-}
-
-
 /* TIMER */
 #content .container .timer.home {
     padding-top: 25px;
     text-align: center;
 }
 #content .container .timer { // fix for other pages
-    text-align: left;
+                             text-align: left;
 }
 #content .container .timer.center {
     text-align: center;
@@ -332,48 +347,26 @@ footer .row div i:hover {
     margin: 5px auto;
     width: 90%;
 }
-.connect .green{
-    width: 87px;
-}
-
 .green {
     background: #00a79d;
     color: #fff;
+    padding: 5px;
     font-weight: bold;
 }
 .green:hover {
     background: #77e2da;
+    color: #fff;
+    text-decoration: none;
+}
+.green.nohover {
+    background: #00a79d;
+    padding: 5px;
 }
 .col-md-6 {
     width: 100%;
 }
 .col-lg-12 {
     text-align: center;
-}
-
-#login-box a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.gray {
-    background: #a4b18f;
-    color: #fff;
-    font-weight: bold;
-}
-.gray:hover {
-    background: #f4f54e;
-}
-div#list_de_trucs{
-    margin:10px auto;
-    background-color: red;
-    width:100%;
-    min-width:400px;
-    max-width:700px;
-}
-div#list_de_trucs table{
-    margin:0px;
-    width:100%;
 }
 /*
 * RESPONSIVE
@@ -432,6 +425,18 @@ div#list_de_trucs table{
     #myCarousel {
         display: none;
     }
+    #header {
+        width: auto;
+        height: 110px;
+    }
+    #header #login {
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+    }
+    #header #login #login-box {
+        right: 40%;
+    }
 }
 @media (min-width: 1124px) {
     #responsiveCarousel {
@@ -442,6 +447,9 @@ div#list_de_trucs table{
 
     #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev, #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
         display: none;
+    }
+    #header #login #login-box {
+        right: 15%;
     }
 }
 @media (min-width: 768px) {
