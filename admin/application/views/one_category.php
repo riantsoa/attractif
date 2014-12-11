@@ -9,7 +9,7 @@ foreach ($category as $key=>$value)
     echo '<br><br>';
 }
 
-echo form_submit('submit', 'Envoyer');
+echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 
 ?>

@@ -12,7 +12,9 @@ echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-time\"></span>
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
+            <th>Id.</th>
             <th>Nom</th>
+            <th>Date</th>
             <th>Modifier</th>
             <th>Supprimer</th>
         </tr>
@@ -23,7 +25,9 @@ echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-time\"></span>
 foreach ($all_event as $key=>$value)
 {
     echo "<tr>";
-    echo "<td><strong>" . $value->name  . " (" . $value->id . ")</strong></td>";
+    echo "<td>" . $value->id  . "</td>";
+    echo "<td><strong>" . $value->name  . "</strong></td>";
+    echo "<td>" . $value->date  . "</td>";
     echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'>Modifier </a></button></td> ";
     echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'>Supprimer </a></button></td>";
     echo "</tr>";
@@ -44,12 +48,17 @@ foreach ($event as $key=>$value)
     echo form_label($event[$key]["label"], $event[$key]["field"]) . '<br>';
 
     if($key == 'date'){
-        echo form_input(array('name' => $event[$key]["field"] , 'id' => 'evenement_date'));
-    }else echo form_input($event[$key]["field"], '');
+        echo form_input(array('name' => $event[$key]["field"] , 'class'=>'form-control input-sm', 'id' => 'evenement_date')) . '<br>';
+    }
+    elseif ($event[$key]["field"] == 'descript')
+    {
+        echo form_textarea($event[$key]["field"], '', 'class="form-control input-sm"');
+
+    }else echo form_input($event[$key]["field"], '', 'class="form-control input-sm"') . '<br>';
 
 }
 
-echo form_submit('submit', 'Envoyer');
+echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 
 ?>

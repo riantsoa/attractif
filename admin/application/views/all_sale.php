@@ -65,7 +65,7 @@ foreach ($sale as $key=>$value)
     echo form_label($sale[$key]["label"], $sale[$key]["field"]) . '<br>';
     if ($sale[$key]["field"] == 'date')
     {
-        echo form_datetime('date', '', 'class="form-control input-sm"');
+        echo form_datetime('date', '', 'class="form-control input-sm" id="evenement_date"');
     }
     elseif ($sale[$key]["field"] == 'product')
     {
@@ -86,7 +86,7 @@ foreach ($sale as $key=>$value)
     }
 }
 
-echo form_submit('submit', 'Envoyer');
+echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 
 
@@ -98,3 +98,8 @@ echo form_close();
 
 ?>
 
+<script>
+    $(function() {
+        jQuery('#evenement_date').datetimepicker({lang:'fr',startDate:new Date()});
+    });
+</script>
