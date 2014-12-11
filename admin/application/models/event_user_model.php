@@ -101,7 +101,7 @@ class Event_user_model extends CI_Model
     {
         return $this->db->select('*')
             ->from($this->table)
-            ->join('user', 'event_user.customer = user.id')
+            ->join('user', 'event_user.user = user.id')
             ->group_by('event_user.id')
             ->having('event', (int) $id)
             ->where('user.admin','0')
