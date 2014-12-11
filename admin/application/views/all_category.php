@@ -38,7 +38,7 @@ form_hidden('id', $this->uri->segment(3));
 foreach ($category as $key=>$value)
 {
     echo form_label($category[$key]["label"], $category[$key]["field"]) . '<br>';
-    echo form_input($category[$key]["field"], '', 'class="form-control input-sm"');
+    echo form_input($category[$key]["field"], '', 'class="form-control input-sm" required="required" ');
 }
 
 echo form_submit('submit', 'Ajouter', 'class="btn btn-primary"');

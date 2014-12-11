@@ -47,13 +47,13 @@ foreach ($event as $key=>$value)
     echo form_label($event[$key]["label"], $event[$key]["field"]) . '<br>';
 
     if($key == 'date'){
-        echo form_input(array('name' => $event[$key]["field"] , 'class'=>'form-control input-sm', 'id' => 'evenement_date')) . '<br>';
+        echo form_input(array('name' => $event[$key]["field"] , 'class'=>'form-control input-sm', 'id' => 'evenement_date', 'required' => 'required')) . '<br>';
     }
     elseif ($event[$key]["field"] == 'descript')
     {
-        echo form_textarea($event[$key]["field"], '', 'class="form-control input-sm"');
+        echo form_textarea($event[$key]["field"], '', 'class="form-control input-sm" required="required" ');
 
-    }else echo form_input($event[$key]["field"], '', 'class="form-control input-sm"') . '<br>';
+    }else echo form_input($event[$key]["field"], '', 'class="form-control input-sm" required="required" ') . '<br>';
 
 }
 
