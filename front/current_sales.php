@@ -8,8 +8,8 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-                <h2 class="page-header">Ventes en cours</h2>
-            </div>
+                <h2 class="currentsales gray">Ventes en cours</h2>
+        </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <?php
@@ -21,7 +21,7 @@ include('header.php');
                 $req = $bdd->prepare('SELECT *
                                     FROM event
                                     WHERE date < :hplus3
-                                    
+
                                     ');
                 //AND date > :hmoins1
                 $req->execute(array(
@@ -37,11 +37,13 @@ include('header.php');
                     echo $enregistrement->name.'<br />';
                     echo $enregistrement->place.'<br />';
                     echo $enregistrement->descript.'<br /><br />';
+
                 }
 //                $secondes = strtotime($hplus3) - time();
                 ?>
             </div>
         </div>
+
         <?php
         include('footer.php');
         
