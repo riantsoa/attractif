@@ -4,6 +4,7 @@ include('lib/dbconnect.php');
 include('header.php');
 ?>
 <!-- Slider -->
+<div id="responsiveCarousel"><img class="img-responsive img-centered" src="img/slide1.jpg" /></div>
 <header id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,7 +42,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="row timer">
-            <div class="col-md-12 col-sm-6">
+            <div class="col-md-12">
                 <?php
                 //Timer
                 $req = $bdd->prepare('SELECT id, date FROM event WHERE date >= NOW()');
@@ -72,19 +73,48 @@ include('header.php');
                             <?php
                             //Je vérifie le pseudo et le mot de passe
                             $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb
-                            FROM product as p
-                            LEFT JOIN sale as s ON (p.id = s.product)
-                            GROUP BY p.id
-                            ORDER BY nb DESC
-                            LIMIT 0,10');
+                                                FROM product as p
+                                                LEFT JOIN sale as s ON (p.id = s.product)
+                                                GROUP BY p.id
+                                                ORDER BY nb DESC
+                                                LIMIT 0,10');
                             //SELECT s.product FROM sales as s WHERE event = 4
                             $req->execute();
-                            $data = $req->setFetchMode(PDO::FETCH_OBJ);
+                            $rows = $req->fetchAll(PDO::FETCH_ASSOC);
 
                             // Nous traitons les résultats en boucle
-                            while ($enregistrement = $req->fetch()) {
+                            foreach ($rows as $row) {
+                                //Gestion favoris
                                 ?>
-                                <div class="item"><?php echo '<img src="img/products/' . $enregistrement->image . '" width="200" alt="' . $enregistrement->name . '" />'; ?></div>
+                                <div class="item">
+                                    <?php
+                                    //Favoris
+                                    //Si on est connecté
+                                    if (isset($_SESSION['data']->id)) {
+                                        $req = $bdd->prepare('SELECT *
+                                                FROM user_favorite
+                                                WHERE user = :user
+                                                AND product = :product');
+                                        $req->execute(array(
+                                            'user' => $_SESSION['data']->id,
+                                            'product' => $row['id']
+                                        ));
+                                        $favorites = $req->fetch(PDO::FETCH_OBJ);
+                                        ?>
+                                        <a href="lib/favorite.php?product=<?php echo $row['id']; ?>&user=<?php echo $_SESSION['data']->id; ?>">
+                                            <span class="favorite-icon <?php
+                                            if ($favorites) {
+                                                echo "active";
+                                            }
+                                            ?>"></span>
+                                        </a>
+                                    <?php } else { ?>
+                                        <a href="register.php">
+                                            <span class="favorite-icon"></span>
+                                        </a>
+                                    <?php } ?>
+                                    <?php echo '<img src="img/products/' . $row['image'] . '" width="200" alt="' . $row['name'] . '" />'; ?>
+                                </div>
                             <?php } ?>
                         </div>
                     </div>

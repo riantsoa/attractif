@@ -28,8 +28,8 @@ foreach ($all_event as $key=>$value)
     echo "<td>" . $value->id  . "</td>";
     echo "<td><strong>" . $value->name  . "</strong></td>";
     echo "<td>" . $value->date  . "</td>";
-    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'>Modifier </a></button></td> ";
-    echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'>Supprimer </a></button></td>";
+    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class=\"glyphicon glyphicon-edit\"></span> </a></button></td> ";
+    echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class=\"glyphicon glyphicon-trash\"></span> </a></button></td>";
     echo "</tr>";
 }
 
@@ -38,7 +38,6 @@ foreach ($all_event as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
-    <h3>Créer nouveau</h3>
 <?php
 echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));
@@ -58,7 +57,7 @@ foreach ($event as $key=>$value)
 
 }
 
-echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
+echo form_submit('submit', 'Ajouter', 'class="btn btn-primary"');
 echo form_close();
 
 ?>

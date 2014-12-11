@@ -34,38 +34,41 @@ class Event_user extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function add($status, $customer, $event, $date)
+    public function add()
     {
         $this->load->helper('url');
         $this->load->model('event_user_model', 'eventUserManager');
-        $this->eventUserManager->add($status, $customer, $event, $date);
 
-        redirect("event_user/");
+        $this->eventUserManager->add(
+            $this->input->get_post('status'),
+            $this->input->get_post('customer'),
+            $this->input->get_post('event')
+        );
+
+        redirect("event/one/" . $this->input->get_post('event'));
         // TODO redirect last insert $id event_user page
     }
 
-    public function edit($id, $status, $customer, $event, $date)
+    public function edit()
     {
         $this->load->helper('url');
         $this->load->model('event_user_model', 'eventUserManager');
         $this->eventUserManager->edit(
-            $id,
-            $this->input->get_post('date'),
-            $this->input->get_post('place'),
-            $this->input->get_post('descript'),
-            $this->input->get_post('name')
+            $this->input->get_post('status'),
+            $this->input->get_post('customer'),
+            $this->input->get_post('event')
         );
 
-        redirect("event_user/one/" . $id);
+        redirect("event/one/" . $this->input->get_post('event'));
     }
 
-    public function del($id)
+    public function del($user, $event)
     {
         $this->load->helper('url');
         $this->load->model('event_user_model', 'eventUserManager');
-        $this->eventUserManager->del($id);
+        $this->eventUserManager->del($user, $event);
 
-        redirect("event_user/");
+        redirect("event/one/" . $event);
     }
 
     public function one($id)

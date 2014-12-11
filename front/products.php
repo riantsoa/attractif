@@ -9,17 +9,23 @@ include('header.php');
 <div class="container">
     <div class="col-lg-12">
         <h2 class="page-header">Liste de nos produits</h2>
+        <form action="products.php" method="POST">
+            <p>
+                <input type="hidden" name="sorted" value="1">
+                <input type="submit" value="Trier par categorie" class="tri_bandeau" onchange="this.form.submit();">
+            </p>
+        </form>
     </div>
-<div class="col-md-12 col-sm-6">
+<div class="col-md-12">
     <?php
         //Je vérifie le pseudo et le mot de passe
     if(isset($_POST['sorted'])){
-        $req = $bdd->prepare('SELECT p.id, p.name, c.name AS catename
+        $req = $bdd->prepare('SELECT p.id, p.name, p.image AS prodimage , c.name AS catename
                               FROM product AS p
                               LEFT JOIN category AS c ON (c.id = p.category)
                               ORDER BY p.category');
     } else{
-        $req = $bdd->prepare('SELECT p.id, p.name, c.name AS catename
+        $req = $bdd->prepare('SELECT p.id, p.name, p.image AS prodimage , c.name AS catename
                               FROM product AS p
                               LEFT JOIN category AS c ON (c.id = p.category)');
         }
@@ -30,21 +36,18 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
         // Affichage des enregistrements
-        echo '<h6>', $enregistrement->catename. '</h6>';
-        echo '<h4>', $enregistrement->name, ' ', '<a href="product_detail.php?id='.$enregistrement->id.'">Voir le produit</a>', '</h4>';
-        }
+
     ?>
+        <div class="view view-first">
+            <?php echo '<img style="max-width: 200px; max-height: 180px" src="img/products/' . $enregistrement->prodimage . '"  />';?>
+            <div class="mask">
+                <h2><?php echo  $enregistrement->name ; ?></h2>
+                <p><?php echo $enregistrement->catename ?></p>
+                <a href="product_detail.php?id=<?php echo $enregistrement->id; ?>" class="info">en savoir +</a>
+            </div>
+        </div>
+        <?php } ?>
 
-
-    <form action="products.php" method="POST">
-            <p>
-                <input type="hidden" name="sorted" value="1">
-                <input type="submit" value="Trier par categorie" class="tri_bandeau" onchange="this.form.submit();">
-            </p>
-    </form>
-
-
-        <!-- sql SELECT * FROM product WHERE category = ".$cat -->
 </div>
 <?php
 include('footer.php');

@@ -17,6 +17,14 @@ header('Content-Type: text/html; charset=utf-8');
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/modern-business.css" rel="stylesheet">
         <link href="css/layout.css" rel="stylesheet">
+
+        <!-- css pour hover image produit -->
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style_common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+
+
+
         <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
         <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
@@ -53,7 +61,9 @@ header('Content-Type: text/html; charset=utf-8');
                     <?php
                 } else {
                     ?>
-                    <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
+                    <div class="connect green">
+                        <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
+                    </div>
                     <div id="login-box">
                         <form action="lib/login.php" method="post">
                             <input type="text" placeholder="E-mail" name="email">

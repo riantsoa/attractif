@@ -34,10 +34,9 @@ include('header.php');
 //                    affiche le timer ('à voir plus tard')
 //                    $secondes = time() - strtotime($enregistrement->date);
 //                    echo '<div id="timer"></div>';
-                    echo $enregistrement->name.'<br />';
-                    echo $enregistrement->place.'<br />';
-                    echo $enregistrement->descript.'<br /><br />';
-
+                    echo '<b>', $enregistrement->name, '</b>', '<br />';
+                    echo '<u>', 'Adresse : ','</u>' .$enregistrement->place.'<br />';
+                    echo 'Infos : ' .$enregistrement->descript.'<br /><br />';
                 }
 //                $secondes = strtotime($hplus3) - time();
                 ?>

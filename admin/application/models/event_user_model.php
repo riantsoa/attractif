@@ -7,16 +7,23 @@ class Event_user_model extends CI_Model
     /**
      *  Ajoute un event_user
      */
-    public function add($status, $customer, $event, $date)
+    public function add($status, $customer, $event)
     {
         //  Ces données seront automatiquement échappées
-        $status = time();
-        return $this->db
-            ->set('status',  $status)
-            ->set('user',   $customer)
-            ->set('event', $event)
-            ->insert($this->table);
-        ;
+
+        if ($this->all_by_user($customer) == NULL)
+        {
+            return $this->db
+                ->set('status',  $status)
+                ->set('user',   $customer)
+                ->set('event', $event)
+                ->insert($this->table);
+            ;
+        }
+        else
+        {
+            return 0;
+        }
 
         //  Une fois que tous les champs ont bien été définis, on "insert" le tout
         // return $this->db->insert($this->table);
@@ -25,29 +32,15 @@ class Event_user_model extends CI_Model
     /**
      *  Édite une event_user déjà existante
      */
-    public function edit($id, $status, $customer, $event, $date)
+    public function edit($status, $customer, $event)
     {
-        $status = time();
-        if($status != null)
-        {
-            $this->db->set('status', $status);
-        }
-        if($place != null)
-        {
-            $this->db->set('place', $place);
-        }
-        if($event != null)
-        {
-            $this->db->set('event', $event);
-        }
-        if($date != null)
-        {
-            $this->db->set('date', $date);
-        }
         //  La condition
-        $this->db->where('id', (int) $id);
+        return $this->db
+            ->set('status', (int) $status)
+            ->where('user',   (int) $customer)
+            ->where('event', (int) $event)
+            ->update($this->table);
 
-        return $this->db->upstatus($this->table);
     }
 
     /**
@@ -115,8 +108,18 @@ class Event_user_model extends CI_Model
             ->get()
             ->result();
     }
-}
 
 
+    public function all_by_user($user)
+    {
+        return $this->db->select('*')
+                ->from($this->table)
+                ->where('user', (int) $user)
+                ->order_by('id', 'desc')
+                ->get()
+                ->result();
+    }
+
+} 
 /* End of file event_user_model.php */
 /* Location: ./application/models/event_user_model.php */

@@ -25,9 +25,15 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
             // Affichage des enregistrements
-            echo '<img src="img/products/' . $enregistrement->image . '" width="200" alt="'.$enregistrement->name.'" /><br />';
-        }
-        ?>
+            ?>
+            <div class="view view-first">
+                <?php echo '<img style="max-width: 200px; max-height: 180px" src="img/products/' . $enregistrement->image . '"  />';?>
+                <div class="mask">
+                    <h2><?php echo  $enregistrement->name ; ?></h2><br />
+                    <a href="product_detail.php?id=<?php echo $enregistrement->id; ?>" class="info">en savoir +</a>
+                </div>
+            </div>
+        <?php } ?>
     </div>
 <?php
 include('footer.php');

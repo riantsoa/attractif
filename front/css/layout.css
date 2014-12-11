@@ -70,7 +70,6 @@ body {
 .navbar .container .navbar-nav {
     float: none;
     margin: 0 auto;
-    width: 60%;
 }
 .navbar .container .navbar-nav li a {
     font-weight: bold;
@@ -96,7 +95,7 @@ body {
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 header.carousel {
-    background: repeat #47D9C9;
+    background: url('../img/slider_bg.jpg') repeat-x #000;
     height: 450px;
 }
 .carousel-inner {
@@ -104,7 +103,7 @@ header.carousel {
     margin: 0 auto;
 }
 .carousel-control.left, .carousel-control.right {
-    background: repeat #47D9C9;
+    background: url('../img/slider_bg.jpg') repeat-x #000;
     opacity: 1;
 }
 header.carousel .carousel-caption.left {
@@ -130,7 +129,6 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 #content .container {
     box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-o-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);
     background: #fff;
-    width: 1164px;
 }
 /* TIMER */
 #content .container .timer {
@@ -204,7 +202,7 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 #content .container .highlight-products #owl-demo .owl-pagination{
     display: none;
 }
-#content .container .highlight-products #owl-demo .item{
+#content .container .highlight-products #owl-demo .item {
     display: block;
     padding: 30px 0px;
     margin: 5px;
@@ -213,6 +211,19 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     -moz-border-radius: 3px;
     border-radius: 3px;
     text-align: center;
+}
+/* FAVORITE */
+#content .container .highlight-products #owl-demo .item .favorite-icon {
+    background: url('../img/favorite_icon.png') -31px 0 no-repeat;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 41px;
+    right: 25px;
+    cursor: pointer;
+}
+#content .container .highlight-products #owl-demo .item .favorite-icon:hover, #content .container .highlight-products #owl-demo .item .favorite-icon.active {
+    background: url('../img/favorite_icon.png') 0 0 no-repeat;
 }
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
     padding: 15px 10px;
@@ -227,7 +238,7 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     margin-top: 2px;
 }
 
-//To move navigation buttons outside use these settings:
+/*To move navigation buttons outside use these settings:*/
 
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
     position: absolute;
@@ -238,16 +249,6 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
     left: 545px;
-}
-@media (max-width: 768px) {
-    #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev, #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
-        display: none;
-    }
-}
-@media (min-width: 768px) {
-    #content .container .highlight-products #owl-demo .owl-pagination {
-        display: block;
-    }
 }
 /*
 * FOOTER
@@ -280,6 +281,10 @@ footer {
     margin: 5px auto;
     width: 90%;
 }
+.connect .green{
+    width: 87px;
+}
+
 .green {
     background: #00a79d;
     color: #fff;
@@ -308,7 +313,6 @@ footer {
 .gray:hover {
     background: #f4f54e;
 }
-
 div#list_de_trucs{
     margin:10px auto;
     background-color: red;
@@ -320,7 +324,9 @@ div#list_de_trucs table{
     margin:0px;
     width:100%;
 }
-
+/*
+* RESPONSIVE
+*/
 @media (max-width: 500px) {
 
     .responsive-table-line td:before { content: attr(data-title); }
@@ -361,4 +367,26 @@ div#list_de_trucs table{
         padding:2px;
     }
 
+}
+@media (max-width: 1124px) {
+    #myCarousel {
+        display: none;
+    }
+}
+@media (min-width: 1124px) {
+    #responsiveCarousel {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+
+    #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev, #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+
+    #content .container .highlight-products #owl-demo .owl-pagination {
+        display: block;
+    }
 }
