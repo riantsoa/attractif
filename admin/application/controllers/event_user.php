@@ -42,24 +42,21 @@ class Event_user extends CI_Controller {
         $this->eventUserManager->add(
             $this->input->get_post('status'),
             $this->input->get_post('customer'),
-            $this->input->get_post('event'),
-            $this->input->get_post('date')
+            $this->input->get_post('event')
         );
 
         redirect("event/one/" . $this->input->get_post('event'));
         // TODO redirect last insert $id event_user page
     }
 
-    public function edit($id, $status, $customer, $event, $date)
+    public function edit()
     {
         $this->load->helper('url');
         $this->load->model('event_user_model', 'eventUserManager');
         $this->eventUserManager->edit(
-            $id,
             $this->input->get_post('status'),
             $this->input->get_post('customer'),
-            $this->input->get_post('event'),
-            $this->input->get_post('date')
+            $this->input->get_post('event')
         );
 
         redirect("event/one/" . $this->input->get_post('event'));
