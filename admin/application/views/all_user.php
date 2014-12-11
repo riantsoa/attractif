@@ -9,6 +9,7 @@ echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-user\"></span>
 
 ?>
 <div class="col-md-9">
+
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
@@ -33,6 +34,7 @@ foreach ($all_user as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
+    <h3>Nouveau</h3>
 <?php
 echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));

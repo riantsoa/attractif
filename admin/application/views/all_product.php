@@ -37,7 +37,7 @@ foreach ($all_product as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
-    <h3>Créer nouveau</h3>
+    <h3>Nouveau</h3>
 
 <?php
 echo form_open($this->uri->segment(1) . '/add/', '');
