@@ -127,7 +127,7 @@ class Event extends CI_Controller {
         $data['all_product'] = $this->productManager->all();
         $data['all_product_event'] = $this->productEventManager->one($id)[0];
         $data['all_event_user'] = $this->eventUserManager->one_by_event($id);
-        $data['all_user'] = $this->userManager->all();
+        $data['all_user'] = $this->userManager->all_not_admin();
         $data['id'] = $id;
         //  On lance une requête
         $data['one_event'] = $this->eventManager->one($id);
