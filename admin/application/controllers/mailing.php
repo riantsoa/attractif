@@ -20,6 +20,7 @@ class Mailing extends CI_Controller {
 
     public function export_mail_csv()
     {
+        $this->userlib->profilMatch(array(UserLib::$ADMIN));
         $_event_id = "";
         //ramener la liste des event par date
         $events = array();

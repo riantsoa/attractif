@@ -20,6 +20,7 @@ class Product_Event extends CI_Controller {
 
     public function index()
     {
+        $this->userlib->profilMatch(array(UserLib::$ADMIN));
         $this->load->model('product_event_model', 'productEventManager');
 
         $data = array();

@@ -19,6 +19,7 @@ class User extends CI_Controller {
      */
     public function index()
     {
+        $this->userlib->profilMatch(array(UserLib::$ADMIN));
         $this->load->helper('url');
         $this->load->view('header');
         $this->load->helper('form');

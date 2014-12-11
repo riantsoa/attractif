@@ -20,6 +20,7 @@ class Event_user extends CI_Controller {
 
     public function index()
     {
+        $this->userlib->profilMatch(array(UserLib::$ADMIN));
         $this->load->model('event_user_model', 'eventUserManager');
 
         $data = array();
