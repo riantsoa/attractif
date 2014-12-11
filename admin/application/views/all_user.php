@@ -39,11 +39,12 @@ form_hidden('id', $this->uri->segment(3));
 
 foreach ($user as $key=>$value)
 {
+    echo '<br>';
     echo form_label($user[$key]["label"], $user[$key]["field"]) . '<br>';
     echo form_input($user[$key]["field"], '', 'class="form-control input-sm"');
 
 }
-
+echo '<br>';
 echo form_submit('submit', 'Ajouter', 'class="btn btn-primary"');
 echo form_close();
 

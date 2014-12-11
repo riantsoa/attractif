@@ -120,6 +120,6 @@ class Event_user_model extends CI_Model
                 ->result();
     }
 
-} 
+}
 /* End of file event_user_model.php */
 /* Location: ./application/models/event_user_model.php */

@@ -45,6 +45,7 @@ form_hidden('id', $this->uri->segment(3));
 
 foreach ($product as $key=>$value)
 {
+    echo '<br>';
     echo form_label($product[$key]["label"], $product[$key]["field"]) . '<br>';
     if ($product[$key]["field"] == 'category')
     {
@@ -55,7 +56,7 @@ foreach ($product as $key=>$value)
         echo form_input($product[$key]["field"], '', 'class="form-control input-sm"');
     }
 }
-
+echo '<br>';
 echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 

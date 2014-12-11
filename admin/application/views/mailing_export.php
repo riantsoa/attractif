@@ -12,7 +12,7 @@
         <div role="form"  style="width: 100%;">
             <label for="date_event_mailing" class="">Evenement : </label>
             <select name="id_event" class="form-control" style="width:89%;" id="id_event_select">
-                <option value="" selected="0">-- Selectionner un évenement --</option>
+                <option value="0" selected="">-- Selectionner un évenement --</option>
                 <?foreach($events as $event):?>
                     <option value="<?=$event->id;?>"><?=$event->name;?></option>
                 <?endforeach;?>
