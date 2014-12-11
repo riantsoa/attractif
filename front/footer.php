@@ -11,12 +11,14 @@
 <script src="js/jquery.js"></script>
 <script src="js/script.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
 <script>
+    //SLIDER
     $('.carousel').carousel({
         interval: 5000 //changes the speed
-    })
-</script>
-<script type="text/javascript">
+    });
+
+    //Timer
     var temps = <?php echo $secondes; ?>;
     var timer = setInterval('CompteaRebour()', 1000);
     function CompteaRebour() {
@@ -39,15 +41,37 @@
     function Redirection(url) {
         setTimeout("window.location=url", 500)
     }
-</script>
-<script type="text/javascript" src="js/mfcarousel.js"></script>
-<script>
-    $(function() {
-        $(".mfcarousel").MFCarousel({
-            btnNext: ".next",
-            btnPrev: ".prev"
+
+    //owl carousel
+
+
+    $(document).ready(function() {
+
+        //Sort random function
+        function random(owlSelector) {
+            owlSelector.children().sort(function() {
+                return Math.round(Math.random()) - 0.5;
+            }).each(function() {
+                $(this).appendTo(owlSelector);
+            });
+        }
+
+        $("#owl-demo").owlCarousel({
+            navigation: true,
+            navigationText: [
+                "<i class='glyphicon glyphicon-chevron-left'></i>",
+                "<i class='glyphicon glyphicon-chevron-right'></i>"
+            ],
+            beforeInit: function(elem) {
+                //Parameter elem pointing to $("#owl-demo")
+                random(elem);
+            }
+
         });
+
     });
+
+
 </script>
 </body>
 </html>

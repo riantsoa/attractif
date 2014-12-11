@@ -28,13 +28,23 @@
 
     <!-- Custom Fonts -->
     <link href="<?php echo $base_url;?>font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url();?>css/jquery.datetimepicker.css" rel="stylesheet" type="text/css">
+    <script src="<?php echo $base_url;?>js/jquery.js"></script>
+    <!-- /#wrapper -->
+    <!-- Metis Menu Plugin JavaScript -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="<?php echo $base_url;?>js/sb-admin-2.js"></script>
+    <script src="<?php echo $base_url;?>js/plugins/metisMenu/metisMenu.min.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+    <script src="<?php echo $base_url;?>js/jquery.js"></script>
     <script src="<?php echo $base_url;?>js/html5shiv.js"></script>
     <script src="<?php echo $base_url;?>jsrespond.min.js"></script>
-    <script src="<?php echo $base_url;?>js/jquery.js"></script>
+
     <![endif]-->
 
 </head>

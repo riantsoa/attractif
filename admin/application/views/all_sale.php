@@ -2,19 +2,39 @@
 echo "<div class=\"row\">
     <div class=\"col-lg-12\">";
 
-echo "<h1 class=\"page-header\">Sales (" . $count_sale . ")</h1><br>
+echo "<h1 class=\"page-header\">Ventes (" . $count_sale . ")</h1><br>
     </div>
 </div>";
 
+?>
+<div class="col-md-9">
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
 
 foreach ($all_sale as $key=>$value)
 {
-    echo "<strong>" . $value->date  . " (" . $value->id . ")</strong><br>";
-    echo "<a href='one/" . $value->id  . "'>Edit </a> ";
-    echo "<a href='del/" . $value->id  . "'>Delete </a><br>";
-    echo '<br>';
+    echo "<tr>";
+    echo "<td><strong>" . $value->date  . " (" . $value->id . ")</strong></td>";
+    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'>Modifier </a></button></td> ";
+    echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'>Supprimer </a></button></td>";
+    echo "</tr>";
 }
 
+?>
+    </tbody>
+</table>
+</div>
+<div class="col-md-3">
+    <h3>Créer nouveau</h3>
+<?php
 echo form_open($this->uri->segment(1) . '/add/' . $this->uri->segment(3), '');
 form_hidden('id', $this->uri->segment(3));
 
@@ -45,39 +65,36 @@ foreach ($sale as $key=>$value)
     echo form_label($sale[$key]["label"], $sale[$key]["field"]) . '<br>';
     if ($sale[$key]["field"] == 'date')
     {
-        echo form_datetime('date', '', "id='datetimepicker'");
+        echo form_datetime('date', '', 'class="form-control input-sm"');
     }
     elseif ($sale[$key]["field"] == 'product')
     {
-        echo form_dropdown('product', $products, '');
+        echo form_dropdown('product', $products, '', 'class="form-control input-sm"');
     }
     elseif ($sale[$key]["field"] == 'user')
     {
-        echo form_dropdown('user', $users, '');
+        echo form_dropdown('user', $users, '', 'class="form-control input-sm"');
     }
     elseif ($sale[$key]["field"] == 'event')
     {
-        echo form_dropdown('user', $events, '');
+        echo form_dropdown('user', $events, '', 'class="form-control input-sm"');
     }
     else
     {
-        echo form_input($sale[$key]["field"], '');
+        echo form_input($sale[$key]["field"], '', 'class="form-control input-sm"');
 
     }
-    // echo form_input($sale[$key]["field"], $one_sale[0]->$key);
-    echo '<br><br>';
 }
 
-echo form_submit('submit', 'Submit');
+echo form_submit('submit', 'Envoyer');
 echo form_close();
 
 
 ?>
-<pre>
+</div>
 <?php
-var_dump($count_sale);
-var_dump($all_sale);
+// //var_dump($count_sale);
+// //var_dump($all_sale);
 
 ?>
-</pre>
 

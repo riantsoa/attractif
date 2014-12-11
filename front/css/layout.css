@@ -96,25 +96,41 @@ body {
     transition: all 1s;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;
 }
 header.carousel {
-    background: #47d9c9;
-    height: 70%;
+    background: repeat #47D9C9;
+    height: 450px;
 }
 .carousel-inner {
     width: 1170px;
     margin: 0 auto;
 }
 .carousel-control.left, .carousel-control.right {
-    background: none;
+    background: repeat #47D9C9;
+    opacity: 1;
+}
+header.carousel .carousel-caption.left {
+    right: 10%;
+    left: 60%;
+    top: 15%;
+}
+header.carousel .carousel-caption.right {
+    right: 60%;
+    left: 10%;
+    top: 15%;
+}
+header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
+    background: rgba(0,157,167,0.5);
+    padding: 15px 0;
 }
 /*
 * CONTENT
 */
 #content {
-    background: #47D9C9;
+    background: repeat #47D9C9;
 }
 #content .container {
     box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-o-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);
     background: #fff;
+    width: 1164px;
 }
 /* TIMER */
 #content .container .timer {
@@ -182,32 +198,56 @@ header.carousel {
     width: 290px;
     box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-webkit-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-moz-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-o-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;
 }
-#content .container .highlight-products .best-products button {
-    width: 45px;
-    height: 45px;
-    vertical-align: middle;
+/*#content .container .highlight-products #owl-demo .item {
+    margin: 3px;
+}*/
+#content .container .highlight-products #owl-demo .owl-pagination{
+    display: none;
 }
-#content .container .highlight-products .best-products .prev {
-    background: url("../img/arrows.jpg") no-repeat scroll 0px -2px rgba(0, 0, 0, 0);
+#content .container .highlight-products #owl-demo .item{
+    display: block;
+    padding: 30px 0px;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
 }
-#content .container .highlight-products .best-products .next {
-    background: url("../img/arrows.jpg") no-repeat scroll 0px -46px rgba(0, 0, 0, 0);
+#content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
+    padding: 15px 10px;
+    position: relative;
+    bottom: 200px;
+    background: #fff;
+    color: #01A79D;
+    opacity: 1;
+    border-radius: 0;
 }
-#content .container .highlight-products .best-products #carousel {
-    margin: 0 auto;
-    width: 950px;
+#content .container .highlight-products .owl-theme .owl-buttons i{
+    margin-top: 2px;
 }
-#content .container .highlight-products .mfcarousel {
-    margin: 25px 0;
-    vertical-align: middle;
-    width: 850px !important;
+
+//To move navigation buttons outside use these settings:
+
+#content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
+    position: absolute;
 }
-#content .container .highlight-products .mfcarousel li {
-    margin: 0 10px;
+#content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev{
+    right: 545px;
 }
-#content .container .highlight-products .mfcarousel img {
-    width: 150px;
-    height: 150px;
+
+#content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
+    left: 545px;
+}
+@media (max-width: 768px) {
+    #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev, #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    #content .container .highlight-products #owl-demo .owl-pagination {
+        display: block;
+    }
 }
 /*
 * FOOTER
