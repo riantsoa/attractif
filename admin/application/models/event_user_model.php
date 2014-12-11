@@ -13,9 +13,8 @@ class Event_user_model extends CI_Model
         $status = time();
         return $this->db
             ->set('status',  $status)
-            ->set('place',   $place)
+            ->set('user',   $customer)
             ->set('event', $event)
-            ->set('date', $date)
             ->insert($this->table);
         ;
 
@@ -54,10 +53,12 @@ class Event_user_model extends CI_Model
     /**
      *  Supprime une event_user
      */
-    public function del($id)
+    public function del($user, $event)
     {
-        return $this->db->where('id', (int) $id)
-                ->delete($this->table);
+        return $this->db
+            ->where('user', (int) $user)
+            ->where('event', (int) $event)
+            ->delete($this->table);
     }
 
     /**

@@ -109,6 +109,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->load->model('product_event_model', 'productEventManager');
         $this->load->model('event_user_model', 'eventUserManager');
+        $this->load->model('user_model', 'userManager');
 
         $this->load->model('product_model', 'productManager');
         $data = array();
@@ -126,11 +127,21 @@ class Event extends CI_Controller {
         $data['all_product'] = $this->productManager->all();
         $data['all_product_event'] = $this->productEventManager->one($id)[0];
         $data['all_event_user'] = $this->eventUserManager->one_by_event($id);
+        $data['all_user'] = $this->userManager->all();
         $data['id'] = $id;
         //  On lance une requête
         $data['one_event'] = $this->eventManager->one($id);
 
 
+        try
+        {
+            $data["form_event_user"] = $this->config->item("event_user");
+        }
+        catch(Exception $err)
+        {
+            log_message("error", $err->getMessage());
+            return show_error($err->getMessage());
+        }
         try
         {
             $data["product_event"] = $this->config->item("product_event");
