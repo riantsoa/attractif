@@ -28,8 +28,8 @@ foreach ($all_product as $key=>$value)
 {
     echo "<tr>";
     echo "<td><strong>" . $value->name  . " (" . $value->id . ")</strong></td> ";
-    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'>Modifier </a></button></td> ";
-    echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'>Supprimer </a></button></td>";
+    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class=\"glyphicon glyphicon-edit\"></span> </a></button></td> ";
+    echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class=\"glyphicon glyphicon-trash\"></span> </a></button></td>";
     echo "</tr>";
 }
 ?>
