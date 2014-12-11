@@ -2,7 +2,7 @@
 echo "<div class=\"row\">
     <div class=\"col-lg-12\">";
 
-echo "<h1 class=\"page-header\">Ventes (" . $count_sale . ")</h1><br>
+echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-shopping-cart\"></span>&nbsp;&nbsp;Ventes (" . $count_sale . ")</h1><br>
     </div>
 </div>";
 
@@ -35,6 +35,7 @@ foreach ($all_sale as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
+
 <?php
 echo form_open($this->uri->segment(1) . '/add/' . $this->uri->segment(3), '');
 form_hidden('id', $this->uri->segment(3));
