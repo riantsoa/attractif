@@ -34,10 +34,11 @@ $data = $req->fetch(PDO::FETCH_OBJ);
 <!-- Page Content -->
 <div id="content">
     <div class="container">
+        <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-            <h2 class="page-header">Liste de nos produits</h2>
+                <h2 class="currentsales gray">Mon compte</h2>
         </div>
-        <div class="col-md-12 col-sm-6">
+        <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <form action="myinfos.php" method="post">
                     <input type="text" placeholder="Nom" name="nom" value="<?php echo $data->name; ?>" /><br />

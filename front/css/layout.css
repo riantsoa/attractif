@@ -131,9 +131,12 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     background: #fff;
 }
 /* TIMER */
-#content .container .timer {
+#content .container .timer.home {
     padding-top: 25px;
     text-align: center;
+}
+#content .container .timer { // fix for other pages
+    text-align: left;
 }
 #content .container .timer h2 {
     margin: 0 0 35px 0;
@@ -145,8 +148,8 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     vertical-align: middle;
 }
 #timer span {
-    width: 60px;
-    height: 60px;
+    max-width: 60px;
+    max-height: 60px;
     padding: 20px;
     margin: 0 10px;
     font-size: 45px;
@@ -157,7 +160,7 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     font-size: 9px;
     padding-top: 20px;
     text-align: center;
-    width: 50px;
+    max-width: 50px;
     display: block;
     margin: 0 auto;
 }
@@ -193,8 +196,19 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     background: #111;
     color: #fff;
     font-weight: bold;
-    width: 290px;
+    max-width: 290px;
     box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-webkit-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-moz-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-o-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;
+}
+#content .container .mask h2 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 17px;
+    margin: 20px 0 0;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: auto;
 }
 /*#content .container .highlight-products #owl-demo .item {
     margin: 3px;
@@ -219,11 +233,17 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     position: absolute;
     width: 30px;
     height: 41px;
-    right: 25px;
+    right: 10px;
     cursor: pointer;
+    z-index: 3;
+    transition: 0.2s all;-moz-transition: 0.2s all;-webkit-transition: 0.2s all;-o-transition: 0.2s all;
 }
 #content .container .highlight-products #owl-demo .item .favorite-icon:hover, #content .container .highlight-products #owl-demo .item .favorite-icon.active {
     background: url('../img/favorite_icon.png') 0 0 no-repeat;
+}
+#content .container .highlight-products #owl-demo .item:hover .favorite-icon {
+    z-index: 0;
+    transition: 0.1s all;-moz-transition: 0.1s all;-webkit-transition: 0.1s all;-o-transition: 0.1s all;
 }
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
     padding: 15px 10px;
@@ -239,10 +259,6 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 }
 
 /*To move navigation buttons outside use these settings:*/
-
-#content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
-    position: absolute;
-}
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev{
     right: 545px;
 }
@@ -255,7 +271,6 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 */
 footer {
     margin: 0 auto;
-    width: 1140px;
     box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);-moz-box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);-webkit-box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);-o-box-shadow: 0px -10px 20px -20px rgba(0, 0, 0, 0.5);
 }
 .main-footer {
@@ -264,11 +279,30 @@ footer {
     background-color: grey;
 }
 
-.row {
-    padding: 25px;
+footer .row {
+    padding: 25px 25px 5px 25px;
+    background: #deeaea;
 }
-
-
+footer .row div {
+    vertical-align: middle;
+}
+footer .row div h4 {
+    color: #00a79d;
+}
+footer .row div i {
+    background: #00a79d;
+    color: #fff;
+    font-size: 22px;
+    height: 30px;
+    margin: 15px 5px;
+    padding: 5px;
+    width: 30px;
+    border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;-o-border-radius: 15px;
+    cursor: pointer;
+}
+footer .row div i:hover {
+    background: #77e2da;
+}
 /*
 * PROPS
 */
@@ -366,7 +400,16 @@ div#list_de_trucs table{
         background-color:#f8f8f8;
         padding:2px;
     }
-
+    #content .container .timer h2 {
+        font-size: 14px;
+    }
+    #timer span {
+        width: 10px;
+        height: 10px;
+        padding: 10px;
+        margin: 0 5px;
+        font-size: 20px;
+    }
 }
 @media (max-width: 1124px) {
     #myCarousel {

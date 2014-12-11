@@ -2,7 +2,17 @@
 session_start();
 include('lib/dbconnect.php');
 include('header.php');
-
+?>
+<!-- Page Content -->
+<div id="content">
+    <div class="container">
+        <!-- Selection 3 blocks -->
+        <div class="col-lg-12">
+                <h2 class="currentsales gray">Mes achats / VP</h2>
+        </div>
+        <div class="row timer">
+            <div class="col-md-12 col-sm-6">
+<?php
 $nb = $bdd->prepare('SELECT COUNT(s.id) AS sales, COUNT( DISTINCT e.id) AS events
                     FROM sale AS s
                     LEFT JOIN event AS e ON (e.id = s.event)
@@ -30,4 +40,8 @@ while ($enregistrement = $req->fetch()) {
     // Affichage des enregistrements
     echo '<h5>', 'Vous avez acheté : ' . $enregistrement->pname . ', lors de l\'évènement ' . $enregistrement->ename . '</h5>';
 }
+?>
+            </div>
+        </div>
+<?php
 include('footer.php');
