@@ -11,7 +11,7 @@ foreach ($user as $key=>$value)
                   '1'  => 'Oui',
                   '0'    => 'Non',
                 );
-        echo form_dropdown('newsletter', $options, $one_user[0]->$key, 'class="form-control input-sm"');
+        echo form_dropdown('newsletter', $options, $one_user[0]->$key, 'class="form-control input-sm" required="required" ');
     }
     elseif ($user[$key]["field"] == 'alert')
     {
@@ -27,15 +27,15 @@ foreach ($user as $key=>$value)
                   '1'  => 'Oui',
                   '0'    => 'Non',
                 );
-        echo form_dropdown('admin', $options, $one_user[0]->$key, 'class="form-control input-sm"');
+        echo form_dropdown('admin', $options, $one_user[0]->$key, 'class="form-control input-sm" required="required" ');
     }
     elseif ($user[$key]["field"] == 'mail')
     {
-        echo form_email($user[$key]["field"], $one_user[0]->$key, 'class="form-control input-sm"');
+        echo form_email($user[$key]["field"], $one_user[0]->$key, 'class="form-control input-sm" required="required" ');
     }
     else
     {
-        echo form_input($user[$key]["field"], $one_user[0]->$key, 'class="form-control input-sm"');
+        echo form_input($user[$key]["field"], $one_user[0]->$key, 'class="form-control input-sm" required="required" ');
     }
     echo '<br><br>';
 }

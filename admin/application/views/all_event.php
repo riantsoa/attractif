@@ -38,6 +38,7 @@ foreach ($all_event as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
+    <h3>Nouveau</h3>
 <?php
 echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));
@@ -47,13 +48,13 @@ foreach ($event as $key=>$value)
     echo form_label($event[$key]["label"], $event[$key]["field"]) . '<br>';
 
     if($key == 'date'){
-        echo form_input(array('name' => $event[$key]["field"] , 'class'=>'form-control input-sm', 'id' => 'evenement_date')) . '<br>';
+        echo form_input(array('name' => $event[$key]["field"] , 'class'=>'form-control input-sm', 'id' => 'evenement_date', 'required' => 'required')) . '<br>';
     }
     elseif ($event[$key]["field"] == 'descript')
     {
-        echo form_textarea($event[$key]["field"], '', 'class="form-control input-sm"');
+        echo form_textarea($event[$key]["field"], '', 'class="form-control input-sm" required="required" ');
 
-    }else echo form_input($event[$key]["field"], '', 'class="form-control input-sm"') . '<br>';
+    }else echo form_input($event[$key]["field"], '', 'class="form-control input-sm" required="required" ') . '<br>';
 
 }
 

@@ -3,42 +3,46 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 ?>
-    <!-- Page Content -->
+<!-- Page Content -->
 <div id="content">
     <div class="container">
-    <div class="col-lg-12">
-        <div class="centerTitle">
+
+        <!-- Selection 3 blocks -->
+        <div class="col-lg-12">
+            <div class="centerTitle">
             <h2 class="pageTitle">Nos 10 produits phares</h2>
         </div>
-    </div>
-    <div class="col-md-12 col-sm-6">
-        <?php
-        //Je vérifie le pseudo et le mot de passe
-        $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb
+        </div>
+        <div class="row timer center">
+            <div class="col-md-12 col-sm-12">
+                <?php
+                //Je vérifie le pseudo et le mot de passe
+                $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb, c.name AS catename
                             FROM product as p
-                            INNER JOIN sale as s ON (p.id = s.product)
+                            LEFT JOIN sale as s ON (p.id = s.product)
+                            LEFT JOIN category AS c ON (c.id = p.category)
                             GROUP BY p.id
                             ORDER BY nb DESC
                             LIMIT 0,10');
-        //SELECT s.product FROM sales as s WHERE event = 4
-        $req->execute();
-        $data = $req->setFetchMode(PDO::FETCH_OBJ);
+                //INNER JOIN sale as s ON (p.id = s.product) -> vide les nb = 0
+                $req->execute();
+                $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
-        // Nous traitons les résultats en boucle
-        while ($enregistrement = $req->fetch()) {
-            // Affichage des enregistrements
-            ?>
-            <div class="view view-first">
-                <?php echo '<img style="max-width: 200px; max-height: 180px" src="img/products/' . $enregistrement->image . '"  />';?>
-                <div class="mask">
-                    <h2><?php echo  $enregistrement->name ; ?></h2><br />
-                    <a href="product_detail.php?id=<?php echo $enregistrement->id; ?>" class="info">en savoir +</a>
-                </div>
+                // Nous traitons les résultats en boucle
+                while ($enregistrement = $req->fetch()) {
+                    // Affichage des enregistrements
+                    ?>
+                    <div class="view view-first">
+                        <?php echo '<img style="max-width: 200px; max-height: 180px" src="img/products/' . $enregistrement->image . '"  />'; ?>
+                        <div class="mask">
+                            <h2><?php echo $enregistrement->name; ?></h2>
+                            <p><?php echo $enregistrement->catename ?></p>
+                            <a href="product_detail.php?id=<?php echo $enregistrement->id; ?>" class="info">en savoir +</a>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
-        <?php } ?>
-    </div>
-<?php
-include('footer.php');
-
-
-//SELECT * FROM `product` AS p LEFT JOIN sell AS s ON (s.product = p.id) LEFT JOIN event AS e ON (e.id = s.event) WHERE event = MAX(event) LIMIT 10;
+        </div>
+        <?php
+        include('footer.php');
+        

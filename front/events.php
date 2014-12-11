@@ -3,16 +3,16 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 ?>
-    <!-- Page Content -->
-    <div id="content">
-        <div class="container">
-
-            <div class="col-lg-12">
-                <div class="centerTitle">
-                    <h2 class="pageTitle">Prochaines ventes</h2>
-                </div>
+<!-- Page Content -->
+<div id="content">
+    <div class="container">
+        <!-- Selection 3 blocks -->
+        <div class="col-lg-12">
+            <div class="centerTitle">
+                <h2 class="pageTitle">Prochaines ventes</h2>
             </div>
-
+        </div>
+        <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
@@ -40,9 +40,6 @@ include('header.php');
                 //    echo '<br />';
 
                 ?>
-
-
-
                     <div class="responsive-table-line" style="margin:0px auto;max-width:700px;">
                         <table class="table table-bordered table-condensed table-body-center" >
                             <thead>

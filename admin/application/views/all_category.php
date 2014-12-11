@@ -31,6 +31,7 @@ foreach ($all_category as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
+    <h3>Nouveau</h3>
 <?php
 echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));
@@ -38,9 +39,9 @@ form_hidden('id', $this->uri->segment(3));
 foreach ($category as $key=>$value)
 {
     echo form_label($category[$key]["label"], $category[$key]["field"]) . '<br>';
-    echo form_input($category[$key]["field"], '', 'class="form-control input-sm"');
+    echo form_input($category[$key]["field"], '', 'class="form-control input-sm" required="required" ');
 }
-
+echo('<br>');
 echo form_submit('submit', 'Ajouter', 'class="btn btn-primary"');
 echo form_close();
 ?>

@@ -9,6 +9,7 @@ echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-user\"></span>
 
 ?>
 <div class="col-md-9">
+
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
@@ -33,17 +34,42 @@ foreach ($all_user as $key=>$value)
 </table>
 </div>
 <div class="col-md-3">
+    <h3>Nouveau</h3>
 <?php
 echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));
 
 foreach ($user as $key=>$value)
 {
+    echo '<br>';
     echo form_label($user[$key]["label"], $user[$key]["field"]) . '<br>';
-    echo form_input($user[$key]["field"], '', 'class="form-control input-sm"');
+    if ($user[$key]["field"] == 'newsletter')
+    {
+        $options = array(
+                  '1'  => 'Oui',
+                  '0'    => 'Non',
+                );
+        echo form_dropdown('newsletter', $options, '', 'class="form-control input-sm" required="required" ');
+    }
+    elseif ($user[$key]["field"] == 'admin')
+    {
+        $options = array(
+                  '1'  => 'Oui',
+                  '0'    => 'Non',
+                );
+        echo form_dropdown('admin', $options, '', 'class="form-control input-sm" required="required" ');
+    }
+    elseif ($user[$key]["field"] == 'mail')
+    {
+        echo form_email($user[$key]["field"], '', 'class="form-control input-sm" required="required" ');
+    }
+    else {
+        echo form_input($user[$key]["field"], '', 'class="form-control input-sm" required="required" ');
+    }
+    echo'<br>';
 
 }
-
+echo '<br>';
 echo form_submit('submit', 'Ajouter', 'class="btn btn-primary"');
 echo form_close();
 

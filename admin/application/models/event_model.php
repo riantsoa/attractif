@@ -92,6 +92,20 @@ class Event_model extends CI_Model
                 ->get()
                 ->result();
     }
+
+    /**
+     *  Retourne une liste des 20 evenements par ordre decroissant date
+     */
+    public function all_event_by_date($nb = 20, $debut = 0)
+    {
+         $res = $this->db->select('*')
+            ->from($this->table)
+            ->limit($nb, $debut)
+            ->order_by('date', 'desc')
+            ->get()
+            ->result();
+        return $res;
+    }
 }
 
 

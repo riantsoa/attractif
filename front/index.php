@@ -41,7 +41,7 @@ include('header.php');
 <div id="content">
     <div class="container">
         <!-- Selection 3 blocks -->
-        <div class="row timer">
+        <div class="row timer home">
             <div class="col-md-12">
                 <?php
                 //Timer
@@ -72,9 +72,10 @@ include('header.php');
                         <div id="owl-demo" class="owl-carousel owl-theme">
                             <?php
                             //Je vérifie le pseudo et le mot de passe
-                            $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb
+                            $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb, c.name AS catename
                                                 FROM product as p
                                                 LEFT JOIN sale as s ON (p.id = s.product)
+                                                LEFT JOIN category AS c ON (c.id = p.category)
                                                 GROUP BY p.id
                                                 ORDER BY nb DESC
                                                 LIMIT 0,10');
@@ -87,6 +88,7 @@ include('header.php');
                                 //Gestion favoris
                                 ?>
                                 <div class="item">
+                                    <div class="view view-first">
                                     <?php
                                     //Favoris
                                     //Si on est connecté
@@ -113,7 +115,15 @@ include('header.php');
                                             <span class="favorite-icon"></span>
                                         </a>
                                     <?php } ?>
-                                    <?php echo '<img src="img/products/' . $row['image'] . '" width="200" alt="' . $row['name'] . '" />'; ?>
+                                    <?php
+                                        echo '<img src="img/products/' . $row['image'] . '" width="200" alt="' . $row['name'] . '" />';
+                                        echo '<div class="mask">
+                                            <h2>'.$row['name'].'</h2>
+                                            <p>'.$row['catename'].'</p>
+                                            <a href="product_detail.php?id='.$row['id'].'" class="info">en savoir +</a>
+                                        </div>';
+                                    ?>
+                                </div>
                                 </div>
                             <?php } ?>
                         </div>
