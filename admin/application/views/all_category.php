@@ -42,7 +42,7 @@ foreach ($category as $key=>$value)
     echo form_input($category[$key]["field"], '', 'class="form-control input-sm"');
 }
 
-echo form_submit('submit', 'Envoyer');
+echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 ?>
 </div>

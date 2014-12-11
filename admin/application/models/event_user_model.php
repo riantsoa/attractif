@@ -80,6 +80,16 @@ class Event_user_model extends CI_Model
                 ->get()
                 ->result();
     }
+    public function one_by_event($id)
+    {
+        return $this->db->select('*')
+                ->from($this->table)
+                ->join('user', 'event_user.user = user.id', 'left')
+                ->group_by('event_user.id')
+                ->having('event', (int) $id)
+                ->get()
+                ->result();
+    }
     /**
      *  Retourne une liste de event_user
      */
