@@ -8,7 +8,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-                <h2 class="currentsales gray">Mes favoris</h2>
+                <h2 class="header-title green nohover">Mes favoris</h2>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
@@ -21,9 +21,9 @@ $nb->execute(array(
 ));
 $data = $nb->fetch(PDO::FETCH_OBJ);
     // Affichage des enregistrements
-    echo '<h4>', 'Votre avez : ' . $data->userfav . ' articles en favoris.</h4>';
-    echo '<br />';
-
+?>
+    <h4>Votre avez : <?php echo $data->userfav; ?> article<?php if ($data->userfav > 1) { echo 's'; } ?> en favoris.</h4><br />
+<?php
 $req = $bdd->prepare('SELECT uf.*, p.name
                     FROM user_favorite AS uf
                     LEFT JOIN product AS p ON (p.id = uf.product)

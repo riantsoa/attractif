@@ -8,7 +8,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-                <h2 class="currentsales gray">Ventes Privées à venir</h2>
+                <h2 class="header-title green nohover">Prochaines ventes</h2>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
@@ -32,13 +32,35 @@ include('header.php');
 
                 while ($enregistrement = $req->fetch()) {
                     // Affichage des enregistrements
-                    echo '<h1>', $enregistrement->name, ' ', $enregistrement->date, '</h1>';
-                    echo '<p>', 'Adresse :' .$enregistrement->place, '</p>';
-                    echo '<p>', 'Infos :' .$enregistrement->descript, '</p>';
-                    echo '<br />';
+                    ?>
+                    <div class="event">
+                        <div class="name inline" style="width: 260px;"><i class="glyphicon glyphicon-map-marker" style="color: #fff;font-size: 20px;padding: 0 5px 0 0;vertical-align: middle;"></i> <?php echo $enregistrement->name; ?></div><!--
+                        --><div class="descript inline" style="width: 500px;">
+                            <div class="inline" style="color: #7ecab2;font-size: 20px;padding: 0 10px 0 0;vertical-align: middle;"><i class="glyphicon glyphicon-info-sign"></i></div><!--
+                            --><div class="inline" style="width: 420px; vertical-align: middle;"><?php echo substr($enregistrement->descript, 0, 250).'...'; ?></div>
+                        </div>
+                        <div class="location inline">
+                            <div class="inline" style="color: #77e2da;font-size: 20px;padding: 30px 5px;vertical-align: middle;">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </div><!--
+                            --><div class="inline" style="width: 180px; vertical-align: middle; padding: 20px 5px;">
+                                <?php echo $enregistrement->place; ?><br />
+                                <?php echo $enregistrement->date; ?>
+                            </div>
+                            <div class="inline" style="width: 150px; vertical-align: middle; padding: 20px 35px;">
+                                <?php if (isset($_SESSION['data'])) { ?>
+                                <a href="participate.php?event=<?php echo $enregistrement->id; ?>" class="green">PARTICIPER</a>
+                                <?php } else { ?>
+                                <a href="register.php" class="green">PARTICIPER</a>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
                 }
                 ?>
-
+            </div>
+        </div>
 
             <?php
             include('footer.php');

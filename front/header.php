@@ -13,18 +13,15 @@ header('Content-Type: text/html; charset=utf-8');
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Attractif - Accueil</title>
+        <title>Attractif - Vente privée 100% High Tech</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/modern-business.css" rel="stylesheet">
         <link href="css/layout.css" rel="stylesheet">
-
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
         <!-- css pour hover image produit -->
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/style_common.css" />
         <link rel="stylesheet" type="text/css" href="css/style1.css" />
-
-
-
         <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
         <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
@@ -73,7 +70,7 @@ header('Content-Type: text/html; charset=utf-8');
                             <input type="submit" value="Connexion">
                         </form>
                         <div id="register">
-                            <span><a href="forgot.php">Mot de passe oublié ?</a></span>
+                            <span><a href="#">Mot de passe oublié ?</a></span>
                             <span class="hr"></span>
                             <span>Pas encore de compte ?<br /><a href="register.php">S'inscrire</a></span>
                         </div>

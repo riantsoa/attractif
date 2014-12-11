@@ -64,7 +64,7 @@ include('header.php');
             </div>
         </div>
         <!-- Produits phares -->
-        <div class="row highlight-products">
+        <div class="row highlight-products home">
             <h2>10 PRODUITS PHARES</h2>
             <div class="best-products">
                 <div class="col-md-12">

@@ -158,6 +158,11 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);-o-box-shadow: 0 0 27px 4px rgba(0, 0, 0, 0.25);
     background: #fff;
 }
+#content .container .header-title {
+    margin: 25px auto;
+    max-width: 40%;
+    text-transform: uppercase;
+}
 /* TIMER */
 #content .container .timer.home {
     padding-top: 25px;
@@ -214,6 +219,31 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     color: #fff;
     text-decoration: none;
 }
+.row.timer .event {
+    height: 91px;
+    margin: 15px 0;
+}
+.row.timer .event .name {
+    background: none no-repeat scroll 0 0 #00BBB1;
+    color: #fff;
+    font-size: 14px;
+    height: 100%;
+    padding: 3% 10px;
+    vertical-align: middle;
+    width: 340px;
+}
+.row.timer .event .descript {
+    background: url('../img/event_arrow.png') no-repeat scroll 0 0 #e5f4f0;
+    height: 100%;
+    max-width: 620px;
+    vertical-align: middle;
+    padding: 15px 10px 15px 35px;
+}
+.row.timer .event .location {
+    background: none repeat scroll 0 0 #e5f4f0;
+    height: 100%;
+    vertical-align: middle;
+}
 /* HIGHTLIGHT */
 #content .container .highlight-products {
     box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-webkit-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-moz-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;-o-box-shadow: 0 30px 25px -20px rgba(0, 167, 157, 0.5) inset;
@@ -238,9 +268,22 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     margin: 20px 0 0;
     padding: 10px;
     position: relative;
+    top: 5px;
     text-align: center;
     text-transform: uppercase;
     width: auto;
+}
+#content .container .view a.info {
+    border: 1px solid #01a79d;
+    background: #fff;
+    color: #01a79d;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    transition: 0.3s all;-moz-transition: 0.3s all;-webkit-transition: 0.3s all;-o-transition: 0.3s all;
+}
+#content .container .view a.info:hover {
+    background: #7FCAB3;
+    color: #fff;
+    transition: 0.3s all;-moz-transition: 0.3s all;-webkit-transition: 0.3s all;-o-transition: 0.3s all;
 }
 /*#content .container .highlight-products #owl-demo .item {
     margin: 3px;
@@ -259,7 +302,7 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     text-align: center;
 }
 /* FAVORITE */
-#content .container .highlight-products #owl-demo .item .favorite-icon {
+#content .container .favorite-icon {
     background: url('../img/favorite_icon.png') -31px 0 no-repeat;
     display: block;
     position: absolute;
@@ -268,15 +311,15 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
     right: 10px;
     cursor: pointer;
     z-index: 3;
-    transition: 0.2s all;-moz-transition: 0.2s all;-webkit-transition: 0.2s all;-o-transition: 0.2s all;
+    /*transition: 0.2s all;-moz-transition: 0.2s all;-webkit-transition: 0.2s all;-o-transition: 0.2s all;*/
 }
-#content .container .highlight-products #owl-demo .item .favorite-icon:hover, #content .container .highlight-products #owl-demo .item .favorite-icon.active {
+#content .container .favorite-icon:hover, #content .container .favorite-icon.active {
     background: url('../img/favorite_icon.png') 0 0 no-repeat;
 }
-#content .container .highlight-products #owl-demo .item:hover .favorite-icon {
+/*#content .container .highlight-products #owl-demo .item:hover .favorite-icon {
     z-index: 0;
     transition: 0.1s all;-moz-transition: 0.1s all;-webkit-transition: 0.1s all;-o-transition: 0.1s all;
-}
+}*/
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons div {
     padding: 15px 10px;
     position: relative;
@@ -368,6 +411,12 @@ footer .row div i:hover {
 .col-lg-12 {
     text-align: center;
 }
+.row .col-md-12 {
+    padding-bottom: 30%;
+}
+.row.home .col-md-12 {
+    padding-bottom: 0;
+}
 /*
 * RESPONSIVE
 */
@@ -451,63 +500,13 @@ footer .row div i:hover {
     #header #login #login-box {
         right: 15%;
     }
+    #content .container .header-title {
+        font-size: 16px;
+    }
 }
 @media (min-width: 768px) {
 
     #content .container .highlight-products #owl-demo .owl-pagination {
         display: block;
     }
-}
-
-
-/*
-* Tableau responsive page events
-*/
-
-@media (max-width: 500px) {
-
-    .responsive-table-line td:before { content: attr(data-title); }
-
-    .responsive-table-line table,
-    .responsive-table-line thead,
-    .responsive-table-line tbody,
-    .responsive-table-line th,
-    .responsive-table-line td,
-    .responsive-table-line tr {
-        display: block;
-    }
-
-    .responsive-table-line thead tr {
-        display:none;
-    }
-
-    .responsive-table-line td {
-        position: relative;
-        border: 0px solid transparent;
-        padding-left: 50% !important;
-        white-space: normal;
-        text-align:right;
-    }
-
-    .responsive-table-line td:before {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 45%;
-        padding-right: 15px;
-        height:100%;
-        white-space: nowrap;
-        text-overflow: ellipsis !important;
-        overflow:hidden !important;
-        text-align:left;
-        background-color:#f8f8f8;
-        padding:2px;
-    }
-
-}
-
-.responsive-table-line{
-    width: 100%;
-    border-bottom : 1px solid #000;
-    width : 500px;
 }
