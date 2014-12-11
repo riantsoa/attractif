@@ -25,8 +25,8 @@ foreach ($all_sale as $key=>$value)
     echo "<tr>";
     echo "<td><strong>" . $value->id  . "</strong></td>";
     echo "<td><strong>" . $value->date  . "</strong></td>";
-    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class=\"glyphicon glyphicon-edit\"></span> </a></button></td> ";
-    echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class=\"glyphicon glyphicon-trash\"></span> </a></button></td>";
+    echo "<td><a href='one/" . $value->id  . "'><button class='btn btn-primary'><span class=\"glyphicon glyphicon-edit\"></span></button></a></td> ";
+    echo "<td><a href='del/" . $value->id  . "'><button class='btn btn-primary'><span class=\"glyphicon glyphicon-trash\"></span></button></a></td>";
     echo "</tr>";
 }
 
