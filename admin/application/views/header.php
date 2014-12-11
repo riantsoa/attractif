@@ -62,7 +62,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>img/logotype.png" height="30px"></a>
+    <a class="navbar-brand" href="index.html"><img src="<?php echo base_url();?>img/logotype.png" height="30px" style="margin-top: -5px;  "></a>
 </div>
 <!-- /.navbar-header -->
 
