@@ -281,6 +281,10 @@ footer {
     margin: 5px auto;
     width: 90%;
 }
+.connect .green{
+    width: 87px;
+}
+
 .green {
     background: #00a79d;
     color: #fff;

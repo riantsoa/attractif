@@ -61,7 +61,9 @@ header('Content-Type: text/html; charset=utf-8');
                     <?php
                 } else {
                     ?>
-                    <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
+                    <div class="connect green">
+                        <span id="login-btn" aria-hidden="true"><i class="glyphicon glyphicon-user"></i> Connexion</span>
+                    </div>
                     <div id="login-box">
                         <form action="lib/login.php" method="post">
                             <input type="text" placeholder="E-mail" name="email">

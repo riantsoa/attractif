@@ -36,10 +36,7 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
         // Affichage des enregistrements
-    /*
-        echo '<h6>', $enregistrement->catename. '</h6>';
-        echo '<h4>', $enregistrement->name, ' ', '<a href="product_detail.php?id='.$enregistrement->id.'">Voir le produit</a>', '</h4>';
-    */
+
     ?>
         <div class="view view-first">
             <?php echo '<img style="max-width: 200px; max-height: 180px" src="img/products/' . $enregistrement->prodimage . '"  />';?>
