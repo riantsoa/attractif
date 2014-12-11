@@ -89,25 +89,33 @@ include('header.php');
                                 <div class="item">
                                     <?php
                                     //Favoris
-                                    $req = $bdd->prepare('SELECT *
+                                    //Si on est connecté
+                                    if (isset($_SESSION['data']->id)) {
+                                        $req = $bdd->prepare('SELECT *
                                                 FROM user_favorite
                                                 WHERE user = :user
                                                 AND product = :product');
-                                    $req->execute(array(
-                                        'user' => $_SESSION['data']->id,
-                                        'product' => $row['id']
-                                    ));
-                                    $favorites = $req->fetch(PDO::FETCH_OBJ);
-                                    ?>
-                                    <a href="lib/favorite.php?product=<?php echo $row['id']; ?>&user=<?php echo $_SESSION['data']->id; ?>">
-                                        <span class="favorite-icon <?php if ($favorites) {
-                                    echo "active";
-                                } ?>"></span>
-                                    </a>
-                                <?php // }  ?>
-                                <?php echo '<img src="img/products/' . $row['image'] . '" width="200" alt="' . $row['name'] . '" />'; ?>
+                                        $req->execute(array(
+                                            'user' => $_SESSION['data']->id,
+                                            'product' => $row['id']
+                                        ));
+                                        $favorites = $req->fetch(PDO::FETCH_OBJ);
+                                        ?>
+                                        <a href="lib/favorite.php?product=<?php echo $row['id']; ?>&user=<?php echo $_SESSION['data']->id; ?>">
+                                            <span class="favorite-icon <?php
+                                            if ($favorites) {
+                                                echo "active";
+                                            }
+                                            ?>"></span>
+                                        </a>
+                                    <?php } else { ?>
+                                        <a href="register.php">
+                                            <span class="favorite-icon"></span>
+                                        </a>
+                                    <?php } ?>
+                                    <?php echo '<img src="img/products/' . $row['image'] . '" width="200" alt="' . $row['name'] . '" />'; ?>
                                 </div>
-<?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
