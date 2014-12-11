@@ -9,14 +9,11 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-            <div class="centerTitle">
-                <h2 class="pageTitle">Liste de nos produits</h2>
-            </div>
+                <h2 class="currentsales gray">Liste des produits</h2>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
     <form action="products.php" method="POST">
->>>>>>> 3260aacf472a99f19a5db5c3d7deebfe0eaef789
             <p>
                 <input type="hidden" name="sorted" value="1">
                 <input type="submit" value="Trier par categorie" class="tri_bandeau" onchange="this.form.submit();">
@@ -41,7 +38,10 @@ include('header.php');
         // Nous traitons les résultats en boucle
         while ($enregistrement = $req->fetch()) {
         // Affichage des enregistrements
-
+    /*
+        echo '<h6>', $enregistrement->catename. '</h6>';
+        echo '<h4>', $enregistrement->name, ' ', '<a href="product_detail.php?id='.$enregistrement->id.'">Voir le produit</a>', '</h4>';
+    */
     ?>
         <div class="view view-first">
             <?php echo '<img style="max-width: 200px; max-height: 180px" src="img/products/' . $enregistrement->prodimage . '"  />';?>

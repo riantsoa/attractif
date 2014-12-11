@@ -35,10 +35,10 @@ $req->execute(array(
     'id' => $id
 ));
 $req->setFetchMode(PDO::FETCH_OBJ);
-
+echo '<h2>Vous avez acheté :</h2>';
 while ($enregistrement = $req->fetch()) {
     // Affichage des enregistrements
-    echo '<h5>', 'Vous avez acheté : ' . $enregistrement->pname . ', lors de l\'évènement ' . $enregistrement->ename . '</h5>';
+    echo '<h5><span class="green nohover">' . $enregistrement->pname . '</span>, lors de l\'évènement ' . $enregistrement->ename . '</h5><br />';
 }
 ?>
             </div>

@@ -84,7 +84,7 @@ INSERT INTO `event` (`id`, `date`, `place`, `descript`, `name`) VALUES
 CREATE TABLE IF NOT EXISTS `event_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `status` int(11) NOT NULL,
-  `client` int(11) NOT NULL,
+  `user` int(11) NOT NULL,
   `event` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
