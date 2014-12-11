@@ -8,7 +8,9 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-                <h2 class="currentsales gray">Ventes en cours</h2>
+            <div class="centerTitle">
+                <h2 class="pageTitle">Ventes en cours</h2>
+            </div>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">

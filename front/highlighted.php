@@ -6,9 +6,12 @@ include('header.php');
 <!-- Page Content -->
 <div id="content">
     <div class="container">
+
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-            <h2 class="currentsales gray">Produits phares</h2>
+            <div class="centerTitle">
+            <h2 class="pageTitle">Nos 10 produits phares</h2>
+        </div>
         </div>
         <div class="row timer center">
             <div class="col-md-12 col-sm-12">

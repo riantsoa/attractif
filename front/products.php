@@ -9,11 +9,14 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-                <h2 class="currentsales gray">Liste des produits</h2>
+            <div class="centerTitle">
+                <h2 class="pageTitle">Liste de nos produits</h2>
+            </div>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
     <form action="products.php" method="POST">
+>>>>>>> 3260aacf472a99f19a5db5c3d7deebfe0eaef789
             <p>
                 <input type="hidden" name="sorted" value="1">
                 <input type="submit" value="Trier par categorie" class="tri_bandeau" onchange="this.form.submit();">
