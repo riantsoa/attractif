@@ -11,7 +11,7 @@ class Event_user_model extends CI_Model
     {
         //  Ces données seront automatiquement échappées
 
-        if ($this->all_by_user($customer) == NULL)
+        if ($this->all_by_user($customer, $event) == NULL)
         {
             return $this->db
                 ->set('status',  $status)
@@ -110,11 +110,12 @@ class Event_user_model extends CI_Model
     }
 
 
-    public function all_by_user($user)
+    public function all_by_user($user, $event)
     {
         return $this->db->select('*')
                 ->from($this->table)
                 ->where('user', (int) $user)
+                ->where('event', (int) $event)
                 ->order_by('id', 'desc')
                 ->get()
                 ->result();
