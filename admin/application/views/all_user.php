@@ -13,6 +13,8 @@ echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-user\"></span>
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
+            <th>Identifiant</th>
+            <th>Email</th>
             <th>Nom</th>
             <th>Modifier</th>
             <th>Supprimer</th>
@@ -23,7 +25,9 @@ echo "<h1 class=\"page-header\"><span class=\"glyphicon glyphicon-user\"></span>
 foreach ($all_user as $key=>$value)
 {
     echo "<tr>";
-    echo "<td><strong>" . $value->name  . " (" . $value->id . ")</strong></td>";
+    echo "<td><strong>" . $value->id  . "</strong></td>";
+    echo "<td><strong>" . $value->mail  . "</strong></td>";
+    echo "<td><strong>" . $value->name  . "</strong></td>";
     echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class='glyphicon glyphicon-edit'></span> </a></button></td> ";
     echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class='glyphicon glyphicon-trash'></span> </a></button></td>";
     echo "</tr>";
