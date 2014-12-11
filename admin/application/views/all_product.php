@@ -17,7 +17,9 @@ foreach ($all_category as $key=>$value)
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
+            <th>ref.</th>
             <th>Nom</th>
+            <th>Qté</th>
             <th>Modifier</th>
             <th>Supprimer</th>
         </tr>
@@ -27,7 +29,9 @@ foreach ($all_category as $key=>$value)
 foreach ($all_product as $key=>$value)
 {
     echo "<tr>";
-    echo "<td><strong>" . $value->name  . " (" . $value->id . ")</strong></td> ";
+    echo "<td><strong>" . $value->id  . "</strong></td> ";
+    echo "<td><strong>" . $value->name  . "</strong></td> ";
+    echo "<td><strong>" . $value->quantity  . "</strong></td> ";
     echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class=\"glyphicon glyphicon-edit\"></span> </a></button></td> ";
     echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class=\"glyphicon glyphicon-trash\"></span> </a></button></td>";
     echo "</tr>";
