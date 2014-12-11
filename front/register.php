@@ -31,10 +31,12 @@ if (isset($_POST['submit'])) {
 <!-- Page Content -->
 <div id="content">
     <div class="container">
+        <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-            <h2 class="page-header">S'inscrire</h2>
+            <h2 class="header-title green nohover">S'enregistrer</h2>
         </div>
-        <div class="col-md-12 col-sm-6">
+        <div class="row timer center">
+            <div class="col-md-12 col-sm-6">
             <form action="register.php" method="post">
                 <input type="text" placeholder="Nom" name="nom" /><br />
                 <input type="email" placeholder="Email" name="email" /><br />
@@ -42,5 +44,8 @@ if (isset($_POST['submit'])) {
                 <input type="submit" name="submit" value="Inscription">
             </form>
         </div>
+        </div>
+
+    
 <?php
 include('footer.php');

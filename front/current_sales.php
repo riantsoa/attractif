@@ -8,9 +8,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-            <div class="centerTitle">
-                <h2 class="pageTitle">Ventes en cours</h2>
-            </div>
+            <h2 class="header-title green nohover">Ventes en cours</h2>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
@@ -23,7 +21,7 @@ include('header.php');
                 $req = $bdd->prepare('SELECT *
                                     FROM event
                                     WHERE date < :hplus3
-
+                                    
                                     ');
                 //AND date > :hmoins1
                 $req->execute(array(
@@ -36,15 +34,29 @@ include('header.php');
 //                    affiche le timer ('à voir plus tard')
 //                    $secondes = time() - strtotime($enregistrement->date);
 //                    echo '<div id="timer"></div>';
-                    echo '<b>', $enregistrement->name, '</b>', '<br />';
-                    echo '<u>', 'Adresse : ','</u>' .$enregistrement->place.'<br />';
-                    echo 'Infos : ' .$enregistrement->descript.'<br /><br />';
+                    ?>
+                    <div class="event">
+                        <div class="name inline"><i class="glyphicon glyphicon-map-marker" style="color: #fff;font-size: 20px;padding: 0 5px 0 0;vertical-align: middle;"></i> <?php echo $enregistrement->name; ?></div><!--
+                        --><div class="descript inline">
+                            <div class="inline" style="color: #7ecab2;font-size: 20px;padding: 0 10px 0 0;vertical-align: middle;"><i class="glyphicon glyphicon-info-sign"></i></div><!--
+                            --><div class="inline" style="width: 510px; vertical-align: middle;"><?php echo substr($enregistrement->descript, 0, 250).'...'; ?></div>
+                        </div>
+                        <div class="location inline">
+                            <div class="inline" style="color: #77e2da;font-size: 20px;padding: 30px 5px;vertical-align: middle;">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </div><!--
+                            --><div class="inline" style="width: 180px; vertical-align: middle; padding: 20px 5px;">
+                                <?php echo $enregistrement->place; ?><br />
+                                <?php echo $enregistrement->date; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
                 }
 //                $secondes = strtotime($hplus3) - time();
                 ?>
             </div>
         </div>
-
         <?php
         include('footer.php');
         

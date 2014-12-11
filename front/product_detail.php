@@ -25,6 +25,8 @@ $data = $req->fetch(PDO::FETCH_OBJ);
             <p>DESCRIPTION : <?php echo $data->pdescrip; ?></p>
             <p>STOCK : <?php echo $data->pqty; ?> produits restants</p>
             <p><img src="img/products/<?php echo $data->pimage; ?>" width="150" alt="<?php echo $data->prodname; ?>" /></p>
+            </div>
+        </div>
 
 <?php
 include('footer.php');

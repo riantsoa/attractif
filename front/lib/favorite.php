@@ -21,7 +21,7 @@ if ($favorite) {
         'user' => $_GET['user'],
         'product' => $_GET['product']
     ));
-    header('location:../index.php#carousel');
+    header('location:' . $_SERVER['HTTP_REFERER']);
 } else {
     $insert = $bdd->prepare('INSERT INTO user_favorite VALUES(NULL, :user, :product, :category, :event)');
     // On envoi la requète
@@ -31,5 +31,5 @@ if ($favorite) {
         'category' => 0,
         'event' => 0
     ));
-    header('location:../index.php#carousel');
+    header('location:' . $_SERVER['HTTP_REFERER']);
 }

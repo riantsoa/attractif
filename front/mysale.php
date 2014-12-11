@@ -8,7 +8,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="col-lg-12">
-                <h2 class="currentsales gray">Mes achats / VP</h2>
+                <h2 class="header-title green nohover">Mes achats / VP</h2>
         </div>
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
@@ -22,9 +22,9 @@ $nb->execute(array(
 ));
 $data = $nb->fetch(PDO::FETCH_OBJ);
     // Affichage des enregistrements
-    echo '<h4>', 'Votre avez effectué : ' . $data->sales . ' achats lors de '.$data->events.' d\'évènements. </h4>';
-    echo '<br />';
-
+?>
+    <h4>Votre avez effectué : <?php echo $data->sales; ?> achat<?php if ($data->sales > 1) { echo 's'; } ?> lors de <?php echo $data->events; ?> d'évènement<?php if ($data->events > 1) { echo 's'; } ?>. </h4><br />
+<?php
 $req = $bdd->prepare('SELECT p.name AS pname, e.name AS ename
                       FROM product AS p
                       LEFT JOIN sale AS s ON (s.product = p.id)
