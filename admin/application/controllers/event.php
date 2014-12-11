@@ -99,7 +99,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model', 'eventManager');
         $this->eventManager->del($id);
 
-        redirect("event//index");
+        redirect("event/index");
     }
 
     public function one($id)

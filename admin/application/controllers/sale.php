@@ -90,7 +90,7 @@ class Sale extends CI_Controller {
         $this->load->model('sale_model', 'saleManager');
         $this->saleManager->del($id);
 
-        redirect("sale/");
+        redirect("sale/index");
     }
 
 
