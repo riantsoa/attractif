@@ -29,7 +29,7 @@ foreach ($sale as $key=>$value)
     echo form_label($sale[$key]["label"], $sale[$key]["field"]) . '<br>';
     if ($sale[$key]["field"] == 'date')
     {
-        echo form_datetime('date', $one_sale[0]->$key, 'class="form-control input-sm"');
+        echo form_datetime('date', $one_sale[0]->$key, 'class="form-control input-sm" id="evenement_date"');
     }
     elseif ($sale[$key]["field"] == 'product')
     {
@@ -52,7 +52,7 @@ foreach ($sale as $key=>$value)
     echo '<br><br>';
 }
 
-echo form_submit('submit', 'Envoyer');
+echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 
 
@@ -62,5 +62,9 @@ echo form_close();
 //var_dump($one_sale);
 
 ?>
-</pre>
 
+<script>
+    $(function() {
+        jQuery('#evenement_date').datetimepicker({lang:'fr',startDate:'+1971/05/01', defaultDate: '<?php echo $one_sale[0]->date ;?>'});
+    });
+</script>
