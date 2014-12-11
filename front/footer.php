@@ -1,13 +1,22 @@
 <!-- Footer -->
-</div>
-</div>
 <footer>
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-2 col-sm-2">
+            <h4>Contactez-nous</h4>
+            <p>15 rue Claude Tillier<br />
+            75011 Paris</p>
+        </div>
+        <div class="col-md-8 col-sm-8" style="text-align: center;">
+            <p class="inline"><i class="fa fa-facebook"></i></p>
+            <p class="inline"><i class="fa fa-twitter"></i></p>
+        </div>
+        <div class="col-md-2 col-sm-2">
             <p>Copyright &copy; Attractif 2014</p>
         </div>
     </div>
 </footer>
+</div>
+</div>
 <script src="js/jquery.js"></script>
 <script src="js/script.js"></script>
 <script src="js/bootstrap.min.js"></script>

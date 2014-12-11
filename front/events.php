@@ -3,12 +3,14 @@ session_start();
 include('lib/dbconnect.php');
 include('header.php');
 ?>
-    <!-- Page Content -->
-    <div id="content">
-        <div class="container">
-            <div class="col-lg-12">
-                <h2 class="event gray">Liste de nos événements</h2>
-            </div>
+<!-- Page Content -->
+<div id="content">
+    <div class="container">
+        <!-- Selection 3 blocks -->
+        <div class="col-lg-12">
+                <h2 class="currentsales gray">Ventes Privées à venir</h2>
+        </div>
+        <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <?php
                 //Timer
@@ -37,7 +39,6 @@ include('header.php');
                 }
                 ?>
 
-            </div>
 
             <?php
             include('footer.php');
