@@ -28,7 +28,7 @@ foreach ($all_user as $key=>$value)
     echo "<td><strong>" . $value->id  . "</strong></td>";
     echo "<td><strong>" . $value->mail  . "</strong></td>";
     echo "<td><strong>" . $value->name  . "</strong></td>";
-    echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class='glyphicon glyphicon-edit'></span> </a></button></td> ";
+    echo "<td><a href='one/" . $value->id  . "'><button class='btn btn-primary'><span class='glyphicon glyphicon-edit'></span> </button></a></td> ";
     echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class='glyphicon glyphicon-trash'></span> </a></button></td>";
     echo "</tr>";
 }
