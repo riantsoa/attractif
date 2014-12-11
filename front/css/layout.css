@@ -138,6 +138,10 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 #content .container .timer { // fix for other pages
     text-align: left;
 }
+#content .container .timer.center {
+    text-align: center;
+    padding: 25px;
+}
 #content .container .timer h2 {
     margin: 0 0 35px 0;
     padding: 0;
@@ -175,7 +179,7 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 }
 .timer .participate {
     font-size: 25px;
-    margin: 25px auto 10px;
+    margin: 25px auto 30px;
     width: 200px;
 }
 .timer .participate a {
@@ -260,11 +264,11 @@ header.carousel .carousel-caption h2, header.carousel .carousel-caption div {
 
 /*To move navigation buttons outside use these settings:*/
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-prev{
-    right: 545px;
+    right: 555px;
 }
 
 #content .container .highlight-products .owl-theme .owl-controls .owl-buttons .owl-next{
-    left: 545px;
+    left: 555px;
 }
 /*
 * FOOTER
