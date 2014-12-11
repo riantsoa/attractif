@@ -4,6 +4,7 @@ include('lib/dbconnect.php');
 include('header.php');
 ?>
 <!-- Slider -->
+<div id="responsiveCarousel"><img class="img-responsive img-centered" src="img/slide1.jpg" /></div>
 <header id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,7 +42,7 @@ include('header.php');
     <div class="container">
         <!-- Selection 3 blocks -->
         <div class="row timer">
-            <div class="col-md-12 col-sm-6">
+            <div class="col-md-12">
                 <?php
                 //Timer
                 $req = $bdd->prepare('SELECT id, date FROM event WHERE date >= NOW()');
