@@ -10,18 +10,18 @@ include('header.php');
         <div class="col-lg-12">
             <h2 class="currentsales gray">Produits phares</h2>
         </div>
-        <div class="row timer">
-            <div class="col-md-12 col-sm-6">
+        <div class="row timer center">
+            <div class="col-md-12 col-sm-12">
                 <?php
                 //Je vérifie le pseudo et le mot de passe
                 $req = $bdd->prepare('SELECT p.*, COUNT(s.id) AS nb, c.name AS catename
                             FROM product as p
-                            INNER JOIN sale as s ON (p.id = s.product)
+                            LEFT JOIN sale as s ON (p.id = s.product)
                             LEFT JOIN category AS c ON (c.id = p.category)
                             GROUP BY p.id
                             ORDER BY nb DESC
                             LIMIT 0,10');
-                //SELECT s.product FROM sales as s WHERE event = 4
+                //INNER JOIN sale as s ON (p.id = s.product) -> vide les nb = 0
                 $req->execute();
                 $data = $req->setFetchMode(PDO::FETCH_OBJ);
 
