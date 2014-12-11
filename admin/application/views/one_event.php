@@ -14,17 +14,17 @@ foreach ($event as $key=>$value)
     echo form_label($event[$key]["label"], $event[$key]["field"]) . '<br>';
     if ($event[$key]["field"] == 'date')
     {
-        echo form_datetime('date', $one_event[0]->$key, 'class="form-control input-sm" id="evenement_date"');
+        echo form_datetime('date', $one_event[0]->$key, 'class="form-control input-sm" required="required"  id="evenement_date"');
         // echo form_input(array('name' => $event[$key]["field"] , 'class'=>'form-control input-sm', 'id' => 'evenement_date')) . '<br>';
     }
     elseif ($event[$key]["field"] == 'descript')
     {
-        echo form_textarea($event[$key]["field"], $one_event[0]->$key, 'class="form-control input-sm"');
+        echo form_textarea($event[$key]["field"], $one_event[0]->$key, 'class="form-control input-sm" required="required" ');
 
     }
     else
     {
-        echo form_input($event[$key]["field"], $one_event[0]->$key, 'class="form-control input-sm"');
+        echo form_input($event[$key]["field"], $one_event[0]->$key, 'class="form-control input-sm" required="required" ');
 
     }
     // echo form_input($event[$key]["field"], $one_event[0]->$key);
@@ -61,7 +61,7 @@ foreach ($form_product_event as $key=>$value)
     echo form_hidden('event', $this->uri->segment(3));
     if ($form_product_event[$key]["field"] == 'product')
     {
-        echo form_dropdown('product', $options, '', 'class="form-control input-sm"');
+        echo form_dropdown('product', $options, '', 'class="form-control input-sm" required="required" ');
     }
 }
 // //
@@ -109,7 +109,7 @@ foreach ($form_event_user as $key=>$value)
 {
     if ($form_event_user[$key]["field"] == 'customer')
     {
-        echo form_dropdown('customer', $options, '', 'class="form-control input-sm"');
+        echo form_dropdown('customer', $options, '', 'class="form-control input-sm" required="required" ');
     }
     elseif ($form_event_user[$key]["field"] == 'status')
     {
@@ -148,7 +148,7 @@ foreach ($all_event_user as $key=>$value)
     echo form_open($this->uri->segment(1) . '/../event_user/edit/', '');
     echo form_hidden('event', $this->uri->segment(3));
     echo form_hidden('customer', $value->id);
-    echo form_dropdown('status', $status, $value->status, 'class="form-control input-sm"');
+    echo form_dropdown('status', $status, $value->status, 'class="form-control input-sm" required="required" ');
     echo form_submit('submit', 'Changer', 'class="btn btn-primary"');
     echo form_close() . "<br>";
     echo "</li>";

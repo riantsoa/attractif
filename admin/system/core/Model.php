@@ -26,7 +26,7 @@
  */
 class CI_Model {
 
-	/**
+	/**$CI->userlib->profilMatch(array(UserLib::$ADMIN));
 	 * Constructor
 	 *
 	 * @access public
@@ -47,8 +47,8 @@ class CI_Model {
 	 */
 	function __get($key)
 	{
-		$CI =& get_instance();
-		return $CI->$key;
+        $CI =& get_instance();
+        return $CI->$key;
 	}
 }
 // END Model Class

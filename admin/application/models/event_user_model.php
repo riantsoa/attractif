@@ -10,12 +10,20 @@ class Event_user_model extends CI_Model
     public function add($status, $customer, $event)
     {
         //  Ces données seront automatiquement échappées
-        return $this->db
-            ->set('status',  $status)
-            ->set('user',   $customer)
-            ->set('event', $event)
-            ->insert($this->table);
-        ;
+
+        if ($this->all_by_user($customer) == NULL)
+        {
+            return $this->db
+                ->set('status',  $status)
+                ->set('user',   $customer)
+                ->set('event', $event)
+                ->insert($this->table);
+            ;
+        }
+        else
+        {
+            return 0;
+        }
 
         //  Une fois que tous les champs ont bien été définis, on "insert" le tout
         // return $this->db->insert($this->table);
@@ -88,8 +96,30 @@ class Event_user_model extends CI_Model
                 ->get()
                 ->result();
     }
+
+    public function one_by_event2($id)
+    {
+        return $this->db->select('*')
+            ->from($this->table)
+            ->join('user', 'event_user.customer = user.id')
+            ->group_by('event_user.id')
+            ->having('event', (int) $id)
+            ->where('user.admin','0')
+            ->get()
+            ->result();
+    }
+
+
+    public function all_by_user($user)
+    {
+        return $this->db->select('*')
+                ->from($this->table)
+                ->where('user', (int) $user)
+                ->order_by('id', 'desc')
+                ->get()
+                ->result();
+    }
+
 }
-
-
 /* End of file event_user_model.php */
 /* Location: ./application/models/event_user_model.php */

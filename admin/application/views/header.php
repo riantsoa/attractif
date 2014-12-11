@@ -297,8 +297,14 @@
             <li>
                 <a href="<?php echo base_url();?>index.php/sale/index"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Ventes</a>
             </li>
-            <li>
-                <a href="<?php echo base_url();?>index.php/sale/index"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Mailing</a>
+            <li class="active">
+                <a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Mailing<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse in" aria-expanded="true" style="">
+                    <li>
+                        <a href="<?php echo base_url();?>index.php/mailing/export_mail_csv"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;Export des adresses mail</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
             </li>
         </ul>
     </div>

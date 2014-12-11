@@ -45,17 +45,18 @@ form_hidden('id', $this->uri->segment(3));
 
 foreach ($product as $key=>$value)
 {
+    echo '<br>';
     echo form_label($product[$key]["label"], $product[$key]["field"]) . '<br>';
     if ($product[$key]["field"] == 'category')
     {
-        echo form_dropdown('category', $options, $product[$key]["field"], 'class="form-control input-sm"') ;
+        echo form_dropdown('category', $options, $product[$key]["field"], 'class="form-control input-sm" required="required" ') ;
     }
     else
     {
-        echo form_input($product[$key]["field"], '', 'class="form-control input-sm"');
+        echo form_input($product[$key]["field"], '', 'class="form-control input-sm" required="required" ');
     }
 }
-
+echo '<br>';
 echo form_submit('submit', 'Envoyer', 'class="btn btn-primary"');
 echo form_close();
 

@@ -96,6 +96,28 @@ class User_model extends CI_Model
                 ->result();
     }
 
+    public function all_not_admin($nb = 100, $debut = 0)
+    {
+        return $this->db->select('*')
+                ->from($this->table)
+                ->limit($nb, $debut)
+                ->where('admin', 0)
+                ->get()
+                ->result();
+    }
+    public function all_not_admin_no_event($nb = 100, $debut = 0)
+    {
+        return $this->db->select('user.id, user.name, user.admin, event_user.user')
+                ->from($this->table)
+                ->join('event_user', 'event_user.user = user.id', 'right')
+                ->having('admin', 1)
+                // ->having('user IS NUL', NULL)
+                ->limit($nb, $debut)
+                ->group_by('user.id', 'desc')
+                ->get()
+                ->result();
+    }
+
     /***
      * verifie si l'utilisateur peut se connecter
      */

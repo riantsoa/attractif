@@ -64,23 +64,23 @@ foreach ($sale as $key=>$value)
     echo form_label($sale[$key]["label"], $sale[$key]["field"]) . '<br>';
     if ($sale[$key]["field"] == 'date')
     {
-        echo form_datetime('date', '', 'class="form-control input-sm" id="evenement_date"');
+        echo form_datetime('date', '', 'class="form-control input-sm" required="required"  id="evenement_date"');
     }
     elseif ($sale[$key]["field"] == 'product')
     {
-        echo form_dropdown('product', $products, '', 'class="form-control input-sm"');
+        echo form_dropdown('product', $products, '', 'class="form-control input-sm" required="required" ');
     }
     elseif ($sale[$key]["field"] == 'user')
     {
-        echo form_dropdown('user', $users, '', 'class="form-control input-sm"');
+        echo form_dropdown('user', $users, '', 'class="form-control input-sm" required="required" ');
     }
     elseif ($sale[$key]["field"] == 'event')
     {
-        echo form_dropdown('user', $events, '', 'class="form-control input-sm"');
+        echo form_dropdown('user', $events, '', 'class="form-control input-sm" required="required" ');
     }
     else
     {
-        echo form_input($sale[$key]["field"], '', 'class="form-control input-sm"');
+        echo form_input($sale[$key]["field"], '', 'class="form-control input-sm" required="required" ');
 
     }
 }
