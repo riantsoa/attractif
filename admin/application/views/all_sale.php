@@ -11,7 +11,8 @@ echo "<h1 class=\"page-header\">Ventes (" . $count_sale . ")</h1><br>
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
-            <th>Nom</th>
+            <th>ref.</th>
+            <th>Date</th>
             <th>Modifier</th>
             <th>Supprimer</th>
         </tr>
@@ -22,7 +23,8 @@ echo "<h1 class=\"page-header\">Ventes (" . $count_sale . ")</h1><br>
 foreach ($all_sale as $key=>$value)
 {
     echo "<tr>";
-    echo "<td><strong>" . $value->date  . " (" . $value->id . ")</strong></td>";
+    echo "<td><strong>" . $value->id  . "</strong></td>";
+    echo "<td><strong>" . $value->date  . "</strong></td>";
     echo "<td><button class='btn btn-default'><a href='one/" . $value->id  . "'><span class=\"glyphicon glyphicon-edit\"></span> </a></button></td> ";
     echo "<td><button class='btn btn-default'><a href='del/" . $value->id  . "'><span class=\"glyphicon glyphicon-trash\"></span> </a></button></td>";
     echo "</tr>";
