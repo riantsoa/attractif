@@ -7,7 +7,9 @@ include('header.php');
 <div id="content">
     <div class="container">
     <div class="col-lg-12">
-        <h2 class="page-header">Nos 10 produits phares</h2>
+        <div class="centerTitle">
+            <h2 class="pageTitle">Nos 10 produits phares</h2>
+        </div>
     </div>
     <div class="col-md-12 col-sm-6">
         <?php

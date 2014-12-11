@@ -8,7 +8,9 @@ include('header.php');
 <div id="content">
 <div class="container">
     <div class="col-lg-12">
-        <h2 class="page-header">Liste de nos produits</h2>
+        <div class="centerTitle">
+            <h2 class="pageTitle">Liste de nos produits</h2>
+        </div>
         <form action="products.php" method="POST">
             <p>
                 <input type="hidden" name="sorted" value="1">
