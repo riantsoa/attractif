@@ -21,15 +21,15 @@ include('header.php');
                 ?>
                 <form action="products.php" method="POST">
                     <p>
-                        <select name="filter">
+                        <select name="filter" class="form-control input-sm input-md">
                             <?php
                             // Nous traitons les résultats en boucle
                             foreach ($rows as $row) {
                                 ?>
                                 <option name="<?php echo $row['name']; ?>" value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
                             <?php } ?>
-                            </select> 
-                            <input type="submit" name="submit" value="Filtrer">
+                            </select>
+                            <input class="form-control input-sm input-md " type="submit" name="submit" value="Filtrer">
                         </p>
                     </form>
                     <?php
@@ -92,4 +92,3 @@ include('header.php');
             </div>
             <?php
             include('footer.php');
-            

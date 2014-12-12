@@ -93,6 +93,10 @@ header('Content-Type: text/html; charset=utf-8');
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
+                            <a href="index.php">Accueil</a>
+                            <div class="nav-hover"></div>
+                        </li>
+                        <li>
                             <a href="current_sales.php">Ventes en cours</a>
                             <div class="nav-hover"></div>
                         </li>

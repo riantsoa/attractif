@@ -41,13 +41,15 @@ $data = $req->fetch(PDO::FETCH_OBJ);
         <div class="row timer">
             <div class="col-md-12 col-sm-6">
                 <form action="myinfos.php" method="post">
-                    <input type="text" placeholder="Nom" name="nom" value="<?php echo $data->name; ?>" /><br />
-                    <input type="email" placeholder="Email" name="email" value="<?php echo $data->mail; ?>" /><br />
-                    <input type="text" placeholder="Mot de passe" name="password" value="<?php echo $data->pass; ?>"/><br />
-                    <input type="submit" name="submit" value="Enregistrer modifications">
+                    <label for="nom">Nom</label>
+                    <input class="form-control input-sm input-md" required="required"  type="text" placeholder="Nom" name="nom" value="<?php echo $data->name; ?>" /><br />
+                    <label for="email">Email</label>
+                    <input class="form-control input-sm input-md" required="required"  type="email" placeholder="Email" name="email" value="<?php echo $data->mail; ?>" /><br />
+                    <label for="password">Mot de passe</label>
+                    <input class="form-control input-sm input-md" required="required"  type="text" placeholder="Mot de passe" name="password" value="<?php echo $data->pass; ?>"/><br />
+                    <input class="form-control input-sm input-md" required="required"  type="submit" name="submit" value="Enregistrer modifications">
                 </form>
             </div>
         </div>
         <?php
         include('footer.php');
-        

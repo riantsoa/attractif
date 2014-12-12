@@ -58,7 +58,7 @@ include('header.php');
                     <?php if (isset($_SESSION['data'])) { ?>
                         <a href="participate.php?event=<?php echo $data->id; ?>">PARTICIPER</a>
                     <?php } else { ?>
-                        <a href="#">PARTICIPER</a>
+                        <a href="register.php">PARTICIPER</a>
                     <?php } ?>
                 </div>
             </div>
@@ -133,4 +133,3 @@ include('header.php');
         </div>
         <?php
         include('footer.php');
-        
