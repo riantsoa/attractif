@@ -37,7 +37,7 @@ foreach ($all_sale as $key=>$value)
 <div class="col-md-3">
 
 <?php
-echo form_open($this->uri->segment(1) . '/add/' . $this->uri->segment(3), '');
+echo form_open($this->uri->segment(1) . '/add/', '');
 form_hidden('id', $this->uri->segment(3));
 
 
@@ -79,7 +79,7 @@ foreach ($sale as $key=>$value)
     }
     elseif ($sale[$key]["field"] == 'event')
     {
-        echo form_dropdown('user', $events, '', 'class="form-control input-sm" required="required" ');
+        echo form_dropdown('event', $events, '', 'class="form-control input-sm" required="required" ');
     }
     else
     {

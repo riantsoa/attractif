@@ -10,7 +10,6 @@ class Sale_model extends CI_Model
     public function add($user, $product, $date, $event)
     {
         //  Ces données seront automatiquement échappées
-        $user = time();
         return $this->db
             ->set('user',  $user)
             ->set('product',   $product)
