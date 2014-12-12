@@ -4,7 +4,7 @@
 ?>
 <div class="col-md-5">
 <?php
-
+//$all_product_event = $all_product_event[0];
 echo "<h1>Evénement: " . $one_event[0]->name   . "</h1><br>";
 echo form_open($this->uri->segment(1) . '/edit/' . $this->uri->segment(3), '');
 form_hidden('id', $this->uri->segment(3));
