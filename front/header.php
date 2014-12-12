@@ -51,9 +51,9 @@ header('Content-Type: text/html; charset=utf-8');
                             <div>Bienvenue, <?php echo $email; ?></div>
                             <br />
                             <div><a href="myinfos.php"><i class="glyphicon glyphicon-user" aria-hidden="true"></i> Mes infos</a></div>
-                            <div><a href="#"><i class="glyphicon glyphicon-bell" aria-hidden="true"></i> Mes alertes</a></div>
                             <div><a href="myfav.php"><i class="glyphicon glyphicon-star" aria-hidden="true"></i> Mes favoris</a></div>
-                            <div><a href="mysale.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats / VP</a></div>
+                            <div><a href="mysale.php"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Mes achats</a></div>
+                            <div><a href="myevents.php"><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i> Mes ventes privées</a></div>
                             <br />
                             <div><a href="lib/logout.php"><i class="glyphicon glyphicon-remove-circle" aria-hidden="true"></i> Me déconnecter</a></div>
                         </div>
