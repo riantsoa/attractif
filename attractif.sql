@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Jeu 11 Décembre 2014 à 16:45
--- Version du serveur :  5.6.17
--- Version de PHP :  5.5.12
+-- Client: localhost
+-- Généré le : Mar 07 Juillet 2015 à 07:00
+-- Version du serveur: 5.5.20
+-- Version de PHP: 5.3.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `attractif`
+-- Base de données: `attractif`
 --
 
 -- --------------------------------------------------------
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `quantity` int(11) NOT NULL,
   `category` int(11) NOT NULL,
   `descript` varchar(1024) NOT NULL,
-  `image` varchar(1024) NOT NULL,
+  `image` varchar(1024) NOT NULL DEFAULT 'default.jpg',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
@@ -242,14 +242,16 @@ CREATE TABLE IF NOT EXISTS `user_favorite` (
   PRIMARY KEY (`id`),
   KEY `user` (`user`),
   KEY `user_2` (`user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `user_favorite`
 --
 
 INSERT INTO `user_favorite` (`id`, `user`, `product`, `category`, `event`) VALUES
-(2, 7, 4, 0, 0);
+(2, 7, 4, 0, 0),
+(5, 7, 6, 0, 0),
+(7, 7, 7, 0, 0);
 
 --
 -- Contraintes pour les tables exportées
